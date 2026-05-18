@@ -8,7 +8,7 @@ It is intended for developers who want to explore, search, or build tools on top
 
 ## Files
 
-### `hook_directory_clean.csv`
+### `hook_directory.csv`
 A structured table of all **556 hook submissions** across cohorts UHI1–UHI8.
 
 | Column | Description |
@@ -26,7 +26,7 @@ A structured table of all **556 hook submissions** across cohorts UHI1–UHI8.
 
 Best for: filtering by cohort/tags, building spreadsheets, quick lookups, data analysis.
 
-### `hook_directory_clean.md`
+### `hook_directory.md`
 A combined Markdown file containing **562 entries** — one section per hook project — including full subpage content such as problem statements, impact descriptions, team bios, GitHub links, demo videos, and more.
 
 Best for: feeding into AI tools, Claude Projects, RAG pipelines, semantic search, or any use case that benefits from rich prose context.
@@ -37,18 +37,18 @@ Best for: feeding into AI tools, Claude Projects, RAG pipelines, semantic search
 
 **Fetch the raw CSV directly:**
 ```bash
-curl -O https://raw.githubusercontent.com/atriumacademy/hook-directory-data/main/hook_directory_clean.csv
+curl -O https://raw.githubusercontent.com/atriumacademy/hook-directory-data/main/hook_directory.csv
 ```
 
 **Load into Python:**
 ```python
 import pandas as pd
-df = pd.read_csv("https://raw.githubusercontent.com/atriumacademy/hook-directory-data/main/hook_directory_clean.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/atriumacademy/hook-directory-data/main/hook_directory.csv")
 print(df[df["Tags"].str.contains("Security", na=False)])
 ```
 
 **Use with AI tools:**
-Upload `hook_directory_clean.md` directly to a Claude Project, ChatGPT file upload, or any RAG tool to enable natural language search across all hook projects.
+Upload `hook_directory.md` directly to a Claude Project, ChatGPT file upload, or any RAG tool to enable natural language search across all hook projects.
 
 ---
 
