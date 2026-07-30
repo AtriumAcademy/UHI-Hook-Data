@@ -1,6 +1,6 @@
 # UHI Hook Directory
 
-Exported and PII-scrubbed. 562 hook entries.
+Exported and PII-scrubbed. 666 hook entries.
 
 ---
 
@@ -10,7 +10,9 @@ Exported and PII-scrubbed. 562 hook entries.
 
 This directory was created by [Atrium Academy](https://atrium.academy) to showcase projects built from the [Uniswap Hook Incubator](https://atrium.academy/uniswap)
 
-We’re now accepting public hook submissions [here](https://www.notion.so/1545f0444abe803997e0d26a51c60e25?pvs=21) and will feature them soon!
+We’re now accepting public hook submissions [here](https://app.notion.com/p/1545f0444abe803997e0d26a51c60e25?pvs=21) and will feature them soon!
+
+Want to explore, search, or build on top of the Hook Directory data? We publish regularly updated CSV and Markdown exports in our [GitHub repository](https://github.com/AtriumAcademy/UHI-Hook-Data/tree/main) — ready for use with AI tools, scripts, and data pipelines.
 
 - **Legal Disclaimer**
     
@@ -899,6 +901,39 @@ Another challenge was connecting three different layers cleanly: Uniswap v4 hook
 
 ---
 
+# AegisHook ( Hook Safety as a Service Cross-chain )
+
+# AegisHook ( Hook Safety as a Service Cross-chain )
+
+Description: AegisHook is a Uniswap v4 security hook that monitors live pool behavior, detects suspicious swap patterns, and can automatically pause an      at-risk pool through Reactive callbacks. It turns DeFi security from passive alerting into real-time on-chain protection.
+Tags: Cross-Chain, MEV, Machine Learning, RWA, Security
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Shreya20002/ageishook](https://github.com/Shreya20002/ageishook)
+Slides: 
+Project Link: 
+Demo Video: [https://www.youtube.com/channel/UCr84_DkIfWhKS3N5Bc8x3zQ](https://www.youtube.com/channel/UCr84_DkIfWhKS3N5Bc8x3zQ)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+By snipping sketchy transactions in the bud, the whole ecosystem gains trust from even the non-involved fols.
+
+## Impact: What makes this project unique? What impact will this make?
+
+The impact is bigger than one hook. AegisHook shows how DeFi protocols can become self-defending: detecting suspicious swaps in real time, isolating risk at the pool level, and reducing the time between exploit detection and mitigation from human response time to protocol response time. For users, that means better protection. For builders, it means a new security primitive. For DeFi as a whole, it moves the ecosystem toward resilient infrastructure where protocols do not just execute capital efficiently, they also protect it intelligently. 
+
+## Challenges: What was challenging about building this project?
+
+One major challenge was building against real Uniswap v4 constraints instead of mocking everything. In v4, hooks are only valid if the contract address itself encodes the right permission bits, so we had to implement CREATE2 salt mining and a factory deployment flow just to make the hook callable in the real lifecycle. That turned a simple smart contract problem into a deployment and protocol-compatibility problem.
+
+---
+
 # AetherPool
 
 # AetherPool
@@ -1227,6 +1262,45 @@ The complexity of integrating the protocols with limited documentation was indee
 
 ---
 
+# Anchor
+
+# Anchor
+
+Description:  Anchor is an AI-powered LP protection system built on **Uniswap v4 hooks** and **Reactive Network** and deloyed on unichain sepolia. It predicts impermanent loss before it compounds, automatically adjusts liquidity exposure via SentryRSC, and locks in profits into a Protection Vault before gains disappear.
+Tags: LP Fees, LP Liquidity, Oracle, Trading Rewards, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+Yes. Reactive Networks, Unichain, Uniswap
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/IdokoMarcelina/Anchor.git](https://github.com/IdokoMarcelina/Anchor.git)
+Slides: https://docs.google.com/presentation/d/1bQDo8c9x4KqQmortGiNKfBsu8WmA2I2m/edit?usp=drivesdk&ouid=[phone removed]&rtpof=true&sd=true
+Project Link: https://anchor-gamma-rust.vercel.app
+Demo Video: [https://www.loom.com/share/2a7edf1eb03f421490b1e14ea710b09f](https://www.loom.com/share/2a7edf1eb03f421490b1e14ea710b09f)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Providing liquidity should generate passive income, but in reality LPs are trapped in a cycle of constant monitoring. Sudden market divergence can wipe out gains through impermanent loss, accumulated fees remain unprotected, and by the time a user notices the risk, the damage is often already done.
+
+Anchor was inspired by the challenge that DeFi liquidity providers face in protecting their capital and earnings from impermanent loss and rapid market movements, as markets move faster than humans can monitor and react.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Anchor is unique because it combines AI-powered risk prediction with automated on-chain liquidity protection, enabling LPs to proactively reduce impermanent loss, secure earned fees, and manage positions without constant manual monitoring, ultimately making DeFi liquidity provision safer, more efficient, and more accessible.
+
+## Challenges: What was challenging about building this project?
+
+Reactive Network's testnet RPC congestion forced us to bypass wagmi and use raw eth_sendTransaction with explicit gas params, proving our chain-agnostic architecture; mainnet infrastructure eliminates this entirely.
+
+On mainnet, Reactive's dedicated RPC infrastructure eliminates mempool issues entirely; the testnet friction validated our chain-agnostic architecture.
+
+---
+
 # AntiSnipingHook
 
 # AntiSnipingHook
@@ -1235,7 +1309,7 @@ Description: The AntiSnipingHook is a Uniswap V4 hook designed to enhance the se
 Tags: Donations, LP Fees, MEV
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 The AntiSnipingHook is a Uniswap V4 hook designed to enhance the security and fairness of liquidity provision. It prevents MEV sniping attacks by preventing swap fee sniping and donation sniping.
@@ -1312,6 +1386,38 @@ We're building on top of 1inch Aqua and Uniswap v4 Hooks and nobody had tried co
 # Team: Who is on the team? What are their backgrounds?
 
 Three founders, all full-time. Tomas (CEO) in DeFi since 2020, Solidity dev since 2020, built protocols across five blockchains. Yudishtra (CTO), ex-Nethermind and Etherscan, 30+ hackathons won. Rithik (Founding Engineer), full scholarship at University of Zurich blockchain program, formally verified a stablecoin. We met at Edge City Patagonia and ETHGlobal Buenos Aires, where we became finalists and won 3 prizes.
+
+---
+
+# Aqua0 Options-Straddler
+
+# Aqua0 Options-Straddler
+
+Description: We are building on top of our last cohort's shared liquidity pool - this time we are mitigating impermanent loss via automatic execution of options.
+Tags: Custom hooks, LP Fees, LP Liquidity
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/NotRithik/Aqua0-UHI9](https://github.com/NotRithik/Aqua0-UHI9)
+Slides: https://drive.google.com/file/d/14_sLeg8FYtpvfmyAEreFugZh_QRPqNcE/view?usp=drivesdk
+Project Link: 
+Demo Video: [https://youtu.be/IEhYqNid3wU](https://youtu.be/IEhYqNid3wU)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+We built Aqua0’s shared liquidity pool to let the same capital work across more avenues instead of sitting idle in a single position. That improved capital efficiency, but it also increased exposure to impermanent loss, so we built an options layer on top of Aqua0 to help LPs hedge that risk.
+
+## Impact: What makes this project unique? What impact will this make?
+
+What makes Aqua0 unique is that it combines shared liquidity with onchain options-based hedging in one system. The goal is to make LP capital more productive while reducing IL, so liquidity providers can earn across more markets with better risk management.
+
+## Challenges: What was challenging about building this project?
+
+The hard part was designing options on top of a shared liquidity architecture without breaking capital efficiency or making the system too complex. We had to balance hedging effectiveness, pool coordination, and clean UX while building on top of Uniswap hooks. It was also a bit tricky to implement Black Scholes pricing in the smart contracts.
 
 ---
 
@@ -1773,6 +1879,91 @@ The second challenge was discovering the execution-time sandwich vulnerability. 
 
 ---
 
+# Atlas
+
+# Atlas
+
+Description: Atlas is a Uniswap v4 hook that pairs every LP add with a delta-matched perpetual short and pays a flat 8% APR through an ERC-4626 vault. A Reactive Smart Contract on Reactive Lasna watches the on-chain oracle and rebalances the hedge cross-chain in 15-20 seconds, fully observable on testnet.
+Tags: Basic Interest Rate, Custom hooks, LP Fees, LVR, Options/Futures, Oracle, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+deployed AtlasReactive on Reactive Lasna (chain 5318007). It subscribes to PriceUpdated on the Atlas oracle on Unichain Sepolia and fires cross-chain rebalance callbacks back to AtlasCallback on Unichain Sepolia. The hook receives the callback, validates a monotonic nonce and deadline, and resizes the hedge through the perp adapter. Observed end-to-end latency: 15 to 20 seconds. hook.lastNonce is at 5 on-chain right now, proving the loop is firing in production.
+
+Chainlink: deployed ChainlinkOracleAdapter on Ethereum Sepolia. It wraps the Chainlink ETH/USD feed at 0x694AA[phone removed]DE4FAC081bf1f309aDC325306 with staleness checks and 1e18 normalization. It implements the same IPriceOracle interface as the demo MockPriceOracle, so the production swap is a constructor argument change with no hook or vault modifications. Verified at 0xFd7E6Abe3347A5bC1b24C4ACbcF271Db946683f5.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/ogazboiz/atlas-uhi9](https://github.com/ogazboiz/atlas-uhi9)
+Slides: 
+Project Link: https://atlas-uhi9-u148.vercel.app
+Demo Video: [https://atlas-uhi9-u148.vercel.app/demovideo](https://atlas-uhi9-u148.vercel.app/demovideo)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Concentrated Uniswap LPs lose to impermanent loss almost every market cycle. Existing IL insurance hooks charge a premium, so LPs often net negative even when protection pays out. Nobody wants insurance. They want their position to stop bleeding.
+
+Atlas hedges the position with a real opposing instrument: a perpetual short on the volatile asset, opened automatically by the v4 hook on every add liquidity. Funding payments on the short leg and swap fees flow into an ERC-4626 vault that pays a flat per-block coupon. The result is a fixed-yield product backed by lumpy LP income, where the LP never touches the hedge.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Atlas turns a defensive product into an offensive one. LPs do not pay premiums. They earn 8% flat APR while the hook keeps their delta neutral.
+
+The Reactive Network integration is the differentiator. The hedge is not maintained by an off-chain keeper or a centralized oracle pusher. A Reactive Smart Contract on Lasna watches the on-chain oracle on Unichain Sepolia and fires cross-chain rebalance callbacks back to the hook in 15 to 20 seconds, end-to-end. The full loop is on-chain and observable.
+
+Six source-verified contracts, 61 passing Foundry tests, 92% line coverage on the hook, 97% on the vault. A live testnet demo where one keystroke fires the full cross-chain flow. The signature visual is a canvas-based liquid-metal simulation that shows both LP positions as physical blobs: the vanilla blob deforms permanently under price impact, the Atlas blob snaps back to a perfect circle through invisible hedge fibers. Same physics, same input, different outcome. The metaphor is the product.
+
+## Challenges: What was challenging about building this project?
+
+Three things stretched the build.
+
+First, debugging the Reactive cross-chain callback. The initial callback silently reverted with execution reverted, data: 0x. With help from the Reactive devrel team I diagnosed that the deployed hook bytecode predated a function signature the callback was invoking. Resolution: full redeploy of the dependent stack, re-verification on Uniscan, and a sha256 compare of deployedBytecode against forge inspect to confirm.
+
+Second, vault buffer dynamics. The 8% APR coupon auto-halves when bufferHealth drops below 0.5x. The first 50k seed deposit drove the buffer to zero on first run and the coupon halved to 4%, contradicting the marketing copy. The fix was a direct USDC transfer to the vault followed by a tiny withdraw to re-evaluate buffer state and restore the coupon to 800 bps.
+
+Third, the AI chat. Initial architecture used Vercel Workflow DevKit's DurableAgent for resumable streaming. The DurableAgent's model serialization boundary forced routing through Vercel AI Gateway, which requires a credit card on file. Pivoted to plain streamText with Gemini 2.5 Flash through @ai-sdk/google direct provider. Four viem-backed reader tools (vault state, user position, oracle price, recent callbacks) give the chat live on-chain grounding so every numeric answer comes from a fresh contract read, not a static context blob
+
+---
+
+# AtlasRouter
+
+# AtlasRouter
+
+Description: Utility hook for efficient onchain routing
+Tags: Custom Routers, DEX
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI6
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/0xCamax/AtlasRouterHook](https://github.com/0xCamax/AtlasRouterHook)
+Slides: 
+Project Link: 
+Demo Video: [https://camax.dev/assets/AtlasRouter.mp4](https://camax.dev/assets/AtlasRouter.mp4)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Most routing solutions depend on off-chain quoting infrastructure to discover the best execution path. This creates a limitation for fully on-chain strategies, smart contracts, and autonomous agents that cannot rely on external services during execution.
+
+This project introduces a routing hook that makes path selection directly on-chain using real-time pool state. By evaluating effective prices across multiple liquidity sources during execution, it enables strategies to access competitive routing without requiring off-chain quotes, APIs, keepers, or external computation.
+
+The result is a routing primitive specifically designed for fully autonomous on-chain systems.
+
+## Impact: What makes this project unique? What impact will this make?
+
+The impact is a more secure and efficient DeFi ecosystem where fully on-chain strategies can achieve execution quality comparable to advanced routers while preserving decentralization, composability, and autonomy.
+
+## Challenges: What was challenging about building this project?
+
+The most challenging part of the project was building a unified routing path across both Uniswap v3 and v4 liquidity sources.
+
+---
+
 # Auction Managed AMM & Active Range Incentives in A
 
 # Auction Managed AMM & Active Range Incentives in Any Currency
@@ -1846,7 +2037,7 @@ Description: am-AMM is an AMM model that utilizes Uniswap v4 hooks to introduce 
 Tags: DeFi, Dynamic Fee, MEV
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 am-AMM is an AMM model that utilizes Uniswap v4 hooks to introduce an auction-based pool manager system, reducing losses from informed orderflow and maximizing revenue from uninformed orderflow. It aims to enhance AMM efficiency and profitability by combining dynamic fee setting with internalized arbitrage.
@@ -1861,7 +2052,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -2338,6 +2529,59 @@ The hardest parts were reliable cross-network callback delivery, nonce synchroni
 
 ---
 
+# Autonomous OTC Hook
+
+# Autonomous OTC Hook
+
+Description: We want to build an Autonomous OTC Hook for Uniswap v4 that gives a pool a second execution lane for large and more sensitive trades. The key idea is that public AMM execution and block-sized negotiated execution do not need to be forced through the same liquidity surface. The hook would let smaller and more organic flow trade against the public pool as normal, while larger trades would be routed through an authenticated OTC-style path with explicit permissions, clip-size controls, and settlement protections. In simple terms, the visible pool remains the public market shell, but large flow gets a more controlled route. This is not meant to be a fully dark exchange. That would be too heavy and probably not the right first step. The idea is to build a realistic segmented market structure inside the Uniswap v4 model, where different order sizes can use different execution rules without losing composability.
+Tags: CFMM, LP Liquidity, Regulation
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/idrees535/uniswap-v4-autonomous-otc-hook-uhi9](https://github.com/idrees535/uniswap-v4-autonomous-otc-hook-uhi9)
+Slides: https://docs.google.com/presentation/d/1Q6SbYnUN-h8Ms3TRBDe1Y6N-zyxGB0xn9nGFm1Cvd_M/edit?usp=sharing
+Project Link: https://docs.google.com/presentation/d/1Q6SbYnUN-h8Ms3TRBDe1Y6N-zyxGB0xn9nGFm1Cvd_M/edit?usp=sharing
+Demo Video: [https://docs.google.com/presentation/d/1Q6SbYnUN-h8Ms3TRBDe1Y6N-zyxGB0xn9nGFm1Cvd_M/edit?slide=id.g3eaae4b68b1_0_15#slide=id.g3eaae4b68b1_0_15](https://docs.google.com/presentation/d/1Q6SbYnUN-h8Ms3TRBDe1Y6N-zyxGB0xn9nGFm1Cvd_M/edit?slide=id.g3eaae4b68b1_0_15#slide=id.g3eaae4b68b1_0_15)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Public AMMs are excellent for open price discovery and composable retail execution, but they are often a poor venue for larger and more sensitive trades. When block-sized flow is forced through the same visible liquidity surface as smaller organic flow, it leaks intent, increases slippage pressure, and exposes LPs to more adverse selection than they should have to absorb.
+
+This project was inspired by a simple market structure question: why should every trade, regardless of size and sensitivity, be forced into the exact same execution lane? In traditional markets, block flow often uses different rails from lit execution. We think Uniswap v4 hooks finally give enough control to bring a version of that logic onchain in a clean way.
+
+For the LP side, the problem is not just execution quality for whales. It is also yield quality. If every large trade hits the same public curve, LPs become the default balance sheet for block-sized flow. That can create worse flow quality, weaker long-run returns, and more brittle liquidity behaviour.
+
+## Impact: What makes this project unique? What impact will this make?
+
+What makes this project unique is that it treats Uniswap v4 hooks as a market structure primitive, not just as a fee customization tool. Instead of only changing fees, it changes where and how certain order flow should execute.
+
+The hook creates a dual-lane design:
+- smaller flow continues using the public AMM shell
+- larger flow must use authenticated OTC-style execution
+
+That design can improve LP yield quality by reducing the amount of block-sized, potentially toxic flow that blindly routes through the public curve. It also creates a more realistic path for DAOs, treasuries, and larger traders who want onchain settlement but need more structure than a one-lane AMM offers.
+
+Over time, the broader impact is that Uniswap pools can start becoming more specialized execution venues. This is especially useful for pairs where trade-size segmentation matters a lot.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was keeping the design practical. It is easy to say “build OTC on top of Uniswap,” but much harder to make that credible without turning it into a vague dark-pool fantasy.
+
+A few specific challenges were:
+- making the OTC path authenticated instead of trust-based
+- handling nonce invalidation and replay safety cleanly
+- supporting partial fills and batch orders without making the order book too messy
+- preserving the public AMM shell for normal flow while still enforcing private routing for large flow
+- making the project fit a UHI9 framing around LP protection and sustainable yield, rather than only execution novelty
+
+Another real challenge was keeping the design honest. This is not a fully private exchange. It is a segmented execution hook, and presenting it correctly matters.
+
+---
+
 # Autopilot Hook
 
 # Autopilot Hook
@@ -2380,6 +2624,95 @@ With more time and funding, I would allocate additional resources to backtesting
 # Team: Who is on the team? What are their backgrounds?
 
 Régis Graptin - Software Engineer - Some background as a Deep Learning Engineer looking for web3 opportunities
+
+---
+
+# BOB - Belief-Oriented Buyback
+
+# BOB - Belief-Oriented Buyback
+
+Description: BOB is a Uniswap v4 hook for conviction-aligned LPing. It lets maxis support liquidity and earn yield while staying closer to the asset they actually believe in.
+Tags: DEX, LP Fees
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/yeahChibyke/bob](https://github.com/yeahChibyke/bob)
+Slides: https://bob-nine-rho.vercel.app/pitch.html
+Project Link: https://bob-nine-rho.vercel.app/
+Demo Video: [https://www.tella.tv/video/introduction-to-bob-single-sided-liquidity-management-5kod](https://www.tella.tv/video/introduction-to-bob-single-sided-liquidity-management-5kod)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Maxis are one of the strongest backbones of crypto. They hold through volatility, provide cultural conviction, and often represent the deepest long-term belief in an asset. But traditional LPing does not really serve them well.
+
+To earn yield, a maxi usually has to stop acting like a pure holder and start acting like an active liquidity manager. They are forced to provide double-sided liquidity, constantly monitor and rebalance ranges, and accept returns in two tokens — one of which they may not actually want to hold.
+
+This creates a mismatch: the people most committed to an asset are also the people most likely to avoid LPing, because the experience exposes them to inventory drift, range management, and unwanted token accumulation.
+
+BOB was inspired by this gap. It asks: what if LPing could feel more like conviction-based holding? What if a maxi could support liquidity around an asset they believe in, earn yield, and still maintain a one-sided, belief-aligned exposure?
+
+## Impact: What makes this project unique? What impact will this make?
+
+BOB is unique because it reframes LPing around belief, not just capital efficiency. Most liquidity systems assume LPs are neutral market makers who are comfortable holding both sides of a pair. BOB starts from a different user: the maxi who wants yield, but does not want to dilute their conviction by holding unwanted exposure.
+
+The impact is that BOB can unlock a new class of liquidity providers: long-term holders who currently avoid LPing because it feels too active, too risky, or too misaligned with their thesis. By making liquidity provision feel more like one-sided holding, BOB can turn idle conviction into productive liquidity.
+
+For protocols and ecosystems, this means deeper liquidity from their strongest believers. For users, it means earning yield without constantly range-managing or drifting away from the asset they actually want to accumulate. In the long run, BOB helps make LPing more accessible, emotionally intuitive, and aligned with how crypto communities already behave.
+
+## Challenges: What was challenging about building this project?
+
+The biggest challenge was translating a simple user idea — “let maxis LP without compromising their conviction” — into something that fits correctly inside Uniswap v4’s hook architecture.
+
+BOB is not just a UI concept; it needs to respect how swaps, liquidity accounting, pool balances, deltas, and hook permissions work. The difficult part was designing the logic so that the user experience feels simple and one-sided, while the underlying mechanism still works within a fundamentally two-sided AMM environment.
+
+Another challenge was balancing ambition with safety. It is easy to overdesign a hook that promises too much, but harder to build something understandable, testable, and realistic for a hackathon timeline. I had to focus on the core primitive: belief-aligned liquidity, yield, and simplified LP participation, while avoiding unnecessary complexity.
+
+Overall, the challenge was making BOB feel emotionally intuitive for users, while staying technically honest about the constraints of Uniswap v4.
+
+---
+
+# BackStop
+
+# BackStop
+
+Description: BackStop is an impermanent loss insurance marketplace built as a Uniswap v4 hook. Think Aave Umbrella, but for IL. LPs get automatic protection while underwriters earn a new on-chain yield primitive.
+Tags: DEX, Dynamic Fee, Impermanent Loss, LP Fees, LP Liquidity, Yield Systems
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 10, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/youssef-jeddi/backStop](https://github.com/youssef-jeddi/backStop)
+- **Deck / Slides:** [https://canva.link/24nv4ya4vnyiou0](https://canva.link/24nv4ya4vnyiou0)
+- **Demo Video:** [https://youtu.be/Rnzj0oN5yD4](https://youtu.be/Rnzj0oN5yD4)
+- **Live Project:** [https://back-stop-2j30reioz-youssefs-projects-822ed3d0.vercel.app/](https://back-stop-2j30reioz-youssefs-projects-822ed3d0.vercel.app/)
+
+### **Partner Integrations**
+
+No partner integrations.
+
+### **Problem / Background**
+
+Impermanent loss is a big problem in DeFi but nobody really talks about it, even though almost half of Uniswap v3 LPs end up worse off than if they'd just held. The existing fixes don't work for normal users: manual hedging takes constant attention, wider ranges kill your fees.
+
+Took Aave Umbrella as inspiration and built BackStop — the "insurance" for Impermanent Loss instead of bad debt.
+
+### **Impact**
+
+What makes BackStop unique is the pricing mechanism: instead of a fixed premium or oracle-estimated risk, the pool's own realized volatility — measured directly from its price history — prices the insurance. The market literally prices its own insurance, with no external dependencies.
+
+The impact comes from making liquidity provision a sound trade for normal users. If LPs are protected, they stay longer and deeper, which means tighter spreads and more volume. Underwriters get a new yield primitive. Traders pay the exact same fee.
+
+### **Challenges**
+
+The hardest part was getting the fee splitting right — traders should pay the exact same fee as on a normal pool, with the redirection to underwriters happening invisibly. Using beforeSwap to set a dynamic LP fee and afterSwap with a return delta to capture the difference took a lot of iteration, especially with the dual-asset reserve.
+
+This kind of project really needs someone with actuarial or quant finance expertise to calibrate the economics properly across different market regimes.
 
 ---
 
@@ -2658,6 +2991,42 @@ The biggest challenge was getting up to speed with Uniswap v4’s new design spa
 
 kexley: lead solidity dev at beefy
 mrt: junior solidity dev at beefy
+
+---
+
+# Bequeath
+
+# Bequeath
+
+Description: Bequeath is a Uniswap v4 hook that self-funds a smoothed monthly income stream from an LP's own realized fees, parked in an ERC-4626 yield vault and transfers that living stream to a beneficiary if the owner goes inactive, making a DeFi yield position inheritable
+Tags: Heir Succession, LP Fees, LP Liquidity, Other, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+N/A
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Shawnchee/bequeath](https://github.com/Shawnchee/bequeath)
+Slides: https://drive.google.com/file/d/1a6l5m0967N4rwcetMEuqZkLtN4cVUCCY/view?usp=sharing
+Project Link: 
+Demo Video: [https://drive.google.com/file/d/1CTatoHSfbd-3j9kGUx5jSPFC5AisBWKe/view?usp=drive_link](https://drive.google.com/file/d/1CTatoHSfbd-3j9kGUx5jSPFC5AisBWKe/view?usp=drive_link)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+DeFi yield has two unsolved problems: yield dies with the owner -> Chainalysis estimates ~$140B in BTC is permanently lost (either owner died or went missing)
+
+## Impact: What makes this project unique? What impact will this make?
+
+Bequeath introduces a genuinely new onchain primitive: a self-funded income stream that outlives its owner!
+
+This directly addresses the ~$140B lost-crypto problem with a trustless, on-chain mechanism and opens the door to DeFi-native pensions and generational wealth transfer without requiring any offchain coordination or added cost to the swap market
+
+## Challenges: What was challenging about building this project?
+
+Had to skim through alot of documentation to assess whether this hook would actually work and spent alot time researching and doubting myself along the way :)
 
 ---
 
@@ -3192,6 +3561,40 @@ The most challenging thing while building this project is settling the Pool Mana
 
 ---
 
+# Brook
+
+# Brook
+
+Description: Brook is a Uniswap v4 hook that turns unpredictable swap fees into steady, paycheck-style income for liquidity providers. It holds a slice of each swap fee in a buffer and streams it out the following epoch, weighted by who actually stayed in range.
+Tags: Basic Interest Rate, Custom Routers, Dynamic Fee, LP Fees, Unichain, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Brook is built on Uniswap v4 core primitives.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Fatumayattani/brook](https://github.com/Fatumayattani/brook)
+Slides: https://brook-hook.xyz/pitch.html
+Project Link: https://brook-hook.xyz/
+Demo Video: [https://youtu.be/EXn2bJ2VeyA](https://youtu.be/EXn2bJ2VeyA)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+LP fee income is unpredictable. Fees only arrive when swaps happen, so a pool can pay high yields one week and almost nothing the next. That volatility quietly disqualifies the largest, most patient pools of capital, since institutional LPs, stablecoin protocols, and anyone who has to report and budget cannot rely on income that swings wildly. Brook was inspired by the idea that the problem is not the size of the fees but their unpredictability. If LP yield could be made steady, an entire class of serious capital could finally provide liquidity.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Brook makes LP yield predictable without any subsidies or emissions. It holds back a configurable slice of each swap fee in an epoch buffer, then streams it to LPs over the next epoch, weighted by their time in range, so committed liquidity earns more while everyone still earns. This turns volatile fee income into something closer to fixed income, which unlocks a whole category of structured products such as LP bonds and fixed-rate vaults that cannot exist on top of random yield. Because the yield is real fee revenue rather than emissions, there is nothing artificial to run dry.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was making the hook genuinely testable by anyone. Brook keys each LP position to the caller, but the standard v4 test routers route every position through the router's own address, so positions did not attribute to individual users. I wrote a small custom periphery router that encodes each user's address into the position salt, so positions key to the real user even though the router is always the caller. Getting the fee skim to work correctly through afterSwapReturnDelta, and sequencing the deploy, seed, and rollover on a tight testnet budget, also took real iteration.
+
+---
+
 # Bundl
 
 # Bundl
@@ -3281,7 +3684,7 @@ Tags: CCIP, Cross-Chain, DEX, DeFi
 Integrations: Chainlink
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 The idea behind project is to utlize the freedom of CCIP and uniswap V4 hooks, to create pool that have native cross chain swap
@@ -3296,7 +3699,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -3371,6 +3774,41 @@ I am thinking of adding liquidity in a way that could protect from sudden MEV li
 
 Jules Leidelinger: French engineer from grande ecole, 10 years xp on algorithmic trading on centralized markets https://www.linkedin.com/in/jules-l-51b94b51/ 
 John Yu: blockchain developer https://www.linkedin.com/in/john-the-white-belt/
+
+---
+
+# CHEFT - Crypto Hook Exchange Fund Token
+
+# CHEFT - Crypto Hook Exchange Fund Token
+
+Description: CHEFT is a Uniswap V4 hook-native on-chain index protocol that gives users diversified exposure to a weighted basket of crypto  assets assets through a single deposit — no fund managers, no custodians, no off-chain infrastructure. The hook atomically swaps eposits into a target-weighted basket, mints an ERC4626 CHEFT share token representing proportional NAV, and rebalances autonomously via Reactive Network's event-driven contract system when basket weights drift beyond 5%.
+Tags: Auctions, Dynamic Fee, LVR, MEV, Oracle, Price Discovery
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+ReactiveRebalancer.sol is deployed on Reactive Network and subscribes to WeightDriftDetected events emitted by CHEFTHook on Base. When any basket token's weight drifts beyond 5%, the Reactive Contract autonomously fires triggerRebalance() on-chain with no manual triggers, bot maintenance, or off-chain monitoring. This eliminates the keeper problem entirely.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/nallalabs/cheft](https://github.com/nallalabs/cheft)
+Slides: https://github.com/NallaLabs/cheft/blob/main/docs/CHEFT_slides.pdf
+Project Link: 
+Demo Video: [https://youtu.be/BpXXAynijG0](https://youtu.be/BpXXAynijG0)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Getting diversified crypto exposure today requires manually buying and rebalancing multiple tokens, trusting a centralised fund manager, or running off-chain keeper bots. None of these are permissionless, autonomous, or cheap enough for ordinary depositors — especially after fees on Ethereum mainnet make small basket deposits economically unviable. CHEFT was inspired by the ETF mechanic and the question: what if the entire index fund lifecycle — deposit, NAV accounting, and rebalancing — lived inside a single Uniswap V4 hook with no operators at all?
+
+## Impact: What makes this project unique? What impact will this make?
+
+CHEFT is the first fully on-chain ETF that requires no off-chain infrastructure at any point in its lifecycle: deposits route through Uniswap V4 hook callbacks, NAV is calculated from Chainlink + TWAP dual oracles with a 2% deviation circuit-breaker, rebalancing is triggered by Reactive Network event subscriptions, and execution is done by permissionless solvers competing in an auction window.
+
+## Challenges: What was challenging about building this project?
+
+(1)Balancer weighted math at WAD precision — implementing outGivenIn using PRBMath UD60x18 pow() for fractional exponents while keeping all decimal scales consistent across 6-decimal USDC, 8-decimal Chainlink prices, and 18-decimal WAD math required careful normalisation at every boundary. (2) Reactive Network cross-chain event relay — wiring the WeightDriftDetected event on Base to a Reactive Contract that fires back a callback on Base required understanding the Reactive Network reactive contract architecture and ensuring the callback payload was ABI-encoded correctly for CHEFTHook.triggerRebalance().
 
 ---
 
@@ -3922,7 +4360,7 @@ Description: Auction managed AMM allowing to strategists compete by predicting o
 Tags: DEX, DeFi, Dynamic Fee, LP Fees, MEV
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Auction managed AMM allowing to strategists compete by predicting onchain volatility
@@ -3933,7 +4371,7 @@ Cohort: UHI2
 🔗 **Links**
 
 - [https://github.com/pixelis0x/Chronus](https://github.com/pixelis0x/Chronus)
-- [https://solar-wax-146.notion.site/Chronus-presentation-10344f08992f8061b954ed6784902e34?pvs=4](https://www.notion.so/10344f08992f8061b954ed6784902e34?pvs=21)
+- [https://solar-wax-146.notion.site/Chronus-presentation-10344f08992f8061b954ed6784902e34?pvs=4](https://app.notion.com/p/10344f08992f8061b954ed6784902e34?pvs=21)
 - [https://gamma.app/docs/Chronus-cawn35yu2sgdzrp](https://gamma.app/docs/Chronus-cawn35yu2sgdzrp)
 </aside>
 
@@ -4225,6 +4663,17 @@ Michael / m00npapi -- Community & Dune & Vibes
 
 ---
 
+# Cleave
+
+# Cleave
+
+Description: A Uniswap v4 hook that turns LP positions into fixed-income products: Pendle, but for liquidity. The first time yield tokenization works for volatile-pair AMM liquidity, made possible by v4's hook-level custody and a watermark mechanism that protects principal during impermanent loss.
+Tags: CFMM, Custom hooks, LP Fees, NoOp, Options/Futures, Pool Native Incentivization, Unichain
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+---
+
 # CoPool Hook
 
 # CoPool Hook
@@ -4280,7 +4729,7 @@ Tags: CoW, Coincidence of Wants, MEV
 Integrations: Brevis
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 CoW hook uses smart indexing engine, which is able to match existing orders if there is a Coincidence of Wants. In order to achieve end-to-end trustless flow, it uses Brevis as a verifiability layer. If there is no CoW after certain blocks (specified by user), trade will be executed through AMM regularly.
@@ -4295,7 +4744,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -4762,6 +5211,41 @@ I couldn't integrate EigenLayer, their docs and workshop felt cryptic/gatekept. 
 
 ---
 
+# Corridor
+
+# Corridor
+
+Description: Corridor is a community-owned infrastructure that builds on traditional African communal finance to offer decentralized, low-cost remittance and currency exchange solutions for local and diaspora communities. By leveraging Uniswap v4 and Reactive Network automation, the platform aims to slash transaction costs from over 8% to under 1% while protecting liquidity providers from volatility and impermanent loss.
+Tags: Dynamic Fee, Governance, LP Liquidity, Liquidity Mining, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+We integrated our core partner, Reactive Network, directly into our Uniswap v4 hook framework to create an automated, low-cost remittance pipeline. While the Uniswap v4 singleton architecture houses our currency exchange pools and manages transaction batching to lower costs to under 1%, Reactive Network serves as our automation layer. It constantly monitors exchange rate volatility to shield our community liquidity providers from impermanent loss and automatically moves idle capital into lending protocols to maximize yields.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/meshackyaro/corridor](https://github.com/meshackyaro/corridor)
+Slides: 
+Project Link: 
+Demo Video: [https://www.loom.com/share/d2052f2fce2d4b8f95510f0c4496a695](https://www.loom.com/share/d2052f2fce2d4b8f95510f0c4496a695)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+The project was inspired by traditional African communal finance practices like esusu, ajo, and charam, combined with the financial challenges faced by modern African communities. It addresses the high cost of traditional money transfers, severe currency volatility, and the limited access to stable dollars for millions of crypto users and diaspora members across the continent.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Corridor distinguishes itself by digitizing traditional African mutual-aid systems like esusu through Uniswap v4 hooks and Reactive Network automation. These technologies protect liquidity providers from impermanent loss, optimize idle funds via lending protocols, and batch transactions to lower user costs.This infrastructure slashes cross-border remittance fees from 8.37% to under 1% to maximize wealth retention for local families and the diaspora. Ultimately, it provides an affordable dollar hedge and sustainable yield for 22 million Nigerian crypto users facing severe currency volatility.
+
+## Challenges: What was challenging about building this project?
+
+Integrating and Deploying to Reactive Network, finding how to navigate NGN/USD pairs as it they aren't readily available
+
+---
+
 # CowDEX Arena
 
 # CowDEX Arena
@@ -4919,7 +5403,7 @@ Tags: DeFi
 Integrations: Chainlink
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 A hook to perform cross chain swaps using CCIP
@@ -4934,7 +5418,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -5083,6 +5567,108 @@ Mrwicks: Mr is a smart contract developer
 
 ---
 
+# CrossHedge — CoW for LP risk
+
+# CrossHedge — CoW for LP risk
+
+Description: CrossHedge is a Uniswap v4 hook that hedges impermanent loss by matching LPs with opposing risk peer-to-peer across chains, with an ERC-4626 vault as the always-available counterparty. The matching engine runs entirely on-chain via Reactive Network, no bridge, no keeper, no off-chain solver, and redirects the $60-120M/year that LPs currently leak to arbitrageurs back to LPs and vault depositors.
+Tags: CoW for LP Risk, Cross-Chain, Cross-Chain LP Netting, Delta Hedging, ERC-4626 Yield Vault, Impermanent Loss Protection, Inter-Connected Pools, LP Fees, LP Liquidity, LVR, Peer-to-Peer Risk Matching, Reactive Smart Contracts, Real Yield, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/jmakwana0x1/UHI-Project](https://github.com/jmakwana0x1/UHI-Project)
+- **Deck / Slides:** [https://uhi-project.vercel.app/CrossHedge-Pitch-Deck.html](https://uhi-project.vercel.app/CrossHedge-Pitch-Deck.html)
+- **Demo Video:** [https://www.youtube.com/watch?v=MDP-ZVi1KDs](https://www.youtube.com/watch?v=MDP-ZVi1KDs)
+- **Live Project:** [https://uhi-project.vercel.app/crosshedge.html](https://uhi-project.vercel.app/crosshedge.html)
+
+### **Partner Integrations**
+
+Reactive Network isn't an integration in CrossHedge, it's the load-bearing wall.
+
+The entire matching engine is three Reactive Smart Contracts live on Lasna:
+
+- MatchingRSC subscribes to LPPositionOpened events on both Unichain Sepolia and Base Sepolia simultaneously, maintains a candidate pool, runs 4-gate pair matching (sign, horizon, gamma, correlation) on every Cron10 tick, and delivers recordMatch callbacks to the registries on both origin chains.
+- Two StrategyRSCs (one per chain) ingest price snapshots on Cron100, maintain a realized-volatility EMA fully on-chain with no oracle, and trigger ERC-4626 vault rebalances via cross-chain callback.
+
+We use Reactive as three things at once:
+
+1. A matching engine
+2. An oracle-free market-data feed
+3. A cross-chain settlement layer
+
+The RSCs are composed: one RSC's output event (PairMatched) becomes another contract's input on two destination chains. That composition is not possible on any other infrastructure we evaluated.
+
+It's all verifiable on-chain today.
+
+The keystone transaction is a PairMatched on Lasna (block 3,717,881) pairing two opposite-delta LPs from different chains, with both Callback events marked "successfully delivered and confirmed" to Unichain and Base, where the registries emit MatchRecorded, full cross-chain match closed in under two minutes.
+
+All three RSCs are verified via Sourcify, Reactive's canonical verifier, and the README maps every claim to a clickable tx and every component to its source file.
+
+We also did the homework on why Reactive specifically.
+
+Our cost analysis (full derivation, sensitivity tables, and a reproducible Python script in the repo) shows the same workload costs:
+
+- ~$547,000/year on Chainlink Automation + CCIP
+- ~$86,000/year with a centralized keeper
+- ~$8,000/year on Reactive
+
+That's about 66x cheaper than Chainlink, holding from 87x in quiet gas regimes to 66x in congested ones, because Reactive only pays destination gas on actual matches instead of every cron tick.
+
+And we engineered for Reactive's failure modes honestly: a watchdog in the registry detects RSC silence and gracefully degrades the hook to vanilla Uniswap, with the pause demonstrated live on both chains.
+
+Two details we're a little proud of:
+
+- Getting the AbstractCallback rvm_id auth convention right (it's the deployer, not the RSC address, and getting it wrong fails silently).
+- The Reactive team being genuinely helpful in Discord when we hit Lasna deploy issues, which we've acknowledged in the README.
+
+### **Problem / Background**
+
+I came into UHI the way I suspect a lot of people do: I could write Solidity, but I didn't actually understand what an LP position was financially.
+
+So before touching hook code, I went down the rabbit hole: AMM mechanics from first principles, then impermanent loss, then the LVR literature (Milionis et al.). That's where I hit the number that wouldn't leave me alone: LPs leak $60-120M a year to arbitrageurs.
+
+Everyone in DeFi knows it.
+
+The accepted answer is "hedge with a perp and pay 8-80% funding," which nobody does, because the cure costs more than the disease.
+
+What the research phase gave me was the reframe.
+
+Once you see an LP position as a short-volatility option rather than "two tokens in a box," something jumps out: the opposite exposure already exists inside DeFi itself.
+
+An in-range LP on one chain and an above-range LP on another are natural hedges for each other. They just have no way to find each other.
+
+CoW Protocol proved that matching opposing flow peer-to-peer beats routing it to the market. Nobody had applied that one layer up, to LP risk instead of trades.
+
+So CrossHedge solves two problems at once:
+
+- LPs bleeding to volatility with no affordable hedge.
+- A pile of offsetting risk sitting on different chains, blind to itself.
+
+I evaluated a dozen hook ideas during the cohort before committing to this one, and it won because it was the only idea where the more I researched, the bigger it got.
+
+### **Impact**
+
+What makes it unique is that the yield isn't manufactured — it's redirected. There are no token emissions anywhere in the system. Every dollar of vault yield (~14% modeled blended APY, rising toward ~38% in high-vol regimes) comes from premium flow that LPs are already paying to volatility today. It just currently lands in arbitrageurs' pockets instead.
+
+As far as can be determined, this is the first cross-chain peer-to-peer netting layer for LP risk: the hedge itself is another LP, not a centralized market maker, and the matching engine is a smart contract on Reactive Network, not a server.
+
+Conservatively, early adoption returns over $1M/year to LPs and vault depositors out of the $60-120M annual LVR leak. Adoption is strictly upside by design — if the matching layer ever fails, the watchdog detects it and pools degrade gracefully to plain vanilla Uniswap.
+
+### **Challenges**
+
+The most instructive bug: premium charging worked perfectly against a mock PoolManager for weeks. The first run against the real v4 PoolManager on Unichain Sepolia immediately reverted with CurrencyNotSettled. The root cause was that real v4 enforces flash accounting strictly — returning a positive hook delta without a matching take() leaves an unsettled balance, and mocks are simply too polite to tell you. Seven fork tests against the live PoolManager are now a permanent part of the test suite.
+
+Pricing the short side honestly was the second fight. An above-range LP holds only USDC, so its "short delta" is synthetic — grounded in Reiner-Rubinstein barrier-option math, weighting exposure by the probability that price actually reaches the range. Making that numerically stable in fixed-point Solidity, with square roots, exponential approximations, and saturation guards, took longer than building the entire hook skeleton.
+
+The third challenge: making three chains tell the same story. The hook, registry, and vault all reference one another across two chains, while v4 hooks additionally encode their permissions in the address itself — requiring CREATE2-predicted addresses, hook-flag mining, and a two-chain deployment pipeline to all agree before anything could ship.
+
+Building solo on Reactive's Lasna testnet added its own surprises, including uncovering the subtle AbstractCallback convention where rvm_id is the deployer wallet, not the RSC address — a mistake that fails silently.
+
+---
+
 # CrossLink
 
 # CrossLink
@@ -5130,6 +5716,47 @@ We aim to extend the Cross-Chain Limit Order project by automating the redeem pr
 
 Emirhan Çavuşoğlu : Fullstack Developer 
 Ahmet Tahir Yıldız : Fullstack Developer
+
+---
+
+# CrossPoolHedger Hook
+
+# CrossPoolHedger Hook
+
+Description: CrossPoolHedger Hook is a Uniswap v4 hook that coordinates LP exposure across two correlated pools, such as ETH/USDC and ETH/stETH. A Reactive Network RSC monitors exposure events from both pools, computes combined imbalance, and triggers a hedge callback when cross-pool IL drift exceeds a threshold.
+Tags: Autonomous Rebalancing, Correlated Pools, Cross-Pool Hedging, DeFi Risk Infrastructure, Event-Driven Automation, Impermanent Loss, LP Risk Management, ReactVM, Reactive Network, Uniswap v4 Hooks
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+CrossPoolHedger integrates Reactive Network through a Reactive Smart Contract deployed on Lasna. The hook emits PoolExposureUpdate(bytes32,int256,int256,uint256) events, the RSC subscribes to those events, maintains netExposureA and netExposureB on ReactVM, and emits a callback to executeHedgeSwapFromReactive(address,bytes32,int256,int256) when threshold and cooldown checks pass. The demo confirms the full Reactive flow: origin event, Lasna RVM callback queue, and destination HedgeExecuted callback.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/smartman873/crosspoolhedger-hook](https://github.com/smartman873/crosspoolhedger-hook)
+Slides: https://gamma.app/docs/Correlated-pairs-cancel-each-others-impermanent-loss-8h1avd6t4um21tf
+Project Link: 
+Demo Video: [https://youtu.be/C-N3OAoOHv0](https://youtu.be/C-N3OAoOHv0)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Impermanent loss is caused by market-wide price movement, but LP risk management is usually handled one pool at a time. When ETH moves, correlated ETH-denominated pools experience related exposure shifts, yet LPs in ETH/USDC, ETH/stETH, ETH/DAI, and similar pools have no native mechanism to coordinate or net those exposures.
+
+CrossPoolHedger solves this gap by treating IL as a cross-pool signal. The hook tracks exposure across two correlated Uniswap v4 pools, emits exposure updates, and uses Reactive Network to autonomously trigger a hedge callback when the combined imbalance becomes large enough.
+
+## Impact: What makes this project unique? What impact will this make?
+
+What makes this project unique? What impact will this make?
+CrossPoolHedger is unique because it moves IL mitigation from isolated pool logic to cross-pool coordination. Instead of relying on an off-chain keeper or managing one pool’s local fee/yield strategy, it uses a Reactive Smart Contract to monitor both pools, maintain combined exposure state, and trigger an authenticated on-chain callback.
+
+The impact is better LP risk coordination for correlated assets. If developed further, this pattern can make liquidity stickier, reduce unmanaged IL drift, and open a new design space for Uniswap v4 hooks that act across multiple pools rather than inside only one pool.
+
+## Challenges: What was challenging about building this project?
+
+What was challenging about building this project?
+The hardest part was designing a clean two-chain Reactive flow with verifiable proof at every stage. A successful origin event is not enough; the demo needed to prove the hook emitted PoolExposureUpdate, Lasna processed the event, the RSC queued the callback, and the destination hook emitted HedgeExecuted.
 
 ---
 
@@ -5226,7 +5853,7 @@ Description: Coincidence of wants
 Tags: DeFi
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Coincidence of wants
@@ -5241,7 +5868,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -5273,7 +5900,7 @@ Description: Coincidence of wants
 Tags: CoW, Coincidence of Wants, DEX, DeFi
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Coincidence of wants
@@ -5288,7 +5915,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -5373,7 +6000,7 @@ Description: Charge dynamic pool fees based on swappers preferences of what they
 Tags: DEX, Dynamic Fee, LP Fees, MEV, Trading Rewards
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Charge dynamic pool fees based on swappers preferences of what they are willing to pay in the next block & charge higher fees for txs identified as MEV.
@@ -5895,6 +6522,77 @@ Andrea Rojas Alvarez - [email removed]
 
 ---
 
+# DeltaHed-Hook
+
+# DeltaHed-Hook
+
+Description: Native insurace hook
+Tags: Insurance
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+We integrated our partners by using Unichain as the execution layer for the Uniswap v4 LP lifecycle and Reactive Network as the off-chain/on-chain automation layer for market-aware reserve management. DeltaHed’s v4 hook runs on Unichain, where it detects LP position events, calculates exposure, and routes dynamic USDC premiums into the shared reserve. Reactive Network observes Unichain market activity and reserve events, including swap behavior, reserve health, and pending liabilities, then pushes updates that adjust participation pricing and trigger aggregate settlement logic when the reserve is sufficiently funded. This combination lets DeltaHed keep coverage native to the LP position while making the system cost-effective and adaptive without relying on external perps or manual hedging.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/andresmolinasix/DeltaHed-UHI9](https://github.com/andresmolinasix/DeltaHed-UHI9)
+Slides: https://canva.link/bla4ru3bpfo282i
+Project Link: https://github.com/Andre154/DeltaHedFront
+Demo Video: [https://vimeo.com/[phone removed]](https://vimeo.com/[phone removed])
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+DeltaHed was inspired by the core trade-off of providing liquidity in DeFi: LPs earn fees, but they also carry impermanent loss. Today, that risk is usually unmanaged inside the LP position itself or hedged externally through perps and manual strategies, which introduce new risks.
+We solve this natively for Uniswap v4 LPs. DeltaHed uses a v4 hook to calculate each position’s exposure, charge a dynamic USDC premium, and fund a shared reserve. As more LPs participate, the reserve becomes deeper and more stable, allowing part of the LP’s loss to be covered through the protocol instead of being carried entirely by the LP.
+
+## Impact: What makes this project unique? What impact will this make?
+
+We looked to convert the deterministic model of v4 concentrated liquidity that generates impermanent loss into a data-based mathematical framework. This helps us model and introduce non-deterministic effects on-chain.
+
+## Challenges: What was challenging about building this project?
+
+Time management.
+
+---
+
+# DeltaNeutral Vault Hook
+
+# DeltaNeutral Vault Hook
+
+Description: DeltaNeutral Vault Hook is a Uniswap v4 hook that monitors LP delta exposure after swaps and uses Reactive Network to autonomously trigger hedge adjustments when pool exposure drifts outside a configured dead band. It proves a full hook-to-RSC-to-callback flow on Unichain Sepolia and Reactive Lasna, reducing unmanaged impermanent-loss exposure without keepers or off-chain bots.
+Tags: Delta-Neutral Hooks, Event-Driven Automation, Hedge Adapter, Impermanent Loss Mitigation, LP Hedging, Perp Hedging, Reactive Network, Reactive Smart Contracts, Risk Management, Unichain Sepolia, Uniswap v4 Hooks, Yield Systems
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+The project integrates Reactive Network through a Reactive Smart Contract deployed on Reactive Lasna. The Uniswap v4 hook emits `DeltaDrift(poolId, netDelta, deltaChange, sqrtPriceX96, totalPositionValue, timestamp)` after swaps when LP delta drift crosses the threshold. The RSC subscribes to that event, validates the origin chain/hook/topic, computes `hedgeTarget = -netDelta` on ReactVM, and emits authenticated callbacks to both `HedgeAdapter.adjustHedgeFromReactive()` and `DeltaNeutralHook.updateHedgePositionFromReactive()`. The demo proves the full flow with live txs: origin event, Lasna RVM ingestion, adapter callback, hook callback, and final hedge-state convergence.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/josh-hooah/deltaneutral-vault-hook](https://github.com/josh-hooah/deltaneutral-vault-hook)
+Slides: https://gamma.app/docs/BlackRock-for-LPs-1ymyrwup6thldbp
+Project Link: 
+Demo Video: [https://youtu.be/_Y6nbnu9M3E](https://youtu.be/_Y6nbnu9M3E)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+LPs in volatile AMM pools are implicitly short gamma: as price moves, the pool rebalances them toward the depreciating asset, so passive fee yield comes with unmanaged directional exposure and impermanent loss risk. Existing hook approaches such as dynamic fees, range rebalancing, and idle-yield routing can improve fee capture or capital efficiency, but they do not directly neutralize LP delta exposure. DeltaNeutral Vault Hook was built to make LP risk management autonomous, observable, and native to the Uniswap v4 lifecycle by reacting to swap-created delta drift instead of relying on manual hedging or centralized bots.
+
+## Impact: What makes this project unique? What impact will this make?
+
+DeltaNeutral Vault Hook is unique because Reactive Network is core to the architecture, not a bolt-on: the hook emits `DeltaDrift`, the RSC computes the hedge target on ReactVM, and Reactive callbacks update both the hedge adapter and the hook’s mirrored hedge state. The project proves the entire flow on live testnets with transaction evidence across Unichain Sepolia and Reactive Lasna, including pool initialization, LP liquidity, swap-triggered drift, RVM ingestion, adapter callback, hook callback, and final state convergence. If extended to production hedge venues such as Hyperliquid or GMX, this pattern can turn volatile-pair LPing into a more institutionally usable risk-managed vault primitive.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was making the Reactive integration provable across all three layers: the origin Uniswap v4 event, the Lasna RVM transaction, and the destination callback transactions. A successful origin event is not enough; the demo had to prove subscription configuration, active RNK filters, callback debt status, RVM ingestion, callback proxy delivery, and final on-chain state updates. It was also challenging to build a clean demo path around Uniswap v4 pool initialization, liquidity, swap-triggered `DeltaDrift`, and deterministic hedge accounting while preserving production-oriented security controls like callback proxy plus RVM sender authentication.
+
+---
+
 # DeltaShield Hedged Liquidity Primitive (HLP)
 
 # DeltaShield: Hedged Liquidity Primitive (HLP)
@@ -6096,7 +6794,7 @@ Tags: Custom hooks, DeFi
 Integrations: Chainlink
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Protecting LP provider from a depegging event on a pegged assets pool with chainlink pricefeeds.
@@ -6111,7 +6809,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -6235,7 +6933,7 @@ Description: Unlocking Bond Trading in DeFi
 Tags: CFMM, DeFi
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Unlocking Bond Trading in DeFi
@@ -6369,6 +7067,44 @@ Follow me:
 https://x.com/web3yurii
 
 [LinkedIn - Yurii Kovalchuk 🇺🇦 (web3yurii)](https://www.linkedin.com/in/web3yurii/)
+
+---
+
+# Devia
+
+# Devia
+
+Description: Devia is a deviation-aware Uniswap v4 hook that dynamically increases swap fees under oracle uncertainty: driven by price deviation and stale updates, reducing LP losses from toxic arbitrage flow. Keepers restore pool-to-market alignment through KeeperExecutor entrypoint, earning a share of subsequent swap fees. Instead of rewarding stale-price extraction, Devia redistributes value toward LPs and accurate keepers.
+Tags: Custom hooks, Donation, Dynamic Fee, LP Fees, MEV, Oracle
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 10, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/saverchenko2002/uhi9-devia](https://github.com/saverchenko2002/uhi9-devia)
+- **Deck / Slides:** [https://docs.google.com/presentation/d/12KkxcdZXv8F2EYmX6lgSQS-Q8RPh-XEHfe1PPmvb1co/edit?usp=sharing](https://docs.google.com/presentation/d/12KkxcdZXv8F2EYmX6lgSQS-Q8RPh-XEHfe1PPmvb1co/edit?usp=sharing)
+- **Demo Video:** [https://youtu.be/2QeBf-qtVS0](https://youtu.be/2QeBf-qtVS0)
+
+### **Partner Integrations**
+
+No partner integrations.
+
+### **Problem / Background**
+
+The idea behind Devia emerged from studying how LP returns behave under different market conditions. A significant portion of value is captured during periods of price misalignment — arbitrageurs capture opportunities created by delayed price discovery while LPs bear the resulting loss.
+
+The core question: can price uncertainty be made explicit and economically priced, so that part of this extraction is redirected toward improving price alignment and better compensating liquidity providers?
+
+### **Impact**
+
+Devia introduces a new incentive model for stale liquidity management by aligning the interests of LPs, arbitrageurs, and oracle maintainers. Instead of allowing toxic arbitrage to extract value entirely from LPs, the system introduces FeedKeepers and SyncKeepers to proactively synchronize pricing and partially redistribute extracted value back to liquidity.
+
+What makes the project unique is its combination of oracle synchronization, atomic pool rebalancing, and incentive realignment within a single mechanism. Rather than treating arbitrage purely as external extraction, it converts part of that process into a value-preserving system for LPs.
+
+### **Challenges**
+
+Decomposition, granulation, and config tuning. Stack too deep errors were also a significant technical challenge.
 
 ---
 
@@ -6646,6 +7382,58 @@ Another challenge was, due to some unfortunate incidents on team formation and t
 ### **Contributions**
 
 Smart contract whereas Kumail worked on the idea formation and the design part
+
+---
+
+# Divergence Index & Swap
+
+# Divergence Index & Swap
+
+Description: Index is the annulaized LP loss as a fraction of pool due to IL, and created a perpetual market on top of it
+Tags: LP Liquidity, LVR
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+The main partner I integrated is Reactive Network. The index is a per pool, per chain number, but the same ETH/USDC pool lives on many chains, so the real canonical IL number has to be cross chain. That is the job I gave Reactive. Each chain's hook emits an IndexUpdated event, a Reactive Smart Contract watches it and pushes that chain's index to a GlobalIndexAggregator on one aggregation chain, and the aggregator drops stale chains, rejects any chain whose number is too far from the median, and liquidity weights the rest into one global index. 
+
+The aggregator and its combine math are real and tested. The V15 test rejects a compromised chain reporting 9000 bps and value weights the rest into one number. The Reactive relay itself follows the Workshop 7 template and I verified it with a mocked callback. I did not deploy a live RSC on Reactive's own chain for this submission, so the transport is wired and proven in simulation, not running live yet
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/tirth2004/IL-index/tree/main](https://github.com/tirth2004/IL-index/tree/main)
+Slides: https://drive.google.com/file/d/1cxLu35BTLqHwFoFlojBSw3GCHjf5jqDt/view?usp=sharing
+Project Link: 
+Demo Video: [https://www.loom.com/share/b6849aafc7a84ad3bb6e161fa402e396](https://www.loom.com/share/b6849aafc7a84ad3bb6e161fa402e396)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+I started tinkering on IL as it was one of the themes in UHI. One thing I noticed, there existed a lot of tools already related to hedging and insuring against IL. But everyone handled it privately. LPs bleed money to arbitrage every day and yet there is no shared, trustworthy on-chain number that says how much. It felt like options trading before the VIX existed. Everyone estimated volatility privately, then someone published a standard index, and a whole industry got built on top of it.
+
+So I built that number. DivergenceIndex is a v4 hook that meters realized LP loss live, swap by swap, and publishes it as an oracle anyone can read. And to prove the number is actually useful, I built its first consumer: DivergenceSwap, a market where LPs hedge their IL away and speculators earn yield underwriting it. My original plan was only the index, but I had time left so I built the swap too (mostly vibe coded, math worked out by hand)
+
+Note: The link to swap repo is in the readme of index repo!
+
+## Impact: What makes this project unique? What impact will this make?
+
+Most projects are products. This is infrastructure. Any insurance hook, hedging vault, dynamic fee or structured yield product can call getIndexBps() and build on it, the same way DeFi builds on Chainlink price feeds. I checked the full directory: no one has built an IL/LVR index before. The 40+ existing IL products are not my competitors, they are my potential consumers.
+
+Three things make the number trustworthy. It measures realized loss from actual swap data (markout against a reference price), so concentrated liquidity amplification gets captured automatically with no extra formulas. It is manipulation resistant: per swap clamping, a top trimmed mean over blocks, and a TWAP sanity check, so one wash trade or one controlled block cannot move it. And it is provably correct: in my end to end simulation the index converges to σ²/8, the closed form LVR rate from published research. My number matches the theory.
+
+Reactive Network then aggregates per chain indices into one global, liquidity weighted number with no keepers.
+DivergenceSwap shows the payoff. LPs go long IL and their pool losses get cancelled at settlement. Speculators go short and collect the premium. A funding rate discovers the real price of IL protection instead of a fixed insurance premium guessing it. Add liquidity through the AutoHedge hook and you are hedged automatically. Measure IL, then make it disappear.
+
+## Challenges: What was challenging about building this project?
+
+I took the math heavy project because it is something I have always enjoyed. But ironically, it was the most challenging part.  
+
+The best mistake I caught: my first design aggregated losses with a median of per block buckets. Then I worked the numbers by hand and realized arb losses are sparse and lumpy. Most blocks have zero loss, a few have spikes, and the median of a mostly zero series is zero. The index would have read "no loss" forever and hidden the entire signal. I switched to a top trimmed mean and wrote a test specifically to stop anyone from "simplifying" it back to a median.
+Tuning manipulation resistance was a constant tradeoff. Clamp too hard and you miss real losses, too soft and one wash trade fakes the index. The GBM plus arbitrage simulation that proves convergence to σ²/8 took longer than the hook itself.
+
+Regarding divergence swap: The mechanism math (funding, settlement, payout caps, solvency invariants) was worked out by hand, and the hedge cancels test proves pool loss plus hedge gain nets to flat. The math holds, and that is what I would ask judges to grade.
+The link to swap repo is in the readme of index repo!
 
 ---
 
@@ -6956,6 +7744,110 @@ the real challenge I think it will be integrated to the current real swap senari
 
 ---
 
+# Driftwood
+
+# Driftwood
+
+Description: Uniswap v4 hook that turns index portfolio rebalancing into LP yield.
+Tags: LP Liquidity, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 10, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/PavelNaydanov/Driftwood](https://github.com/PavelNaydanov/Driftwood)
+- **Deck / Slides:** [https://drive.google.com/file/d/1gYLz8hG8J7RmqmelRD02VOEEHrADJnsr/view?usp=sharing](https://drive.google.com/file/d/1gYLz8hG8J7RmqmelRD02VOEEHrADJnsr/view?usp=sharing)
+- **Demo Video:** [https://www.loom.com/share/4e5f5b0b28e3407a8175395dfd576517](https://www.loom.com/share/4e5f5b0b28e3407a8175395dfd576517)
+
+### **Partner Integrations**
+
+No partner integrations.
+
+### **Problem / Background**
+
+Index protocols hold baskets of tokens at target weights and treat rebalancing as a cost — they pay to realign drifting weights through auctions, MEV, and market makers, while the underlying reserves sit idle at 0%.
+
+The spark was a symmetry: a Uniswap LP's impermanent loss — quietly selling the asset that's rising — is exactly the trade an index needs to rebalance. What's a loss for an LP is the goal for an index. So the idea was to make the index be the LP. Driftwood deploys idle index reserves as just-in-time liquidity: idle capital earns swap fees, and rebalancing flips from a cost into revenue.
+
+### **Impact**
+
+Driftwood is the design where impermanent loss is the goal, not the risk: the trade that hurts a normal LP is exactly the rebalance an index needs. Rebalancing flips from a cost (auctions, MEV, market makers) into yield — done by organic swap flow, with no keepers and no separate market, entirely inside a Uniswap v4 hook.
+
+Impact: index protocols turn a recurring cost into income; holders earn passive yield on reserves that used to sit idle; and the ecosystem gets a reusable proof that "impermanent loss" is just rebalancing by another name.
+
+### **Challenges**
+
+The hardest part was the JIT loan accounting — lending the index's reserves into the pool in beforeSwap and pulling them back with the fee in afterSwap while keeping Uniswap v4's flash accounting balanced.
+
+Closely tied to it: making the weight check trustworthy across the swap — simulating the outcome before the trade, then re-asserting on the real balances after, so a divergence (e.g. an oracle price change mid-swap) reverts instead of silently breaking the mandate.
+
+---
+
+# Drool
+
+# Drool
+
+Description: Drool is a Uniswap v4 hook that automatically rehypothecates idle LP capital into Aave v3, so liquidity providers earn Aave yield on top of swap fees without changing their experience. 80% of deposited liquidity earns supply APY in Aave while 20% stays in the pool to service swaps, with automatic rebalancing on every liquidity and swap event.
+Tags: LP Fees, LP Liquidity, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/damboy0/drool-contracts/](https://github.com/damboy0/drool-contracts/)
+Slides: 
+Project Link: https://drooll.netlify.app/
+Demo Video: [https://www.loom.com/share/6fb493b03f4941628de19ee438c01252](https://www.loom.com/share/6fb493b03f4941628de19ee438c01252)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers on Uniswap v4 earn fees only when trades happen within their range. Between swaps, idle capital sits dormant in the PoolManager, earning nothing. This is a massive capital inefficiency; billions in TVL across AMMs generate zero yield when not actively trading. We built Drool to solve this by automatically rehypothecating idle LP capital into Aave v3, so LPs earn Aave yield on top of swap fees without changing their LP experience at all.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Drool is a production-deployed Uniswap v4 hook that automatically rehypothecates idle liquidity into Aave v3 in real time. It is unique because it requires zero changes to the LP UX; liquidity providers add and remove liquidity exactly as normal, while the hook silently routes 80% of deposited capital to Aave. On every swap, the hook checks reserves and withdraws from Aave only if needed, ensuring swaps always execute. LPs get dual yield: swap fees + Aave supply APY. This could meaningfully increase capital efficiency across all of DeFi if adopted at scale.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was mastering Uniswap v4's transient accounting model. The PoolManager uses a lock/unlock callback pattern where all token flows must net to zero within a single transaction, any imbalance reverts with CurrencyNotSettled. Routing tokens from the PoolManager to an external protocol (Aave) within a hook callback required deep understanding of take(), settle(), sync(), and the afterAddLiquidityReturnDelta permission. I also hit Aave Sepolia reserve freezes (error code 51 on USDC) which forced us to debug the entire reserve selection process on-chain. Getting the delta accounting correct across afterAddLiquidity and afterSwap took many iterations.
+
+---
+
+# DualTranche Vault
+
+# DualTranche Vault
+
+Description: A Uniswap v4 hook that eliminates idle capital and bad-entry timing for concentrated liquidity LPs by splitting every pool into two volatility-aware tranches — Senior and Junior — each with distinct risk/reward profiles, coordinated by a single shared on-chain volatility signal.
+Tags: LP Fees, Tranched Liquidity
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI6
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Skinny001/DualTranche-Vault](https://github.com/Skinny001/DualTranche-Vault)
+Slides: https://gamma.app/docs/DualTranche-Vault-Hook-3kp1ot7vmnhwey6
+Project Link: 
+Demo Video: [https://youtu.be/YoTPoDPwdXo](https://youtu.be/YoTPoDPwdXo)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap v3's concentrated liquidity promised higher capital efficiency, but it introduced a brutal asymmetry: the moment price leaves an LP's range, their capital earns zero — no fees, no yield, nothing — while still carrying full price exposure on one side. On volatile pairs, LPs spend 40–70% of their time completely out of range, idle, while lending protocols sit ready to pay 4–10% APY on that same capital. Worse, there is no on-chain mechanism to protect LPs from entering at the worst possible time — right before a large price move that immediately pushes them out of range and crystallizes impermanent loss before they've earned a single basis point in fees. These two problems compound each other: bad entries accelerate IL, and idle capital means there's nothing to offset it. Uniswap v4 hooks finally provide the primitives to solve both in a single, automatic, on-chain system — beforeAddLiquidity to gate deposits based on real-time volatility, and afterSwap to detect range exits and route idle capital to a lending vault the moment it stops earning fees — which is exactly what DualTranche is built to do.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Concentrated liquidity AMMs have had no on-chain solution to idle capital — every prior fix relies on off-chain bots, keeper infrastructure, or protocol-level vaults that abstract away LP participation entirely. DualTranche is the first hook that handles both the idle capital problem and the bad-entry problem atomically, inside the same transaction as the swap or deposit that triggers them — no bots, no latency, no trusted off-chain layer. The tranche separation is equally novel: instead of treating all LPs as identical participants competing for the same reward, it recognises that passive and active LPs have genuinely different needs and serves both from the same pool without forcing either to compromise — Senior LPs get a yield floor with zero idle time, Junior LPs get 70% fee capture with statistically better entry conditions. For individual LPs the impact is measurable: a Senior LP on a pair that spends 50% of its time out of range at 6% lending APY earns an automatic ~3% additional yield annually on top of fees, while Junior LPs enter structurally earlier on the IL curve. For the protocol the impact is stickier TVL — the single biggest driver of LP attrition in concentrated liquidity is depositing, going immediately out of range, and watching capital do nothing; DualTranche eliminates that experience entirely. And as a broader proof of concept, it demonstrates what becomes possible when hooks can intercept every LP action and every price movement in a single coordinated system — turning a passive AMM into a capital-efficient yield engine that works for every type of LP, at all times.
+
+## Challenges: What was challenging about building this project?
+
+Building DualTranche surfaced challenges at every layer of the Uniswap v4 hook architecture. The most fundamental was the sender problem — in v4, the sender parameter passed to hook callbacks is the router, not the actual LP, which meant naively minting shares to sender would credit the wrong address entirely; the fix required encoding the LP's address explicitly in hookData as abi.encode(bool isSenior, address lp) and minting to that extracted address instead. Hook address mining added another constraint: the contract must be deployed at an address whose lower 16 bits encode the exact permission flags (0x1F40), which required either a salt miner in production or vm.etch in tests to copy bytecode — including baked-in immutables — to the flag address without redeploying. The reward-per-share accounting had to be designed carefully so that yield accrues correctly when shares are transferred mid-epoch, which the Synthetix debt-index pattern handles but requires precise ordering of debt snapshots relative to balance changes. On the testing side, Forge's bound() function uses modular arithmetic rather than clamping — bound(1, 1e12, 10_000e18) returns 1e12 + 1, not 1e12 — which caused subtle failures in pro-rata fuzz tests where two "equal" raw inputs produced different actual share amounts after mapping, requiring tolerance widening and minimum-pending guards. A separate class of vm.prank bugs emerged from the pattern of chaining external calls in argument position: hook.seniorShareTokens(poolId).transfer(to, hook.seniorShareTokens(poolId).balanceOf(from)) consumed the prank on the getter call before transfer ever dispatched, requiring all values to be cached into local variables before the prank was set. Together these challenges reflect a recurring theme in v4 hook development: the execution model is subtly different from standard contract interactions in ways that only surface when you push the architecture toward real product behaviour.
+
+---
+
 # Dump No Fun
 
 # Dump No Fun
@@ -6964,7 +7856,7 @@ Description: We implement a hook and an interface that allows anyone to launch a
 Tags: DEX, DeFi, Security
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 We implement a hook and an interface that allows anyone to launch a standardized token with locked liquidity. This hook prevents arbitrary customization, and also prevents 3rd party pool creators to attach this hook (to steal credibility).
@@ -7281,6 +8173,38 @@ solo
 
 ---
 
+# DynamicLPFeesHook
+
+# DynamicLPFeesHook
+
+Description: Instead of using a fixed fee for every swap, the hook compares the current Uniswap pool price with a Chainlink ETH/USD reference price. When the pool price moves further away from the oracle reference price, the hook increases the swap fee so liquidity providers are better compensated for higher execution risk.
+Tags: Dynamic Fee, LP Fees, Oracle
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/J0BSdev/Uniswap-V4-hook](https://github.com/J0BSdev/Uniswap-V4-hook)
+Slides: 
+Project Link: 
+Demo Video: [https://youtu.be/WBZPBEIskYY](https://youtu.be/WBZPBEIskYY)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Most AMM pools use static fee tiers even though market conditions constantly change. Liquidity providers face higher execution risk when the pool price diverges from fair market value, but they still earn the same fee. This project was inspired by the idea of making LP fees adaptive by using a trusted external reference price from Chainlink and adjusting fees based on real-time pool conditions.
+
+## Impact: What makes this project unique? What impact will this make?
+
+DynamicLPFeesHook introduces oracle-aware dynamic fees for Uniswap v4. Instead of charging the same fee for every swap, the hook increases LP compensation when the pool price moves further away from the Chainlink reference price. This can help liquidity providers better manage execution risk while keeping fees lower during normal market conditions. The project also demonstrates how external oracle data can be combined with Uniswap v4 hooks to create more adaptive AMM behavior.
+
+## Challenges: What was challenging about building this project?
+
+The most challenging part was correctly calculating and comparing prices between Uniswap and Chainlink. The project required handling sqrtPriceX96 conversions, token decimal differences, oracle scaling, dynamic fee overrides, and oracle safety checks such as stale prices, incomplete rounds, and Base sequencer uptime validation. Another challenge was designing a fee model that remains simple enough for users to understand while still responding to changing market conditions.
+
+---
+
 # DynamicShield Hook
 
 # DynamicShield Hook
@@ -7478,6 +8402,50 @@ ERD-Hook combines hook-time liquidity/swap signal capture with vault-based accum
 The hardest parts were designing manipulation-resistant reward math, correctly integrating Uniswap v4 hook permissions/address constraints, and ensuring strict accounting invariants across streaming and epoch modes. We also focused on end-to-end reproducibility, test coverage, and on-chain demo proof quality.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# EigenAuction
+
+# EigenAuction
+
+Description: Arbitrage auction mechanism based on EigenLayer AVS which reduce LVR for liquidity providers.
+Tags: Auctions, LP Liquidity, LVR, MEV
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/ohMySol/eigen-auction](https://github.com/ohMySol/eigen-auction)
+Slides: 
+Project Link: 
+Demo Video: [https://youtube.com/shorts/TvgSsjCK1Uw?feature=share](https://youtube.com/shorts/TvgSsjCK1Uw?feature=share)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Problem / Background:
+
+As a liquidity provider I am familiar with IL/LVR and toxic flow. Every time an arb bot pushes my pool back to fair value after a CEX price move, that profit comes out of my pocket - it's not a bug, it's how AMMs work. 
+
+The profit exists, someone is capturing it, and that someone could be the LPs themselves. Angstrom proved a great solution, but there was no production-ready implementation of this as a Uniswap V4 hook secured by EigenLayer restaking. So I built one.
+
+## Impact: What makes this project unique? What impact will this make?
+
+EigenAuction is the first Uniswap V4 hook that turns LVR from a loss into a revenue with the help of EigenLayer AVS. Instead of arb bots extracting value from the pool, an EigenLayer-secured auction captures that value and routes it back to liquidity providers proportionally. 
+
+The hook also bundles user swap intents into the same atomic settlement, meaning regular users get executed at the post-arb price rather than a stale one. Any V4 pool can add this hook - it's a big improvement for any LP who is tired of subsidising arbitrageurs.
+Another unique feature is that I didn't build a separate network of nodes which will run this auction without any punishment for wrong auction result. Instead auction fairness is powered by restakers of EigenLayer and operators who have a financial motivation to provide correct auction results.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was getting the reward distribution to work correctly inside Uniswap V4's flash accounting model. My first approach used V4's sync/settle flow to move the arb reward into the hook, but that caused CurrencyNotSettled reverts because V4 tracks every token movement and any imbalance at unlock exit is fatal. 
+The fix - transferring the reward directly from the operator to the hook outside V4 accounting, before the swap - was non-obvious and took a lot of debugging. 
+
+The second major challenge was porting V3-style tick-outside accumulators into a V4 hook context, since V4 doesn't expose the same tick data structures V3 had internally. I had to maintain the accumulator state entirely in the hook's own storage and reason carefully about the order of tick crossing vs reward folding to keep the math consistent.
+ 
+There was also a fun Solidity pragma clash: EigenLayer's IStrategy requires ^0.8.27 while Uniswap V4 locks at =0.8.26, which meant I had to carefully isolate the EigenLayer-facing interface to avoid pulling the incompatible pragma into the hook's compile unit.
 
 ---
 
@@ -7704,6 +8672,38 @@ Hippocampus is a Senior Developer
 
 ---
 
+# Eleos
+
+# Eleos
+
+Description: Eleos is a Uniswap v4 hook that automatically recaptures impermanent loss for liquidity providers, funded by a percentage of the swap fees traders already pay. A loyalty-weighted vault rewards patient LPs who stay through volatility while redistributing forfeited recapture from early exiters with idle vault capital deployable to any ERC-4626 yield protocol like Aave
+Tags: LP Fees, LP Liquidity, LVR, Price Discovery, Unichain, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI6
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/7maylord/eleos](https://github.com/7maylord/eleos)
+Slides: https://gamma.app/docs/Eleos-Uniswap-v4-IL-Recapture-Hook-syykpmc2ysil7he
+Project Link: https://eleos-gold.vercel.app
+Demo Video: [https://www.loom.com/share/28b3d37ad9634798a30ba8a9c4e1637f](https://www.loom.com/share/28b3d37ad9634798a30ba8a9c4e1637f)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Impermanent loss is the single largest hidden cost for liquidity providers on Uniswap. When prices diverge from a position's entry point, LPs end up holding more of the depreciating token and less of the appreciating one often wiping out fee earnings entirely. Studies on Uniswap v3 data show over 50% of LPs would have been better off simply holding their tokens. In concentrated liquidity pools, this is amplified: the tighter the range, the more fees you earn, but the faster IL compounds when price moves outside it. There was no native, automated mechanism to compensate LPs for this structural disadvantage, Eleos is built to fill that gap.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Eleos fundamentally changes the risk profile of being an LP without changing how liquidity provision works. By diverting 20% of swap fees into our dedicated RecaptureVault and paying out IL compensation weighted by a loyalty multiplier, Eleos aligns incentives across the ecosystem: patient LPs recover up to 100% of their IL at full lock duration, early exiters' forfeited recapture is redistributed to those who stayed, and the vault can connect to Aave or Morpho via ERC-4626 to earn yield on idle capital making it self-sustaining even in low-volume periods. Deeper, stickier liquidity means better prices for traders so better risk-adjusted returns mean more LPs are willing to provide it.
+
+## Challenges: What was challenging about building this project?
+
+The most technically demanding challenge was the AFTER_SWAP_RETURNS_DELTA_FLAG hook pattern: diverting fees by modifying the swap output delta at the hook level blocks native Uniswap routing, requiring custom router integration for swaps. While writing the contract, computing IL percentages, recapture ratios, and loyalty multipliers in WAD-scaled fixed-point arithmetic without precision loss or overflow required extensive unit and fuzz testing.
+
+---
+
 # EngageSwap
 
 # EngageSwap
@@ -7775,6 +8775,47 @@ The most challenging part of the development was making our contracts compatible
 
 ---
 
+# EvenFlow
+
+# EvenFlow
+
+Description: EvenFlow is a Uniswap v4 hook that turns an oracle-free directional-toxicity fee into a yield-smoothing system: it escrows the toxicity premium during adverse flow and drips it back to in-range LPs once the market goes quiet, with a Reactive Network cron releasing stranded reserve cross-chain even when no swaps happen.
+Tags: Cross-Chain, Custom hooks, DEX, Dynamic Fee, ERC6909, LP Fees, LP Liquidity, LVR
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+Reactive Network. A ShieldReactiveController (Lasna RSC) subscribes to Reactive CRON and, on each tick, sends an authenticated cross-chain callback through the chain callback proxy to a ShieldReactiveExecutor on Base, which calls the hook's bounded triggerQuietDrip() to release stranded LP reserve via Uniswap v4 donate() — no keeper, no bot. Two-factor callback auth (callback-proxy msg.sender + locked rvm_id). Verified live on Base Sepolia ← Reactive Lasna: tx 0x7a2b6afb30e436f9da3b1bc3dde55bc5f[phone removed]b96fc681a029313ebed71f (block 42275501).
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Hebx/EvenFlow](https://github.com/Hebx/EvenFlow)
+Slides: https://canva.link/ohh3e99jzlp1p3i
+Project Link: 
+Demo Video: [https://www.loom.com/share/4186f27292ca42eaa82ff685fb49214c](https://www.loom.com/share/4186f27292ca42eaa82ff685fb49214c)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Passive LPs lose to informed, one-directional flow, and even a good defensive fee leaves realized yield lumpy — fat during toxic bursts, thin when quiet — with surplus value stranded in the pool. We wanted to price toxicity honestly without an oracle AND turn that surplus into a smoother LP payout, then solve the last-mile problem that the surplus stays stranded when nobody swaps.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Three composable layers, each optional above the base: (1) an oracle-free directional fee that funds a reserve, (2) opt-in ERC-6909 smoothing that captures the toxicity premium and drips it back to in-range LPs via canonical donate() with wei-exact conservation, and (3) a Reactive Network cron that releases stranded reserve cross-chain with no keeper. On burst-then-quiet flow, per-step yield variance drops ~61% (2.5× tighter) at conserved total yield. Every claim is backed by an explorer-verifiable tx (real Base mainnet-fork PoolManager + live Base Sepolia + a live Lasna→Base reactive drip).
+
+## Challenges: What was challenging about building this project?
+
+Making custody honest: capture→escrow→drip had to conserve value exactly (captured == dripped + remaining to the wei) and stay opt-in so the default path holds no funds.
+
+Keeping Reactive off the per-swap hot path while still being the thing that makes smoothing work in an idle pool.
+
+Reactive callback security: moved from a spoofable injected-address check to two-factor auth (callback proxy msg.sender + locked rvm_id), and a set-once controller to break the executor⇄controller mutual-address deploy dependency.
+
+Proving it for real: driving a genuine cron-triggered cross-chain drip on testnet, not a mock.
+
+---
+
 # FWB TWAMM Hook
 
 # FWB TWAMM Hook
@@ -7783,7 +8824,7 @@ Description: We're building a Time-Weighted Average Market Maker (TWAMM) that wi
 Tags: Order Type
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 We're building a Time-Weighted Average Market Maker (TWAMM) that will allow DAOs, specifically FWB, to execute large purchases or sales of tokens with limited to no slippage
@@ -7794,7 +8835,7 @@ Cohort: UHI2
 🔗 **Links**
 
 - [https://github.com/leeftk/hooks-fwb/tree/main](https://github.com/leeftk/hooks-fwb/tree/main)
-- [https://scarlet-recorder-da1.notion.site/FWB-TWAMM-Buyback-Hook-4e77398e49c349d7ae2839cb5c2d51ca](https://www.notion.so/4e77398e49c349d7ae2839cb5c2d51ca?pvs=21)
+- [https://scarlet-recorder-da1.notion.site/FWB-TWAMM-Buyback-Hook-4e77398e49c349d7ae2839cb5c2d51ca](https://app.notion.com/p/4e77398e49c349d7ae2839cb5c2d51ca?pvs=21)
 </aside>
 
 ### Demo:
@@ -7985,6 +9026,41 @@ Camilo Sacanamboy ([@camilosaka](https://x.com/camilosaka)) — Founder of [Peew
 
 ---
 
+# FeeCompounder Hook
+
+# FeeCompounder Hook
+
+Description: FeeCompounder Hook is a Uniswap v4 hook that captures a configurable slice of LP fee flow, tracks LP ownership with vault-style shares, and compounds accumulated fees only when execution conditions are favorable. A Reactive Network RSC monitors FeesAccrued events, applies threshold/gas/cooldown gates, selects the best configured yield route, and triggers compounding without a keeper or bot.
+Tags: Aave, Auto-Compounding, Fee Smoothing, Gas-Aware Automation, Keeperless Automation, LP Fee Compounding, Morpho, Pool Reinvestment, RSC, Reactive Network, Share Accounting, Uniswap v4 Hooks, Yield Systems
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+FeeCompounder integrates Reactive Network through a Reactive Smart Contract deployed on Lasna. The hook emits FeesAccrued(bytes32,uint256,uint256,uint256,uint256,uint256,uint256) on Unichain Sepolia; the RSC subscribes to that event, evaluates pending fees, gas price, cooldown, and configured route APYs, then emits a Reactive callback to the hook’s triggerCompoundFromReactive(address,PoolKey,address) function. The hook authenticates both the Reactive callback proxy and the encoded RVM sender before compounding fees into the selected route.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/blue-benz/feecompounder-hook](https://github.com/blue-benz/feecompounder-hook)
+Slides: https://gamma.app/docs/FeeCompounder-iovsvmuozm9c3jh
+Project Link: 
+Demo Video: [https://youtu.be/TtFMdKXqvRs](https://youtu.be/TtFMdKXqvRs)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+LP fees often sit idle until LPs manually collect and reinvest them, which creates lost yield, poor timing, and unnecessary operational overhead. Existing auto-compounding approaches can be too naive because they compound too frequently, ignore gas economics, or fail to preserve fair LP accounting after deposits and compounding events. FeeCompounder was inspired by the need for a vault-like compounding strategy that lives natively inside the Uniswap v4 hook lifecycle while using Reactive Network for autonomous, event-driven execution.
+
+## Impact: What makes this project unique? What impact will this make?
+
+FeeCompounder combines four pieces that are usually separate: Uniswap v4 fee accrual, ERC-4626-style share accounting, gas-aware execution policy, and Reactive Network callbacks. Instead of compounding on every swap, the hook emits fee events and lets an RSC decide when compounding is economically justified and which configured route should receive the fees. The impact is a more disciplined LP yield system: fees become productive capital, execution is observable on-chain, and LP ownership remains proportional across deposits, compounding, and withdrawals.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was proving the Reactive integration end to end rather than stopping at a local simulation. Reactive has three separate proof layers: the origin-chain FeesAccrued transaction, the Lasna RVM transaction that processes the event, and the destination-chain callback that emits CompoundExecuted. We also had to handle exact event topic matching, RVM sender authentication, callback proxy authorization, callback debt/payment behavior, and clear demo logging so judges can verify each stage independently
+
+---
+
 # FheMarket
 
 # FheMarket
@@ -8167,6 +9243,41 @@ This is not a secure solution whatsoever. Preferably, this should work with exis
 # Team: Who is on the team? What are their backgrounds?
 
 I hacked solo this time. I am Solomon, co-founder of Stable Jack
+
+---
+
+# Fixed-Income Tranche Hook
+
+# Fixed-Income Tranche Hook
+
+Description: Fixed-Income Tranche Hook brings structured finance to Uniswap v4 by splitting LP capital into senior and junior ERC-20 tranches. Senior LPs receive fixed-priority yield, while junior LPs absorb impermanent loss and fee shortfalls in exchange for residual upside, with epoch settlement automated through Reactive Network.
+Tags: Aave Adapter, ERC-20 Tranche Tokens, Epoch Settlement, Fixed Income, Impermanent Loss, LP Tranching, RSC, Reactive Network, Senior/Junior Liquidity, Structured Products, Uniswap v4 Hook, Yield Systems
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+The project integrates Reactive Network through a Reactive Smart Contract deployed on Lasna. The hook emits FeesAccrued(uint256,uint256,uint256) events, the RSC subscribes to those events, checks whether the epoch is mature, and emits a callback to settleEpochFromReactive(address,uint256) on the Unichain Sepolia hook. The hook authenticates the callback with both msg.sender == callbackProxy and sender == reactiveSender.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/KHRAFTSng/fixed-income-tranche-hook](https://github.com/KHRAFTSng/fixed-income-tranche-hook)
+Slides: https://gamma.app/docs/Fixed-Income-Tranche-Hook-zfa2dvhfiwsn5b9
+Project Link: 
+Demo Video: [https://youtu.be/w9NdbVxpj2g](https://youtu.be/w9NdbVxpj2g)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap LPs currently face one undifferentiated risk profile: every LP absorbs the same fee volatility and impermanent loss regardless of whether they want predictable yield or higher-risk upside. That makes v4 pools harder to use for allocators who need fixed-income-like exposure and for risk-seeking LPs who want explicit levered upside. Fixed-Income Tranche Hook solves this by creating a capital structure inside a v4 pool: senior LPs are paid first, while junior LPs intentionally absorb IL and shortfalls in return for residual fee upside.
+
+## Impact: What makes this project unique? What impact will this make?
+
+This project is unique because it turns LP positions into explicit senior and junior ERC-20 tranche tokens with deterministic waterfall accounting. Instead of only adjusting fees or routing idle capital, it assigns risk to the users who choose to take it: senior LPs get fixed-priority yield, and junior LPs receive the upside after senior obligations are paid. The impact is a new LP primitive for Uniswap v4 that can support fixed-income products, structured vaults, risk-segmented liquidity markets, and more institutional-friendly liquidity provisioning.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was making the Reactive integration provable end-to-end rather than treating it as a black-box callback. The system needed to prove the origin FeesAccrued event, the Lasna RSC subscription and ReactVM logic, the destination callback proxy call, and the final EpochSettled event. Another challenge was keeping the tranche accounting deterministic and testable: senior payout priority, junior shortfall absorption, IL attribution, same-epoch withdrawal protection, and callback idempotency all needed explicit tests.
 
 ---
 
@@ -8542,6 +9653,42 @@ Additionally, aligning blockchain mechanics with a real-world impact use case re
 
 ---
 
+# FlowPass
+
+# FlowPass
+
+Description: FlowPass is a Uniswap v4 fee-smoothing yield hook that sells prepaid trading passes: traders pay upfront for discounted future swap volume, and the hook tracks quota and expiry per wallet. The pass revenue is split into LP reserve and treasury revenue, while the discount helps retain recurring order flow in competitive pools.
+Tags: DEX, LP Fees, LP Liquidity, Trading Volume Rewards
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Joezhouzmz/FlowPass](https://github.com/Joezhouzmz/FlowPass)
+Slides: 
+Project Link: https://flowpass.joezhouzmz.workers.dev/
+Demo Video: [https://youtu.be/ft2iuAvbOCg](https://youtu.be/ft2iuAvbOCg)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+In highly competitive pools, especially stablecoin-style routing markets, traders can choose between many similar venues. Prices, liquidity, fees, and routing are extremely transparent, and traders can switch pools with very low friction. A simple fee discount may attract flow, but it can also reduce LP revenue if the same flow would have stayed anyway.
+
+FlowPass is inspired by Costco-style membership economics: a user pays upfront, then receives lower prices later. The merchant may earn less per transaction, but the membership creates commitment, repeat usage, and higher total volume. FlowPass applies this idea to AMMs by asking recurring traders to prepay for a time-limited discounted quota, giving them a reason to keep routing through the FlowPass pool.
+
+## Impact: What makes this project unique? What impact will this make?
+
+FlowPass turns swap-fee competition into a yield product and business model. Traders get lower marginal execution costs after buying a pass, LPs get discounted swap fees plus an upfront reserve allocation, and the protocol captures prepaid revenue through the hook treasury.
+
+The project also shows why hooks matter commercially, not only technically. In a transparent AMM market, purely technical advantages can be copied or arbitraged away. FlowPass creates pool-level differentiation through prepaid access, quota, expiry, and revenue sharing. It also gives hook creators a path to sustainable treasury revenue, which can help incentivize more serious mechanism design in the Uniswap v4 hook ecosystem.
+
+## Challenges: What was challenging about building this project?
+
+The hardest parts were translating a membership-pass model into real Uniswap v4 hook mechanics, handling dynamic LP fee overrides correctly, and avoiding quota mis-accounting around swaps. The MVP also needed a custom exact-input router so the hook could receive trader identity in hookData, plus a clear explanation of why standard router quoting does not automatically understand pass discounts.
+
+---
+
 # Fluidity - MEV-Resistant Uniswap V4 Rebalancing Ho
 
 # Fluidity - MEV-Resistant Uniswap V4 Rebalancing Hook with FHE
@@ -8580,6 +9727,41 @@ Limited verification of rebalancing flow due to liquidity provision challenges.
 # Team: Who is on the team? What are their backgrounds?
 
 Yathindra Kodithuwakku and Oshadhi Liyanage. Both graduated from the University of Westminster and are currently working as software engineers, each with over seven years of experience.
+
+---
+
+# FluxShield - Adaptive fee hook for UniswapV4
+
+# FluxShield - Adaptive fee hook for UniswapV4
+
+Description: FluxShield is an adaptive fee hook for Uniswap v4 that uses Chainlink price feeds to detect market‑AMM deviation and dynamically escalates swap fees, protecting liquidity providers from arbitrage extraction while preserving price synchronization
+Tags: Dynamic Fee, LP Fees, LVR
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 8, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/ighodaro-daniel/fluxshieldHook](https://github.com/ighodaro-daniel/fluxshieldHook)
+- **Demo Video:** [https://www.youtube.com/watch?v=6YfT3vvpd7g](https://www.youtube.com/watch?v=6YfT3vvpd7g)
+
+### **Partner Integrations**
+
+No partner integrations.
+
+### **Problem / Background**
+
+The idea for FluxShield came from observing a fundamental imbalance in AMM design: LPs absorb most of the downside from arbitrage-driven inventory shifts, yet fee structures treat all swaps equally. During periods of high volatility, stale AMM prices become hunting grounds for arbitrageurs who extract value that rightfully belongs to LPs.
+
+Existing solutions either eliminate arbitrage entirely (which breaks price synchronization) or rely on static fees that cannot adapt to market stress. The question: can we build a fee mechanism that scales with arbitrage risk, protecting LPs without destroying market efficiency? Problems addressed: Loss-Versus-Rebalancing (LVR), Static Fee Inefficiency, Oracle Misalignment.
+
+### **Impact**
+
+FluxShield is the first v4 hook that integrates Chainlink directly into fee determination — fees respond to real-time market divergence, not just on-chain liquidity conditions. The configurable, non-linear fee curve lets owners tune thresholds and fee tiers to balance LP protection vs. arbitrage incentive. Crucially, FluxShield preserves arbitrage — unlike aggressive anti-MEV designs, it keeps arbitrage profitable enough to maintain price sync, simply taxing it more fairly.
+
+### **Challenges**
+
+Initially used the Pyth oracle to fetch price data, but encountered a problem: every swap required the swapper to pay an additional fee to update and retrieve the latest price. Ultimately switched to the Chainlink oracle, which provides price feed access without imposing per-swap costs on users.
 
 ---
 
@@ -8799,6 +9981,62 @@ Everything done by myself (individual submission)
 
 ---
 
+# FxHedgeHook — Delta-Neutral IL Shield for a FX Yie
+
+# FxHedgeHook — Delta-Neutral IL Shield for a FX Yield Machine
+
+Description:   FxHedgeHook is a Uniswap v4 hook that tracks LP exposure on FX/BTC pools in real time and   auto-opens offsetting short perps on our on-chain clearinghouse, neutralizing impermanent   loss so LPs keep the full spread + yield. It's the IL shield of a larger "yield machine"   where empty-pool delta-accounting (FxSwapHook) lets the same capital earn Morpho/USYC yield   between swaps.
+Tags: Cross-Chain, DEX, Dynamic Fee, Inter-Connected Pools, LP Liquidity, LVR, Options/Futures, Stablecoins
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Circle - past cohort it seems.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/BuFi007/fx-telarana](https://github.com/BuFi007/fx-telarana)
+Slides: 
+Project Link: https://fx.bu.finance
+Demo Video: [https://video.bu.finance/video/bufx-multi-chain-forex-and-defi-protocol-1-ch68](https://video.bu.finance/video/bufx-multi-chain-forex-and-defi-protocol-1-ch68)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+LPs on volatile pairs (BTC/USDC, FX/USDC) bleed impermanent loss that routinely exceeds fee income — “yield” that ends up net negative. Meanwhile, their capital sits idle in pools between swaps, earning nothing.
+
+We built both halves:
+
+FxHedgeHook measures each pool’s directional exposure on every swap and liquidity event using EMA TWAP and a 2% deviation circuit breaker. It emits hedge deltas that automatically open offsetting shorts on our on-chain perp clearinghouse, deleting the IL drag.
+
+FxSwapHook serves swaps via `beforeSwapReturnDelta` from an oracle-anchored PMM with empty pools. That means the backing capital is not trapped in passive liquidity. It earns Morpho lending APY and a USYC T-bill floor until the instant a swap summons it.
+
+## Impact: What makes this project unique? What impact will this make?
+
+LP yield becomes honest: spread, perp-fee share, and money-market yield, with impermanent loss hedged instead of ignored.
+
+The empty-pool design means a single vault deposit can back every FX pool, with no fragmented ranges. Tranche accounting protects senior lenders by making the junior buffer absorb money-market PnL first, while a hard on-chain compliance wall keeps retail NAV out of Reg-S USYC.
+
+Everything self-operates through permissionless, incentivized `rebalance()`, with no off-chain SaaS in the value path.
+
+Live across two Gateway-bridged hubs — Fuji and Arc — with eight CCTP spokes.
+
+## Challenges: What was challenging about building this project?
+
+The hardest parts were:
+
+1. Hedge sizing without oracle manipulation. We solved this with per-pool EMA TWAP and auto-pause on 2% deviation. On Arc, there is a single oracle, so circuit breakers are load-bearing.
+
+2. Keeping the swap hot path sacred. Hedging and yield movement are fully out-of-band. `beforeSwap` stays under 50k gas with a single vault call.
+
+3. Decimal hell. Arc has 18-decimal native gas USDC, 6-decimal ERC-20 USDC, 8-decimal cirBTC, and 18-decimal JPYC.
+
+4. Enforcing the retail/USYC compliance wall as an on-chain invariant. `retailAssets ∩ USYC = ∅` is enforced in code, not treated as a policy note.
+
+5. Cross-hub capital that is never idle. Gateway burn-intents are EOA-signed until Circle ships ERC-1271, so we designed authority rotation in advance.
+
+---
+
 # Gacha Hook
 
 # Gacha Hook
@@ -8983,7 +10221,7 @@ Description: This hook offers gasless swaps to traders by having them executed b
 Tags: DEX, DeFi, MEV, Order Type
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 This hook offers gasless swaps to traders by having them executed by a non-toxic MEV executor. Users only need to sign a EIP-712 like signature to send their order
@@ -8998,7 +10236,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -9064,7 +10302,7 @@ Description: The fixed weight pool create a value-weighted liquidity pool of ass
 Tags: DEX, DeFi, LP Fees
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 The fixed weight pool create a value-weighted liquidity pool of assets. It can give the Liquidity Provider an auto-rebalance portfolio with fixed value-weighted ratio.
@@ -9104,6 +10342,91 @@ swap fee should be initialize from standard univ4 initialize data. This property
 
 simon ho [https://x.com/SimonVenHo]
 welcome others to enhance this project.
+
+---
+
+# Glyph
+
+# Glyph
+
+Description: Every AMM today charges a sandwich bot the same fee as a first-time user, because   pools have no memory. Glyph fixes that: a shared reputation registry that every v4 pool reads   before quoting a fee, repricing extractors up to 33x and paying the premium straight back to   LPs.
+Tags: Cross-Chain, LP Fees, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+Reactive Network runs our cross-pool propagation: one RSC subscription to our registry covers
+  every Glyph pool ever deployed, aggregates toxicity off-chain at zero gas cost to pools, and
+  calls back to reprice a flagged wallet everywhere within seconds — deployed and funded on Lasna.
+  Unichain hosts the stack on its canonical v4 PoolManager, and its one-second blocks are why our
+  keeper repriced an attacker mid-burst rather than after. Brevis makes wallet history provable
+  instead of asserted (ZK circuit + on-chain consumer feeding the scoring model). Pyth catches
+  no-history attackers: anomalous first-touch price impact quotes the max fee instantly, and a
+  stale feed never reverts a swap.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/jayteemoney/glyphh](https://github.com/jayteemoney/glyphh)
+Slides: https://docs.google.com/presentation/d/1q9Wxcj8WcIIy-kgZSbd4RTbaEaN11czOpiEvwezXt40/edit?usp=sharing
+Project Link: https://glyphh-alpha.vercel.app/
+Demo Video: [https://glyphh-alpha.vercel.app/](https://glyphh-alpha.vercel.app/)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+A sandwich bot pays the same fee on its thousandth attack as a retail user on their first swap pools have no memory, so LPs silently fund their own extraction (this is LVR, and on volatile pairs fees don't cover it). Every existing defense reacts to symptoms (price, volatility) instead of the actor, forgets between swaps, and defends one pool at a time while attackers simply rotate venues. Every mature market solves this with counterparty reputation; on-chain the data is public and unused. v4 hooks finally let a pool ask who is swapping before quoting a fee, Glyph is that answer. Decaying wallet reputation, fees up to 33x for extractors, premium back to LPs,  propagated to every pool in seconds.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Glyph is the only hook that prices the wallet behind the swap, and the only one where pools share what they learn;  flag a bot in one pool and every pool reprices it in seconds. Unlike volatility hooks that punish everyone when markets move, only extractors pay more (up to 33x), and the seven-day decay makes it a price, not a blacklist. It's live and measured: our detector flagged an attack bot mid-burst, 0 to 8,000, next swap 5.20% instead of 0.30%, premium to LPs in the same transaction. Impact: LVR stops being a silent tax on LPs and becomes their yield, deeper liquidity follows, and the registry underneath is a reusable reputation primitive such as;  lending, perps, and RFQ systems can read the same scores. Every new pool makes every other pool safer; no single-pool defense can say that.
+
+## Challenges: What was challenging about building this project?
+
+The hard parts only appeared live. Our LP-premium design called donate() after charging the dynamic fee. Every toxic swap reverted with CurrencyNotSettled, because v4's fee override already pays LPs and the donate double-counted; our tests missed it by pranking msg.sender but not tx.origin. Hook address mining failed because broadcasts deploy via the CREATE2 factory, not the EOA. Our block-based burst detection went blind on the real chain (receipt waits spread bursts across blocks), forcing a redesign around time-gaps and directional pressure, after which the keeper flagged the attacker mid-burst. Add trust-separating three score writers (EIP-712 nonces, hook allow-lists, validated Reactive callbacks) and surviving public infrastructure (lagging RPC nonces, the Kopli-to-Lasna migration), and most of the project was the gap between 'works in tests' and 'works.
+
+---
+
+# Goldgard
+
+# Goldgard
+
+Description: Goldgard is a hook that protects LST LP yield through oracle‑aware dynamic fees, circuit breaking and post‑swap delta rebalancing funded by a 0.02% insurance premium flowing into an ERC‑4626 Safety vault.
+Tags: Cross-Chain, Dynamic Fee, LP Fees, LVR, Stablecoins, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+**Key Links**
+
+- **GitHub:** [https://github.com/jorshimayor/Goldgard/tree/main/goldgard-hookathon](https://github.com/jorshimayor/Goldgard/tree/main/goldgard-hookathon)
+- **Demo Video:** [https://youtu.be/60bY2buG7YY](https://youtu.be/60bY2buG7YY)
+
+**Partner Integrations**
+
+Reactive Network makes Goldgard proactive instead of only reactive. The GoldgardReactiveWatcher contract on Lasna listens to OraclePriceUpdated events emitted on Sepolia. When TWAP vs Chainlink divergence crosses the early-warning threshold, it sends a callback back to Sepolia through GoldgardCallbackReceiver, which validates the callback path and tells the hook to raise an alert level — triggering fee adjustments before the hook's own local circuit breaker would fire.
+
+**Problem / Background**
+
+Liquid Staking Tokens (LSTs) yield a steady 3–7%, but depositing them into traditional AMMs to earn swap fees is a trap. Natural price drift triggers heavy Impermanent Loss (IL) and Loss Versus Rebalancing (LVR). This structural flaw routinely bleeds 8–15% of capital, completely wiping out the staking rewards LPs came to earn.
+
+Hedging an active position forces users across separate protocols — external rebalancing managers, isolated lending platforms — inflicting massive gas fees and critical execution delays, exposing funds to toxic MEV bots and stale hedges.
+
+**Impact**
+
+Goldgard eliminates this friction as a self-contained yield-protection layer built directly into Uniswap v4's core architecture. A defensive beforeSwap hook monitors prices against external oracles, dynamically raising fees during volatility and tripping a circuit breaker if price de-pegs past 8%. An automated afterSwap hedging engine then measures directional drift and runs a counter-swap against an internal, protocol-owned Hedge Reserve to absorb the LVR.
+
+The entire sequence executes via flash accounting using EIP-1153 transient storage — all balances settle to net-zero within a single transaction block, bypassing permanent storage writes and slashing traditional multi-contract gas costs by roughly 40%.
+
+Three structural guarantees: (1) underlying staking yield is preserved — LST collateral continuously earns its baseline rewards without being wrapped or lent out; (2) the pool's aggregate delta is actively neutralized on every trade with no manual intervention required; (3) residual loss is backstopped by a protocol-owned ERC-4626 Safety Module funded by a 0.02% fee on every swap.
+
+**Challenges**
+
+Pre-v4 AMMs lacked the native capacity for atomic execution, which forced reliance on off-chain managers and multi-contract loops. The core challenge was compressing a full protection stack — oracle verification, user swaps, and aggregate delta rebalancing — directly into a single transaction lifecycle.
+
+Taming the resulting gas overhead required studying EIP-1153 transient storage, with careful state management to ensure all balance deltas settled to net-zero via flash accounting before the lock closed.
+
+Finally, ensuring the multi-layered defense system — dynamic fees, the internal Hedge Reserve, and the ERC-4626 Safety Module — interacted correctly without risking protocol insolvency was the hardest integration challenge.
 
 ---
 
@@ -9264,6 +10587,57 @@ Fenrir - CTO
 
 ---
 
+# HedgeFlow
+
+# HedgeFlow
+
+Description: HedgeFlow is an adaptive liquidity protection protocol for Uniswap v4 that dynamically adjusts trading fees based on real-time risk scoring, and automatically compensates LPs for impermanent   loss from a shared reserve vault when they withdraw — powered by an AI risk engine, Reactive Network automation, and an on-chain IL calculator.
+Tags: LP Fees, LP Liquidity, Trading Rewards, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+ HedgeFlow integrates Reactive Network as its cross-chain automation backbone — a deployed HedgeFlowReactive contract on the Reactive Network (Lasna, chain 5318007) listens for RiskModeUpdated events emitted on Unichain Sepolia and autonomously triggers on-chain risk mode changes on the RiskManager contract, eliminating the need for a centralized keeper and making
+ the risk response trustless and decentralized.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Wilfred007/HedgeFlow-Hook](https://github.com/Wilfred007/HedgeFlow-Hook)
+Slides: 
+Project Link: hedge-flow-hook.vercel.app
+Demo Video: [https://www.loom.com/share/a85a1d61cc9c4d27a739199d171da1cc](https://www.loom.com/share/a85a1d61cc9c4d27a739199d171da1cc)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers on Uniswap v4 face two compounding problems: impermanent loss silently erodes their capital whenever prices move, and static fee tiers fail to reflect actual market risk
+  — charging the same fee during calm markets as during high-volatility crashes. Existing solutions either require LPs to actively manage positions or offer no protection at all, leaving
+  passive LPs exposed with no recourse.
+
+  HedgeFlow was inspired by the question: what if the pool itself could defend its LPs? Instead of pushing responsibility onto the LP, HedgeFlow embeds protection directly into the Uniswap v4
+  hook — dynamically raising fees when the AI risk engine detects elevated volatility, whale activity, or reserve stress, and automatically paying out IL compensation from a reserve vault the
+  moment an LP withdraws. The result is a protocol where passive LPs are protected by design, not by luck.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Most IL "solutions" are synthetic derivatives or off-chain insurance products that require LPs to actively opt in, pay premiums, and trust a third party — HedgeFlow is unique because
+  protection is native to the pool itself, requiring zero extra steps from the LP. The moment you add liquidity, you're covered.
+
+  What makes it technically distinct is the combination of three systems working in lockstep: a real-time AI risk engine (using LLM-powered sentiment analysis alongside on-chain volatility,
+  liquidity stress, and whale activity scoring) that drives dynamic fee adjustment on every swap, feeding into a trustless compensation vault that pays out IL automatically on withdrawal — all
+  coordinated across chains via Reactive Network without a centralized keeper.
+
+  The impact is a fundamentally safer LP experience: capital that was previously sitting idle or being quietly drained by IL can now earn yield with a built-in safety net. For the broader DeFi
+  ecosystem, HedgeFlow demonstrates that Uniswap v4 hooks can evolve beyond fee customization into full LP risk management infrastructure — a new primitive that could change how protocols
+  compete for liquidity.
+
+## Challenges: What was challenging about building this project?
+
+It was a bit of a challenge deploying on reactive network
+
+---
+
 # HedgeZ
 
 # HedgeZ
@@ -9330,6 +10704,17 @@ Building this project was challenging because we had to combine three hard syste
 # Team: Who is on the team? What are their backgrounds?
 
 Daniel Pham (discord id: [phone removed], gmail: [[email removed]](mailto:[email removed])) he also joined UHI8 with me, we are both blockchain developers, we love researching and learning new protocols on DeFI, Network Layer and everything related to Blockchain.
+
+---
+
+# Hedgehog
+
+# Hedgehog
+
+Description: Hedgehog is a Uniswap v4 hook that auto-hedges LP impermanent loss via EigenLayer-secured, cross-chain GMX short positions — fee income without directional risk.
+Tags: Cross-Chain, LP Fees, Trading Volume Rewards
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI6
 
 ---
 
@@ -9400,6 +10785,41 @@ Liqui Hedgehog: synthetic ETH-vault atop UniV3+Squeeth. Hack DeFi with Wintermu
 
 ---
 
+# Hedgeman
+
+# Hedgeman
+
+Description:  Automatically pair opposing LP positions across correlated pools. When one side exits, emit a real-USDC rebalance signal. No oracles. No in-callback token movement.
+Tags: Custom hooks
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI7
+
+## How did you integrate our partners, if any?
+
+Off-chain keeper (design only).
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/mangekyou-labs/hedgeman](https://github.com/mangekyou-labs/hedgeman)
+Slides: 
+Project Link: 
+Demo Video: [https://youtu.be/c1LqigqQTNE](https://youtu.be/c1LqigqQTNE)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+LPs in correlated pools carry overlapping risk. When ETH drops, WBTC drops too. Two separate WETH/USDC and WBTC/USDC LP positions mean double downside — with zero coordination between them.
+
+## Impact: What makes this project unique? What impact will this make?
+
+it will serve as a useful tool for DeFi traders and institutions who want to play safe in the market. Furthermore, it can evolve into a more complex hedging & yielding system on the whole ecosystem.
+
+## Challenges: What was challenging about building this project?
+
+i don't know much about the formula to calculate correlation hedging  at the start
+
+---
+
 # Helix
 
 # Helix
@@ -9435,6 +10855,84 @@ This project is unique because it’s the first to combine Uniswap V4 Hooks with
 Ensuring secure task execution, precise tick calculations, and smooth end-to-end communication between the hook, operator, and RPC layer required careful engineering.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# Helix
+
+# Helix
+
+Description: Helix is a Uniswap v4 hook that mutualizes impermanent loss across a basket of correlation-diversified LP positions — matching providers whose IL exposure offsets each other and redistributing surplus at settlement so each member converges toward the basket's average IL instead of absorbing their own in full. It uses Reactive Smart Contracts to autonomously monitor cross-chain price correlation and volatility, triggering re-matching or pausing when a basket's risk assumptions break down.
+Tags: CCIP, Compliance, DEX, Governance, Regulation
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+Date: June 10, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/aliveevie/helix](https://github.com/aliveevie/helix)
+- **Deck / Slides:** [https://docs.google.com/presentation/d/1AvHxpYNBWVMhcwZFYfUDPkCNrTQmEeZu82cDTT6Q4eY/edit?usp=sharing](https://docs.google.com/presentation/d/1AvHxpYNBWVMhcwZFYfUDPkCNrTQmEeZu82cDTT6Q4eY/edit?usp=sharing)
+- **Demo Video:** [https://www.youtube.com/watch?v=9TxX2zQ2xMo](https://www.youtube.com/watch?v=9TxX2zQ2xMo)
+- **Live Project:** [https://helix-ui-five.vercel.app](https://helix-ui-five.vercel.app/)
+
+### **Partner Integrations**
+
+Uniswap v4 (core): HelixHook extends BaseHook and registers afterInitialize | afterAddLiquidity | afterSwap | beforeRemoveLiquidity, reading real pool price from PoolManager via StateLibrary.getSlot0. ForkLifecycle.t.sol forks Sepolia and runs the full initialize → add-liquidity → swap → settle path against the canonical v4 PoolManager.
+
+Chainlink: ChainlinkOracle implements IHelixOracle, pulling latestRoundData with a staleness guard. Deployed and live as a feed reader against the Sepolia ETH/USD feed. Caveat: the currently-deployed hook instance has its immutable oracle set to a MockOracle — wiring Chainlink end-to-end is a hook redeploy with the same interface, no code change.
+
+ERC-8004 (Trustless Agents): ReputationAccumulator is a conformant ERC-8004 registry. The hook's credit/penalize paths emit ERC-8004 feedback so protocol actions surface through the standard's read path.
+
+Reactive Network: HelixReactive is a real RSC maintaining a volatility EMA and cross-pool correlation estimate, emitting triggerRebalance(matchId, action) callbacks. Deployed on Reactive Lasna, funded, with both Subscribe events confirmed on-chain. Caveat: the live on-chain callback firing from Lasna into Sepolia needs a real volatility event on a subscribed pool — round-trip is demonstrated in test, not yet as an on-chain transaction.
+
+### **Problem / Background**
+
+Every Uniswap LP carries impermanent loss as a silent tax. Existing solutions are all unsatisfying: hedging IL with perps means leaving the AMM, posting margin on a separate venue, and actively managing a position most LPs aren't equipped to run. Insurance-pool designs socialize losses without addressing the cause and need external capital to stay solvent.
+
+The insight behind Helix: the risk often doesn't have to exist — it just has to meet its counterparty. For almost every LP losing to divergence on one pair, there's another LP on a correlated pair experiencing the inverse pull. Those positions never see each other. Capital that is structurally hedgeable stays unhedged purely because nothing matches it.
+
+### **Impact**
+
+Helix is the first IL solution that requires no perp, no external insurance pool, and no exit from the AMM — it turns the LP losing to divergence and the LP gaining from it into each other's hedge. Matching offsetting positions into a basket and redistributing to the average IL provably cuts the variance of LP returns, with the Reactive layer keeping matches honest as correlations shift — all self-funded, so the protocol never holds directional risk.
+
+### **Challenges**
+
+The hardest part was being honest about what "hedging" actually means. The tempting pitch — match two LPs and IL vanishes — is false: matching two concave LP payoffs doesn't create true delta neutrality. Had to rebuild the claim around something provable — mutualizing IL toward the basket average to cut variance, not magically erase the mean — and prove that conservation holds as a Foundry invariant.
+
+Settlement accounting was the next wall: computing IL fairly requires a clean entry/exit price, but pool spot is manipulable, so _settlePrice cross-checks the oracle against each pool's realized TWAP and reverts on divergence.
+
+---
+
+# Holdfast
+
+# Holdfast
+
+Description: A Uniswap v4 hook that measures IL exposure, partially compensates realized impermanent loss, and compounds rewards through Aave V3.
+Tags: Dynamic Fee, LP Fees, LP Liquidity, LVR, Liquidity Mining, Pool Native Incentivization, Reputation, Trading Rewards, Trading Volume Rewards, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/eylulbalcilar/holdfast-hook](https://github.com/eylulbalcilar/holdfast-hook)
+Slides: https://canva.link/a839r1kgce4cw4e
+Project Link:  [https://holdfast.network/](https://holdfast.network/) 
+Demo Video: [https://www.loom.com/share/8ad0609e91514d2c90f4f72f41c24e5a](https://www.loom.com/share/8ad0609e91514d2c90f4f72f41c24e5a)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers in volatile pools consistently lose to impermanent loss, even when fee income is positive. Across multiple independent studies, net LP returns come out negative. Existing hooks each solve one piece  in isolation. Holdfast was built to address LP retention and IL exposure together, in a single hook, instead of leaving each problem to a separate tool.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Holdfast combines four retention mechanisms (realized IL compensation, volatility-weighted retention scoring, tiered NFT badges, and Aave V3 yield compounding) into one subscriber-native hook. The contribution is the synthesis with genuine composability: the bonus pool runs in a real Aave V3 position on-chain, not mocked. Identity is anchored to the canonical PositionManager tokenId, removing a denial-of-accrual spoofing surface present in caller-asserted designs.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was the identity model. An early design resolved LP ownership from hookData, which diverged from how PoolManager keys positions and created a spoofing surface. I rewrote the contract subscriber-native, rekeying all state by the canonical PositionManager ERC-721 tokenId, while respecting the hard periphery invariant that notification handlers must never revert. Calibrating the scoring and tier thresholds via simulation, and integrating Aave V3 with a safe partial-fill withdraw path, were also significant
 
 ---
 
@@ -9717,6 +11215,85 @@ I have been working in the web3 space for the last 4 years. Have developed many 
 
 ---
 
+# HookMind
+
+# HookMind
+
+Description: HookMind is an AI-powered liquidity protection protocol for Uniswap v4. It pairs real-time AI dynamic fees with an on-chain "Market Airbag" hook that auto-enrolls every liquidity position into impermanent-loss protection.
+Tags: Dynamic Fee, LP Fees, LP Liquidity, Machine Learning, Oracle, Security, Unichain, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+Date: June 9, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/Eras256/HookMind](https://github.com/Eras256/HookMind)
+- **Deck / Slides:** [https://drive.google.com/drive/folders/1-UGiHHlyyvKQBKKCiwIfXzDnkKZnJMg-?usp=sharing](https://drive.google.com/drive/folders/1-UGiHHlyyvKQBKKCiwIfXzDnkKZnJMg-?usp=sharing)
+- **Demo Video:** [https://icnk.io/u/pVFEQrQIFXhj](https://icnk.io/u/pVFEQrQIFXhj)
+- **Live Project:** [https://hookmind.xyz](https://hookmind.xyz/)
+
+### **Partner Integrations**
+
+No partner integrations.
+
+### **Problem / Background**
+
+Liquidity providers on Uniswap lose money two ways: pool fees don't react to volatility, and impermanent loss silently erodes their capital — over $1.3B/year is exposed to IL on Uniswap alone. Existing tools treat these as separate, manual problems.
+
+The goal was for LPs to be protected automatically, the moment they add liquidity, without managing anything. That inspired HookMind: an AI that tunes fees in real time, plus an on-chain insurance airbag that enrolls every position by default.
+
+### **Impact**
+
+HookMind is the only Uniswap v4 hook combining AI-driven dynamic fees with on-chain impermanent-loss protection that auto-enrolls every LP position — no forms, no separate transaction. Every AI decision is ECDSA-signed and IPFS-audited, giving LPs a verifiable, tamper-proof trail of why each fee changed.
+
+Live on Unichain Sepolia with 87,778 signed agent transactions and 22,823 on-chain core transactions. Makes sophisticated liquidity protection accessible to retail LPs (Market Airbag, tiered coverage) while scaling to institutional positions up to a $10K safety offset per epoch.
+
+### **Challenges**
+
+The hardest part was making AI decisions trustworthy and verifiable on-chain. Built an ECDSA signature + nonce-replay scheme so the contract only accepts fee updates from authorized agents, and pinned every audit log to IPFS. Also had to fit fee logic within v4's hook lifecycle (beforeSwap dynamic fees, afterAddLiquidity auto-enrollment) while keeping the audit surface small — consolidated from 5 contracts to 2, reaching 90.4% test coverage with invariant fuzzing.
+
+### **Team**
+
+Giovanny Amador — Founder & CEO. Full-stack Web3 + AI developer. UHI 8 graduate. Built HookMind's smart contracts (Uniswap v4 hooks, Solidity), the off-chain AI agent daemon, the REST API/SDKs, and the dashboard frontend.
+
+Montserrat Mendoza — Co-founder. AI development and UI/UX design. Leads product design, the institutional dashboard experience, and the retail-friendly UX.
+
+Both are part of the Uniswap Foundation Acceleration Season 2026 cohort.
+
+---
+
+# HookMind
+
+# HookMind
+
+Description: HookMind is a non-custodial Uniswap v4 hook that protects liquidity providers from impermanent loss with an on-chain "Market Airbag" that auto-enrolls at deposit, while an AI agent adjusts fees to live volatility. Every fee decision is ECDSA-signed and pinned to IPFS for a full on-chain audit trail.
+Tags: Custom hooks, Dynamic Fee, LP Fees, LVR, Machine Learning, Oracle, Unichain
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Eras256/HookMind](https://github.com/Eras256/HookMind)
+Slides: https://drive.google.com/file/d/19bOT3qV7CoiOsLzsl3AnwDwuu7iFEAlZ/view?usp=sharing
+Project Link: https://hookmind.xyz
+Demo Video: [https://www.youtube.com/watch?v=2nmSm5AnFyw](https://www.youtube.com/watch?v=2nmSm5AnFyw)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers on Uniswap lose money in two ways that are rarely solved together: impermanent loss when prices move, and static fees that do not reflect real volatility. Most LPs cannot actively manage their positions, so they slowly lose value and eventually leave. We wanted a way for an LP to get both problems handled in a single deposit, with no extra steps.
+
+## Impact: What makes this project unique? What impact will this make?
+
+HookMind is the only Uniswap v4 hook we know of that combines AI-managed dynamic fees with on-chain impermanent-loss protection that auto-enrolls the moment liquidity is added. The protection, which we call the Market Airbag, is capped, epoch-prorated, and non-custodial, so the pool cannot be drained by a single event. Every fee decision the agent makes is ECDSA-signed and pinned to IPFS, so the reasoning is auditable on-chain. This sits squarely in the UHI9 theme: it is an IL insurance hook and a fee-smoothing hook in one. Lower perceived risk for LPs means deeper pools and better execution for swappers.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was making an off-chain AI agent trustworthy on-chain. We added ECDSA signatures, nonce replay protection, and hard fee guardrails (50 to 1000 bps) so the contract stays safe no matter what the agent proposes. Designing the IL protection so it is solvent and capped, rather than an unbounded promise, took several iterations. We also consolidated our contracts from five down to two to shrink the audit surface, which meant rewriting and re-testing most of the core logic.
+
+---
+
 # HookMind Protocol
 
 # HookMind Protocol
@@ -9912,6 +11489,41 @@ Mansa: Software engineer, Smart contract researcher
 
 ---
 
+# HyFi
+
+# HyFi
+
+Description: HyFi is a platform for propAMMs that makes them possible on EVM for the first time. PropAMMs offer better pricing, eliminate toxic flow, lower fees, and less slippage than regular AMMs.
+Tags: Custom hooks, DEX, Dynamic Fee, LP Liquidity, LVR, MEV, Oracle, PropAMM, Unichain
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+No partners, just general Uniswap/Unichain - I applied for an audit grant from Uniswap and will launch this as is because I'm only interested in what has actual product market fit, I'm not sponsor-prize-maxxing haha
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/quantaf1re/hyfi-hook](https://github.com/quantaf1re/hyfi-hook)
+Slides: https://docs.google.com/presentation/d/1EaYyV9uctfNAhOmvX_n3d8LEFSmnvNmw/edit?usp=sharing&ouid=[phone removed]&rtpof=true&sd=true
+Project Link: https://docs.hyfi.finance/
+Demo Video: [https://www.loom.com/share/bf876dbfb0374ebdbf4a6e7ac3deb64d](https://www.loom.com/share/bf876dbfb0374ebdbf4a6e7ac3deb64d)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Most LPs lose money because of toxic flow. PropAMMs are the solution, but they're prohibitively expensive on EVM in most situations, and aggregators have to manually integrate each one individually.
+
+## Impact: What makes this project unique? What impact will this make?
+
+The biggest benefit is that it eliminates toxic flow loss for Market Makers, which allow them to charge lower fees fees, have lower slippage, tighter spreads etc - users get CEX-grade prices, all onchain.
+It's the first ever platform for propAMMs - it reduces the cost of the constant price updates by allowing multiple propAMMs to plug into a platform with the updates included, which effectively socialises the cost across all of them, making it economical to do so on EVM. It also allows MMs to permissionlessly start getting flow by using HyFi vs trying to get every aggregator to integrate their propAMM manually.
+
+## Challenges: What was challenging about building this project?
+
+Trying to get flow via UniswapX or router/aggregator integrations, taking forever lol
+
+---
+
 # Hybryda Hook
 
 # Hybryda Hook
@@ -10001,6 +11613,145 @@ I am solo for now when i start building the frontend and other aspect of the pro
 
 ---
 
+# IL Shield
+
+# IL Shield
+
+Description: A self-funded, on-chain mutual insurance system embedded in a Uniswap v4 pool, where every swap contributes a configurable premium to a shared reserve that compensates LPs for impermanent loss when they exit; with tiered coverage, a deductible, and graceful reserve degradation.
+Tags: LP Fees, LP Liquidity
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 9, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/acyutaharidas-gif/ilShield_uhi9](https://github.com/acyutaharidas-gif/ilShield_uhi9)
+- **Demo Video:** [https://www.loom.com/share/c1ec5cac1ebd4c1a8656fda4eff87872](https://www.loom.com/share/c1ec5cac1ebd4c1a8656fda4eff87872)
+
+### **Partner Integrations**
+
+No partner integrations.
+
+### **Problem / Background**
+
+As far as can be determined, there is no deployed v4 hook that implements self-funded LP insurance. What makes ILShield different is the self-funding loop: the reserve grows automatically from swap premiums, so LP protection scales with pool usage rather than requiring external capital. If it works in production, it could meaningfully lower the barrier for LPs to provide liquidity in volatile pools.
+
+### **Impact**
+
+Every existing solution — external protocols, IL derivatives, farm subsidies — sits outside the AMM. ILShield's IL calculation handles concentrated positions correctly across all three price regimes (in-range, below-range, and above-range), which most implementations skip. The pro-rata cap means the reserve is distributed fairly regardless of which LP exits first.
+
+### **Challenges**
+
+The math was the hardest part. The IL formula for concentrated liquidity requires a proper derivation — three separate cases depending on where the current price is relative to the position's range, all computed in sqrtPriceX96 units using 512-bit intermediate arithmetic to avoid overflow.
+
+Then there's v4's flash accounting for the afterSwap premium collection — getting the hookDeltaUnspecified sign right took real debugging. The pro-rata cap required careful snapshot timing to ensure accounting is correct when multiple LPs exit sequentially.
+
+---
+
+# ILAwareLimitOrderHook
+
+# ILAwareLimitOrderHook
+
+Description: A Uniswap V4 hook that turns every limit order into a yield-bearing, IL-aware position: the filled output earns vault yield, and impermanent loss is computed on-chain from sqrtPriceX96 (no oracle) and rebated from that yield. Live on Unichain mainnet - orders are ERC-721 NFTs, 53 tests passing.
+Tags: Custom hooks, LVR, Order Type, Unichain, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/impetus82/il-aware-limit-order-hook](https://github.com/impetus82/il-aware-limit-order-hook)
+Slides: 
+Project Link: https://il-aware-hook.vercel.app
+Demo Video: [https://youtu.be/eikjiI5kq8I](https://youtu.be/eikjiI5kq8I)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+On-chain limit orders are idle capital: your tokens sit locked in the order earning nothing while they wait to fill - and the moment the order fills, you've effectively sold into a moving market and eaten impermanent loss versus simply holding. I wanted a limit order that does the opposite: it puts the capital to work earning yield while it waits, and uses that yield to compensate the user for the IL they incur on the fill - entirely on-chain, with no trusted oracle.
+
+## Impact: What makes this project unique? What impact will this make?
+
+It fuses two things that are normally separate - execution (limit orders) and capital efficiency (yield + IL protection) - into one Uniswap V4 hook. Impermanent loss is computed on-chain from the pool's own sqrtPriceX96 via a Taylor approximation (the pool is the oracle), and the rebate is provably bounded at min(yield, IL), so the system is always solvent. Orders are minted as ERC-721 NFTs, making a resting or filled order a composable, tradeable asset. As a default primitive, every limit order on Uniswap could become yield-bearing and IL-aware by default.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was computing impermanent loss on-chain without an oracle - deriving it from sqrtPriceX96 with a Taylor approximation that stays gas-cheap and accurate. On top of that: keeping the hook solvent and DoS-resistant with graceful execution that never reverts the whole swap and degrades safely when a vault redeem or slippage check fails; O(1) tick-bucket bookkeeping so order discovery doesn't blow up gas; and using V4 flash accounting for exact settlement with no custom token accounting. Covering the edge cases - lossy vault redeem, partial fills, slippage - to 53 passing tests took real effort.
+
+---
+
+# ILT — Impermanent Loss Token
+
+# ILT — Impermanent Loss Token
+
+Description: ILT is a Uniswap v4 hook that turns impermanent loss into fee-funded, collateralized insurance with a tradeable claim token. LPs can hedge IL using premiums funded from their own swap fees, while underwriters and traders can price whether the loss will revert or become permanent.
+Tags: Cross-Chain, Custom hooks, DEX, LP Fees, Trading Rewards, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+We integrated Reactive Network for cross-chain settlement. The Reactive smart contract is deployed on Reactive Lasna and watches multiple price sources; when the configured consensus condition is met, it dispatches a callback to the ILT Uniswap v4 hook on Unichain Sepolia to finalize settlement. We also deployed the hook system on Unichain Sepolia using Uniswap v4 infrastructure
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/anxbt/ILT-Impermanent-Loss-Token](https://github.com/anxbt/ILT-Impermanent-Loss-Token)
+Slides: https://drive.google.com/drive/folders/1n7QmVnp5ZqRI5ksEk5FP6DPIhwfj5arA?usp=drive_link
+Project Link: 
+Demo Video: [https://youtu.be/0jcrRdU1PtM](https://youtu.be/0jcrRdU1PtM)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Prediction markets have shown that people are willing to trade uncertainty, but DeFi still has a major unpriced uncertainty: whether an LP’s impermanent loss will revert or become permanent. Today LPs mostly have two bad options ,stay in the pool and hope the loss disappears, or exit and lock in the loss. ILT creates a native market for this risk by letting LPs transfer impermanent-loss exposure while allowing underwriters and traders to price that risk.
+
+## Impact: What makes this project unique? What impact will this make?
+
+ILT is unique because it is not just another LP dashboard or optimizer; it creates a collateralized, tradeable market for impermanent-loss risk. The LP gets protection funded from their own fees, underwriters earn premium for taking the other side, and the ILT market price becomes a live “IL fear gauge” showing whether the market expects the loss to revert or stick. If extended to production, ILT could become a risk layer for AMM liquidity, making liquidity provision more attractive and more capital-efficient
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was correcting the mechanism so it measured true impermanent loss rather than exit slippage. We also had to avoid using Uniswap’s V4Quoter on-chain, because it is not suitable for hook execution. Other challenges included mining the correct hook permission address, integrating with the shipped Reactive Network library API, deploying across Unichain Sepolia and Reactive Lasna, wiring live frontend reads, and being honest about which dashboard panels are live versus simulated
+
+---
+
+# ILex Hook
+
+# ILex Hook
+
+Description: Automated Impermanent Loss Protection + Yield Parking for Uniswap v4 LPs, powered by Reactive Network.
+Tags: LP Fees, LP Liquidity, MEV, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Reactive Network — Powers the entire automation layer. An ILexReactive RSC (Reactive Smart Contract) is deployed on Lasna testnet and subscribes to five event topics from ILexHook (PositionCreated, PriceUpdate, PositionExited, PositionReentered, ManualExit). On every swap the hook emits a PriceUpdate event, the Reactive Network delivers it to the RSC's react() function, which evaluates IL for all tracked LPs and fires cross-chain callbacks (triggerExit() / triggerReentry()) back to the hook via the Callback Proxy. No keepers, no off-chain bots.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/anumukul/ILex-Protocol-UHI9](https://github.com/anumukul/ILex-Protocol-UHI9)
+Slides: https://anumukul.github.io/Pitch-Deck-ILex-Protocol-UHI9/
+Project Link: https://i-lex-protocol-hook-p.vercel.app/
+Demo Video: [https://www.loom.com/share/4ccfa[phone removed]cbbd1c1f66e26c842b](https://www.loom.com/share/4ccfa[phone removed]cbbd1c1f66e26c842b)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap v4 LPs providing concentrated liquidity face severe impermanent loss (IL) during volatile price moves. Today there is no on-chain safety net — LPs must manually monitor positions 24/7, react to price swings, and execute exits themselves. Existing automation relies on off-chain bots, keepers, or centralized relayers that are expensive, opaque, and introduce trust assumptions. The idea came from the observation that Reactive Network's on-chain event-driven execution could replace all of that with a single, verifiable smart contract.
+
+## Impact: What makes this project unique? What impact will this make?
+
+ILex is the first fully on-chain, bot-free IL protection system for Uniswap v4. A Reactive Smart Contract monitors price movements, evaluates IL for every LP on every swap, and autonomously exits/re-enters positions — all within the same transaction as the swap itself. LPs set their tolerance once and walk away. The impact is a new primitive for DeFi: programmable, trustless LP risk management that scales to any number of LPs with zero marginal overhead. No keepers, no cron jobs, no relayers.
+
+## Challenges: What was challenging about building this project?
+
+- Reactive Network's testnet instability — Lasna underwent an Omni fork mid-development; event ingestion broke on the old chain and the faucet was non-functional on the new chain. Cross-chain automation testing had to be simulated locally via reactive-test-lib and Forge fuzz tests.
+- CREATE2 address mining — The hook contract requires the afterSwap flag in its address, which meant brute-forcing salt values to find a valid deployment address — adding deployment complexity.
+- Two-chain mental model — Debugging requires reasoning about Unichain Sepolia (hook/lending pool), Reactive Lasna (RSC), and the bridge between them simultaneously. Event delivery failures could originate in either chain or the infrastructure layer, making root-cause analysis non-trivial.
+
+---
+
 # ISP (Intent Sandwich Protector)
 
 # ISP (Intent Sandwich Protector)
@@ -10032,6 +11783,38 @@ ISP demonstrates how Uniswap v4 hooks can be used not just for fee extraction bu
 The hardest part was emulating the PoolManager’s lock mechanism safely in tests and ensuring the hook’s logic aligned with Uniswap v4's low-level slot0 structure for TWAP reads. We also had to balance UX (delays) with real protection guarantees.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# IdentiFI Protocol
+
+# IdentiFI Protocol
+
+Description: A local-first privacy framework for Uniswap v4. It uses a client-side Rust/WASM generator to build authorization payloads that the beforeSwap hook validates before allowing trades.
+Tags: Compliance, Security, Trading Rewards, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/IdentiFI-Protocol/identifi-hooks](https://github.com/IdentiFI-Protocol/identifi-hooks)
+Slides: 
+Project Link: https://identifiprotocol.vercel.app/
+Demo Video: [https://www.youtube.com/watch?v=Zs_OOHRmqEA](https://www.youtube.com/watch?v=Zs_OOHRmqEA)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Modern DeFi publicly links all swap strategies and wallet clusters. We wanted to protect the user's on-chain interaction graph locally without building databases. IdentiFI solves this by moving payload preparation to the user's browser, preventing leaking strategy and setup information before execution.
+
+## Impact: What makes this project unique? What impact will this make?
+
+It creates an authority-gated swap layer directly inside the hook framework. Instead of hiding the transaction on-chain, it masks the relationship between secondary user wallets. By channeling 33% of the generated swap fees back to active LPs and swappers, it aims to create an incentive alignment for capital deployment.
+
+## Challenges: What was challenging about building this project?
+
+Managing the dynamic data split under strict gas rules. Compressing the client-side signature and validation payload into a tight 160-byte data array inside hookData required a lot of storage optimization, alongside decoupling the executor side to the JobberUniversal router.
 
 ---
 
@@ -10270,6 +12053,43 @@ Currently, I’m working solo but am open to contributors and interested develop
 
 ---
 
+# Indemnify
+
+# Indemnify
+
+Description: Indemnifi is on-chain insurance for Uniswap v4 liquidity providers, letting LPs buy explicit impermanent-loss coverage directly through a v4 hook. Premiums are backed by an insurance vault, while Reactive Network monitors pool events and automates claim settlement when covered losses occur.
+Tags: Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+We integrated **Uniswap v4 Hooks** and **Reactive Network**.
+
+The Uniswap v4 hook is implemented in `contracts/src/hook/IndemnifiHook.sol`, where LPs can create impermanent-loss insurance policies tied to pool activity. Reactive Network is integrated through `contracts/src/reactive/ReactiveRiskMonitor.sol`, which monitors hook events and triggers automated claim-settlement callbacks instead of relying on a manual claims process.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [http://github.com/xqcxx/indemnifi/tree/main](http://github.com/xqcxx/indemnifi/tree/main)
+Slides: https://docs.google.com/presentation/d/11zfCnd_UoXK2Nt7e5OH6tYqBjpzZmxI8OHJoKJ_70WA/edit?usp=sharing
+Project Link: https://indemnifi-frontend.vercel.app/
+Demo Video: [https://www.loom.com/share/e222da5caf13450897a4cc7844c5ec62](https://www.loom.com/share/e222da5caf13450897a4cc7844c5ec62)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers face impermanent loss as a core risk, but today that risk is usually unmanaged, manually hedged, or handled through off-chain insurance workflows. Indemnifi was inspired by the idea that Uniswap v4 hooks can move protection directly into the pool layer: LPs should be able to buy transparent, priced coverage at the moment they provide liquidity, with claims settled automatically from an on-chain vault.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Indemnifi turns impermanent loss from an open-ended LP risk into an explicit, priced, on-chain insurance product embedded directly in Uniswap v4. Its impact is making liquidity provision safer and more predictable: LPs can protect positions with known premiums, deductibles, and payout caps, while automated Reactive Network settlement removes the need for manual claims handling.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was coordinating multiple moving pieces into one reliable flow: Uniswap v4 hook lifecycle logic, premium and payout math, vault solvency accounting, frontend wallet interactions, and Reactive Network callbacks. It was also challenging to make the demo understandable, because impermanent-loss insurance involves several steps, so we built a scenario runner and frontend that compress the full lifecycle into a clear Alice-versus-Bob comparison.
+
+---
+
 # InfraFund
 
 # InfraFund
@@ -10375,6 +12195,61 @@ Hooks in general are quite difficult conceptually & technically.
 # Extension: How might you extend the idea with more funding or time?
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# Intent LP
+
+# Intent LP
+
+Description: IntentLP is a Uniswap v4 beforeSwap hook that lets LPs register on-chain conditions (volume range, time window, slippage tolerance) so swaps violating their intent pay a penalty fee instead of routing at the base rate — turning uncontrolled toxic flow into compensated risk. It integrates Chainlink price feeds, Circle USDC streaming rewards, and Across Protocol cross-chain bridging in a single gas-optimized hook with 63 passing tests and a live frontend.
+Tags: Custom hooks, Dynamic Fee, LP Fees, Liquidity Mining, MEV, Oracle
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+SPONSOR INTEGRATIONS
+• Chainlink: maxSlippageBps enforced via AggregatorV3Interface in _countViolations() — real-time on-chain price deviation checks without external trust assumptions
+
+• Circle (USDC): Streaming reward pool with per-second accrual — depositRewards(), claimRewards(), setRewardRate() incentivize active LP participation
+
+• Across Protocol (ERC-7683): Cross-chain intent bridging — bridgeIntent() pulls LP USDC, calls Across open(), and re-encodes intent params into the message for re-registration on the destination chain
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Mosss-OS/IntentLP](https://github.com/Mosss-OS/IntentLP)
+Slides: https://docs.google.com/presentation/d/1SiUb9Goz4x9cuZ5f3OJrx6HJyIcqJx-5aMI0BJrljdc/edit?usp=sharing
+Project Link: https://intent-lp-hook.vercel.app
+Demo Video: [https://youtu.be/Asb1BGbTUcQ](https://youtu.be/Asb1BGbTUcQ)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap v4 LPs currently have no on-chain way to control which swaps route through their liquidity. A 0.01 ETH dust swap, a 500 ETH whale dump, and a 3 AM trade during zero-liquidity hours are all treated identically. This uncontrolled toxic flow is the primary source of impermanent loss that hasn't been solved at the hook layer.
+
+## Impact: What makes this project unique? What impact will this make?
+
+1. Penalty fees instead of hard blocks — Most hooks either block swaps or let everything through. IntentLP applies a proportional penalty fee (up to 30 bps) when conditions are violated. The pool stays always accessible, but toxic flow becomes economically unattractive for the swapper and profitable for the LP.
+
+2. No external dependencies for core logic — Volume tracking uses a 24h on-chain exponential decay formula. No keeper, no oracle, no off-chain bot needed for the primary mechanism. The Chainlink feed is optional (only for slippage enforcement).
+
+3. Three sponsor integrations in a single hook — Chainlink (slippage feeds), Circle (streaming USDC rewards), and Across Protocol (cross-chain bridging). Most submissions target one sponsor — IntentLP targets three without compromising the hot path.
+
+4. Gas-optimised hot path — beforeSwap has zero external calls. Volume tracking was moved to afterSwap, saving ~25K gas per swap. The penalty calculation is a single SLOAD + arithmetic.
+
+5. Full-stack product — Deployed contracts + React frontend + The Graph subgraph + SwapSimulator live preview + cross-chain bridge UI. It's not just a contract — it's a usable application with real-time data.
+
+## Challenges: What was challenging about building this project?
+
+1. Uniswap v4 beforeSwap fee mechanics — The 0x400000 flag to signal fee overrides to PoolManager was poorly documented. Figuring out how to return a BeforeSwapDelta with a proportional penalty fee (not a flat one) took multiple rounds of reading the v4 core source and testing on a fork.
+
+2. PoolKey encoding consistency — The PoolId derived from keccak256(abi.encode(PoolKey)) needed to match identically between Solidity (via toId()) and the frontend (via viem's encodeAbiParameters). A single field ordering mismatch would silently read wrong data. Had to verify with cast on every deploy.
+
+3. Multiple sponsor integrations without bloating the hot path — Adding Chainlink price feeds, USDC rewards, and Across bridging without making beforeSwap expensive was a constant constraint. The solution was deferring volume tracking to afterSwap and keeping Chainlink lookups conditional (only when the LP sets a slippage bound).
+
+4. Reward accrual edge cases — _accrueRewards() must handle the case where activeIntentCount changes between accrual calls (LPs register/deactivate mid-cycle). The division accrued / numActive also required careful ordering to avoid rounding consistently favoring late-claiming LPs.
+
+5. Gas optimization under time pressure — Moving volume updates out of beforeSwap saved ~25K gas but required restructuring the entire swap lifecycle flow in the contract, which broke existing tests and forced a redeploy.
 
 ---
 
@@ -11111,6 +12986,70 @@ Naman Mohnani - Smart contract dev
 
 ---
 
+# Kinematic Protocol
+
+# Kinematic Protocol
+
+Description: Kinematic Protocol hopes to serve as an automatic money shifter for people who provide Bitcoin to help others trade on Uniswap.
+Tags: Cross-Chain, Dynamic Fee, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 10, 2026
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/entuziaz/kinematic](https://github.com/entuziaz/kinematic)
+Slides: 
+Project Link: 
+Demo Video: [https://github.com/entuziaz/kinematic](https://github.com/entuziaz/kinematic)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Normally, when you put your Bitcoin into a trading pool, it only makes money if people are actively trading at your specified price. If the market price moves too high or too low, your Bitcoin just sits there completely idle, doing absolutely nothing and earning zero dollars. Kinematic automatically fixes the idle time by setting up a smart monitor to watch the market price 24/7. I was inspired to work on this idea based on my experience exploring the Bitcoin ecosystem.
+
+## Impact: What makes this project unique? What impact will this make?
+
+It brings together the benefits of the Bitcoin and Uniswap ecosystems.
+
+## Challenges: What was challenging about building this project?
+
+Confirming Bedrock's programmatic deposit/withdrawal behavior on Rootstock and integrating the Reactive network RSCs
+
+---
+
+# Kinetic Capital Hook
+
+# Kinetic Capital Hook
+
+Description: We didn't just build insurance; we split the LP position into its core components so that yield can compound safely and risk can be traded freely.
+Tags: Compliance, Constant Product Market Maker (CPMM), Custom hooks, Dynamic Fee, Inter-Connected Pools, LP Fees, LP Liquidity, LVR, RWA, Reputation, Trading Rewards, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/DIFoundation/Kinetic-Capital-Hook](https://github.com/DIFoundation/Kinetic-Capital-Hook)
+Slides: https://copy-of-accelerator-appl-tfflip6.gamma.site/
+Project Link: 
+Demo Video: [https://youtu.be/ErFWiCZ3c3w](https://youtu.be/ErFWiCZ3c3w)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+We kept watching LPs get silently drained by impermanent loss and only find out after they withdrew. Over half of Uniswap v3 LPs are unprofitable, yet there's no way to see, price, or hedge that risk while you're still in the pool. A study in late 2025 formally introduced IL as a risk factor for the first time, the risk existed since 2018, the tools never caught up. We decided to build them.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Every major derivatives market started the same way, someone made an invisible risk tradeable. Credit risk became CDS. Volatility became options. IL is next. Kinetic is the first protocol to decompose an LP position into tradable layers: yield, risk, and protection, natively inside Uniswap v4, with no external subsidies or governance required. Deeper pools, informed LPs, and a brand new on-chain asset class.
+
+## Challenges: What was challenging about building this project?
+
+Making the economics actually hold was the hardest part, designing premium pricing that reflects real risk without being so expensive no LP would pay it took many iterations. On the technical side, coordinating vault interactions, token minting, and IL settlement atomically inside a single v4 hook callback without reentrancy vulnerabilities required working from near first principles, since ERC-6909 and v4's flash accounting are still very new territory with little prior art.
+
+---
+
 # KineticYield
 
 # KineticYield
@@ -11505,6 +13444,42 @@ Killian - dev background
 
 ---
 
+# LP Rewards hook
+
+# LP Rewards hook
+
+Description: A 
+Tags: Dynamic Fee, LP Liquidity, Yield Farming
+Submission Type: Hook Self Paced Course
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/akshay-ap/lp-rewards-hooks](https://github.com/akshay-ap/lp-rewards-hooks)
+Slides: 
+Project Link: 
+Demo Video: [https://drive.google.com/file/d/1NJsYWDrY5XJ-j4p13lHl_6YbgdbJsVud/view?usp=drive_link](https://drive.google.com/file/d/1NJsYWDrY5XJ-j4p13lHl_6YbgdbJsVud/view?usp=drive_link)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+This submission is a capstone hook instead of the original planned idea. 
+
+Capstone hook idea:
+
+LPs in AMM pools earn nothing beyond the base swap fee, while much of their capital sits passively especially liquidity parked far from the active price, which earns the same as useful liquidity under naive reward schemes. Meanwhile, charging traders extra fees usually feels punitive. The idea: charge a tiny extra fee (0.02%) only when gas is cheap  i.e., when the trader is already saving money relative to normal network conditions  and stream it to LPs weighted by how much liquidity they provide, and how close their range sits to where swap actually happens.
+
+## Impact: What makes this project unique? What impact will this make?
+
+This hook is an experiment to incentivize LP providers to provide the liquidity in range near the active tick by giving additional fees collected when the gas price is low on the network.
+
+## Challenges: What was challenging about building this project?
+
+The challenge is to build an incentive mechanism without hurting the trader with additional fees.
+
+---
+
 # LPDAO - Hedge Fund in a Hook
 
 # LPDAO - Hedge Fund in a Hook
@@ -11513,7 +13488,7 @@ Description: LPDAO allows LPs to pool their funds and elect a fund manager to ma
 Tags: Custom hooks, Donations, Dynamic Fee
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 LPDAO allows LPs to pool their funds and elect a fund manager to manage their funds in a trustless manner. The fund manager only gets paid if they actually return a profit, so incentives are aligned.
@@ -11560,7 +13535,7 @@ Description: This system enables just-in-time (JIT) liquidity provisioning for l
 Tags: DeFi, LP Fees, MEV, Trading Volume Rewards
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 This system enables just-in-time (JIT) liquidity provisioning for large LST swaps, offering zero slippage to traders while maintaining standard fees. By automatically detecting large swap transactions and temporarily providing liquidity, it benefits both traders (through better execution) and liquidity providers (through increased yields with lower risk), while collecting a 5bps fee on each large swap.
@@ -11571,7 +13546,7 @@ Cohort: UHI2
 🔗 **Links**
 
 - [https://github.com/leeftk/v4-hooks-lst](https://github.com/leeftk/v4-hooks-lst)
-- [https://scarlet-recorder-da1.notion.site/LST-Rebalancer-288dbc7daefd449082ef953511d16fe2](https://www.notion.so/288dbc7daefd449082ef953511d16fe2?pvs=21)
+- [https://scarlet-recorder-da1.notion.site/LST-Rebalancer-288dbc7daefd449082ef953511d16fe2](https://app.notion.com/p/288dbc7daefd449082ef953511d16fe2?pvs=21)
 </aside>
 
 ### Demo:
@@ -11820,6 +13795,55 @@ Extend the stylus contract to be a general compute contract which track info not
 # Team: Who is on the team? What are their backgrounds?
 
 Just me, with some background in distributed computing
+
+---
+
+# LaminarY
+
+# LaminarY
+
+Description: LaminarY is a Uniswap v4 hook that splits every LP position into a Principal Token with time-decaying IL exposure and a Yield Token representing the full fee stream — protected by a self-compounding IL Reserve that grows stronger the longer the pool runs. No escrow. No perp hedge. No external dependencies. Just math and time.
+Tags: LP Fees, LP Liquidity, Principal Token, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI6
+
+**Key Links**
+
+- **GitHub:** [https://github.com/Samuel1505/LaminarY](https://github.com/Samuel1505/LaminarY)
+- **Deck / Slides:** [https://gamma.app/docs/LaminarY-d3b8rsygm3uhusq](https://gamma.app/docs/LaminarY-d3b8rsygm3uhusq)
+- **Demo Video:** [https://www.loom.com/share/67dc7a1127704c719d76aeff9b81879f](https://www.loom.com/share/67dc7a1127704c719d76aeff9b81879f)
+
+**Partner Integrations**
+
+No partner integrations.
+
+**Problem / Background**
+
+Liquidity providers on Uniswap face two compounding structural problems: impermanent loss that crystallizes silently at the worst possible moment — exactly when price volatility is highest and an LP most needs to exit — and a fee yield that is entirely illiquid, with no way to sell, borrow against, or transfer the future income stream before it is earned.
+
+These problems reinforce each other: unmitigated IL forces LPs to demand higher returns before committing capital, while illiquid fee yield prevents LPs with short time horizons from providing long-duration liquidity at any yield level. The result is a DeFi ecosystem where pools are systematically thinner and more expensive than they need to be.
+
+Uniswap v4's hook architecture changed what was buildable. LaminarY was built on one thesis: yield tokenization of LP positions was always the right primitive, and v4 is the moment the infrastructure can finally support it without compromise.
+
+**Impact**
+
+LaminarY is the first protocol to treat LP yield as a tradeable asset class and impermanent loss as an amortizable liability, simultaneously, inside a single Uniswap v4 hook, with no external dependencies.
+
+What makes it structurally unique is not just the decomposition of LP positions into PT and YT, but the self-compounding IL Reserve: the forgiveness fund earns yield on its own holdings through an ERC4626 vault, meaning the longer a pool runs, the stronger its protection capacity grows — the protocol's safety improves organically with usage rather than requiring external capital injection or governance decisions.
+
+Impact operates at three levels: (1) For individual LPs, IL is no longer a cliff at withdrawal but a known, shrinking liability that converges to zero at maturity, and fee income can be monetized immediately by selling YT. (2) For pools, LPs who commit to longer durations earn explicit protection, reducing panic exits during volatility spikes. (3) For DeFi at large, YT is a standard ERC20 that can be listed on any DEX, used as collateral, or integrated into yield aggregators — opening LP yield as a new asset class with genuine price discovery.
+
+**Challenges**
+
+The hardest challenge was that every design decision had to be simultaneously correct at the Uniswap v4 hook layer, the token accounting layer, and the reserve economics layer, with no tolerance for approximation at any level.
+
+The v4 hook architecture introduced several non-obvious traps: the sender parameter in hook callbacks is the router, not the LP — requiring explicit lpOwner encoding in hookData. Zero-delta modifyLiquidity calls (fee collection operations) route through afterRemoveLiquidity without a corresponding PT, causing NoPTForPosition reverts until guarded explicitly. ERC20 transfers inside the v4 unlock context required careful reasoning — ILReserve.withdraw calls vault.withdraw on an ERC4626 vault from within a hook callback, correct only because vault operations move ERC20 tokens between external addresses and never touch v4's currency accounting.
+
+On the accounting side, getting the MasterChef reward-debt model right on a freely-transferable ERC20 — where any transfer must atomically settle both sender and receiver — required precise settlement ordering and a correctness proof that total claimable fees are structurally bounded by total accrued fees.
+
+Foundry's via_ir = true Yul IR optimizer re-materializes TIMESTAMP opcodes rather than caching them, causing loop variables referencing block.timestamp to behave differently than expected in tests — only caught because the test suite was strict enough to expose it.
+
+Finally, the IL amortization formula had to be both economically meaningful and manipulation-resistant: the linear decay from a stored depositTimestamp with no oracle input is the correct design precisely because it offers no attack surface — but arriving at it required ruling out several more sophisticated approaches that introduced oracle risk or governance parameters.
 
 ---
 
@@ -12564,6 +14588,77 @@ In the long term: implement a just-in-time (JIT) liquidity system that borrows f
 
 ---
 
+# LiquiShield
+
+# LiquiShield
+
+Description: LiquiShield is a Uniswap v4 Hook-based impermanent loss insurance protocol that allows liquidity providers to purchase protection directly within the LP lifecycle. By combining lifecycle-aware hooks, concentrated liquidity risk modeling, a TWAP-based pricing mechanism, and an ERC-4626 insurance vault, LiquiShield transforms LP positions into safer and more predictable yield-generating assets.
+Tags: DeFi Insurance
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 8, 2026
+
+**Cohort: UHI9   |   Chain(s): Not specified**
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/hementewodros/lp-insurance](https://github.com/hementewodros/lp-insurance)
+- **Demo Video:** [https://drive.google.com/file/d/1vvCvmgC_v5uRblXY6MGpBktCJu0lPTNN/view?usp=sharing](https://drive.google.com/file/d/1vvCvmgC_v5uRblXY6MGpBktCJu0lPTNN/view?usp=sharing)
+
+### **Partner Integrations**
+
+No partner integrations.
+
+### **Problem / Background**
+
+Impermanent loss remains one of the largest barriers preventing wider participation in decentralized liquidity provision. While traders benefit from deep liquidity, LPs absorb significant divergence risk whenever prices move. Existing hedging solutions are often complex, fragmented, or inaccessible to average users.
+
+LiquiShield was inspired by the idea that LP protection should be native to the liquidity lifecycle itself — exploring how Uniswap v4 Hooks could create a programmable insurance layer that automatically protects LPs from excessive impermanent loss while remaining fully on-chain and composable.
+
+### **Impact**
+
+LiquiShield introduces impermanent loss protection directly into Uniswap v4 through hook-native architecture. Unlike external insurance systems, coverage is tightly bound to the LP position lifecycle. The protocol combines concentrated liquidity-aware risk calculations, TWAP-based pricing, lifecycle validation, and an ERC-4626 insurance reserve vault into a unified system.
+
+By reducing LP downside risk, LiquiShield has the potential to unlock additional liquidity, improve user confidence, and make volatile-pair LPing a more sustainable and accessible financial product.
+
+### **Challenges**
+
+The most difficult challenge was designing economically sound impermanent loss protection while remaining faithful to Uniswap v4 mechanics — accounting for concentrated liquidity behavior, secure oracle design, policy lifecycle enforcement, vault solvency, and state consistency across multiple contracts. Balancing mathematical accuracy, security, and usability within a hook-based architecture required multiple design iterations and extensive testing.
+
+---
+
+# Liquid NFT
+
+# Liquid NFT
+
+Description: Liquid NFT is a marketplace protocol to provide fungible liquidity to non-fungible token (NFT) collections.
+Tags: Auctions, DEX, Illiquid Assets, LP Liquidity, Price Discovery
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/skypper/liquid-nft](https://github.com/skypper/liquid-nft)
+Slides: 
+Project Link: 
+Demo Video: [https://github.com/skypper/liquid-nft](https://github.com/skypper/liquid-nft)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+NFTs are highly illiquid assets. Selling often requires finding a buyer for a specific NFT, resulting in slow exits, poor price discovery, and locked capital. Liquid NFT solves this by converting NFTs into liquid ERC-20 collection tokens that can be traded instantly while preserving additional value for rare NFTs.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Liquid NFT brings DeFi-style liquidity to NFT markets. By combining NFT fractionalization, AMM liquidity, and auctions, it enables instant liquidity, better price discovery, and greater capital efficiency for NFT holders while making NFTs more composable within DeFi.
+
+## Challenges: What was challenging about building this project?
+
+The main challenge was balancing instant liquidity with fair valuation. NFTs within the same collection have different rarity and value, so we needed a mechanism that provides fungible liquidity while still allowing rare NFTs to capture their premium through auctions and market-based price discovery.
+
+---
+
 # Liquid-IP
 
 # Liquid-IP
@@ -12991,6 +15086,48 @@ The main challenge was understanding the complexities of Uniswapv4 which is part
 This was a solo project.
 
 Contact: [email removed]
+
+---
+
+# LiquidityOrchestrate
+
+# LiquidityOrchestrate
+
+Description: Liquidity Orchestrate is a DeFi automation protocol built on Uniswap v4 that automatically detects idle liquidity positions and rebalances them into active trading ranges to maximize capital efficiency and fee generation. Using custom hooks and automated upkeep logic, the protocol helps liquidity providers earn higher returns while reducing the need for manual position management.
+Tags: LP Fees, LP Liquidity, Unichain
+Integrations: Unichain
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 7, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/IsholaAtotimati/LiquidityOrchestrator](https://github.com/IsholaAtotimati/LiquidityOrchestrator)
+- **Deck / Slides:** [https://www.canva.com/design/DAHAQm5vSfY/s8tOZEXqWMqVegsoeZ1_kA/edit](https://www.canva.com/design/DAHAQm5vSfY/s8tOZEXqWMqVegsoeZ1_kA/edit)
+- **Demo Video:** [https://youtu.be/vluLrGa9TDY](https://youtu.be/vluLrGa9TDY)
+- **Live Project:** [https://idle-liquidity-ui.netlify.app/](https://idle-liquidity-ui.netlify.app/)
+
+### **Partner Integrations**
+
+I deploy to unichain sepolia
+
+### **Problem / Background**
+
+The idea for LiquidityOrchestrate was inspired by a core inefficiency in DeFi: liquidity providers constantly struggle with idle or poorly positioned liquidity that earns little to no fees, especially in concentrated liquidity AMMs like Uniswap v3/v4. Most LPs either lack the time, tools, or automation needed to actively manage and rebalance their positions as market conditions change.
+
+This leads to two major problems: capital inefficiency, where funds sit outside active trading ranges, and manual overhead, where users must constantly monitor markets to stay profitable. LiquidityOrchestrate solves this by introducing an automated orchestration layer that continuously monitors positions and dynamically repositions liquidity into optimal ranges, turning passive liquidity into actively working capital while reducing user effort and improving yield consistency.
+
+### **Impact**
+
+What makes this project unique is its ability to actively orchestrate and rebalance idle DeFi liquidity across pools in real time, turning unused capital into continuously optimized yield instead of leaving it stagnant.
+
+Its impact is higher capital efficiency for users and protocols, reducing idle liquidity across DeFi while improving sustainable yield generation and making liquidity provision more adaptive, automated, and less manual.
+
+### **Challenges**
+
+The biggest challenges were designing a reliable rebalancing system that reacts to changing market conditions without introducing excessive gas costs or unnecessary transactions. Managing Uniswap v4 hook behavior and tick-based liquidity math also required deep precision, since small miscalculations can lead to inefficient positions or impermanent loss.
+
+Another major challenge was simulating "real-time" DeFi behavior in a UI while keeping it aligned with on-chain logic, especially when dealing with event-driven updates, state synchronization, and ensuring the system remains predictable under volatile market conditions.
 
 ---
 
@@ -14270,6 +16407,42 @@ This makes MEV protection scalable, transparent, and economically aligned. LPs g
 
 ---
 
+# Maestro
+
+# Maestro
+
+Description: Maestro is an auction-managed AMM (am-AMM) Uniswap v4 hook that recaptures the value LPs normally lose to arbitrage (Loss-Versus-Rebalancing) and pays it back to them as per-block rent. The pool manager is not a human or a bot but an autonomous cross-chain Reactive Smart Contract that tracks the live Pyth ETH/USD price and re-concentrates the liquidity on its own.
+Tags: Auctions, Cross-Chain, Custom hooks, Dynamic Fee, Dynamic Tick Adjustment, LP Fees, LVR, MEV, Oracle, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI6
+
+## How did you integrate our partners, if any?
+
+Reactive Network (autonomous cross-chain execution): The entire pool manager is a Reactive Smart Contract built on AbstractReactive / AbstractCallback. It observes the Pyth price update on Ethereum Sepolia and fires a cross-chain callback to a ManagerCallback contract on Unichain Sepolia, which calls repositionToPrice on the hook, re-concentrating the liquidity around the new price with no keeper, no off-chain bot, and no sequencer dependency. Because Unichain Sepolia can be a Reactive callback destination but not a subscribable origin, the price is observed on Ethereum Sepolia and the action is taken on Unichain, a genuine cross-chain control loop.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/RudraBhaskar9439/Maestro](https://github.com/RudraBhaskar9439/Maestro)
+Slides: 
+Project Link: https://maestro-iota-eight.vercel.app/
+Demo Video: [https://www.youtube.com/watch?v=k83N_fZ5K1Y](https://www.youtube.com/watch?v=k83N_fZ5K1Y)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+On volatile pairs, liquidity providers consistently lose more to arbitrage than they earn in fees. Every time the market price moves, an AMM pool's price is briefly stale; 
+arbitrageurs trade against the stale pool and pocket the difference. This leakage, Loss-Versus-Rebalancing (LVR), is the on-chain heart of impermanent loss, and today 100% of it flows to searchers and block builders, not the LPs who funded the pool. The am-AMM paper (Adams, Moallemi, Reynolds, Robinson) proposed auctioning the manager role to recapture this value, but left two things open: it didn't extend to concentrated liquidity, and it still assumed an off-chain searcher as the manager. Maestro was built to close both gaps, to turn the arbitrageur's profit into LP yield, automatically.
+
+## Impact: What makes this project unique? What impact will this make?
+
+ Maestro is, to my knowledge, the first concentrated-liquidity auction-managed AMM, and the first where the manager is a fully autonomous, cross-chain smart contract rather than an off-chain bot. A continuous Harberger auction sells the right to manage the pool; the manager concentrates the hook-owned liquidity around the real price and pays rent every block straight to LP shareholders. That manager is a Reactive Smart Contract: it subscribes to the live Pyth ETH/USD feed on Ethereum Sepolia and fires a cross-chain callback to Unichain that re-concentrates the pool, with no keeper, no bot, and no sequencer dependency. The impact: it converts LVR from a pro-searcher extraction game into a passive LP yield product. The value that leaks out of pools today becomes recaptured income for the people who provide liquidity, directly addressing impermanent loss with a working yield mechanism.
+
+## Challenges: What was challenging about building this project?
+
+ The hardest part was making the manager genuinely autonomous and cross-chain. Reactive Network can only subscribe to events on supported origin chains, and Unichain Sepolia is a valid callback destination but not a valid origin, so we had to observe the Pyth price on Ethereum Sepolia and act on Unichain, a true cross-chain control loop, and deploy the Reactive contract with forge create (not forge script) using a payable, REACT-funded constructor because the event-subscription precompile only exists on the live node. On the AMM side, giving one manager control of concentration required a hook-owned liquidity vault (external liquidity is reverted), which meant rebuilding deposits/withdrawals/rent accounting around shares of a single aggregate position. We also fought Solidity stack-too-deep under via_ir (needed for EIP-170 size limits), which broke forge coverage until we replaced a vendored test helper, getting us to 43 passing tests at 97% line coverage. Finally, designing the honest economic model, the band spans [spot, oracle] so arbitrageurs closing that gap are exactly what pays the rent, took several iterations to get right.
+
+---
+
 # Magnetick
 
 # Magnetick
@@ -14822,6 +16995,57 @@ Andrei Shablovsky
 
 ---
 
+# Mochi Yield
+
+# Mochi Yield
+
+Description: Mochi Yield is a Uniswap v4 hook that turns yield-bearing assets like wstETH into tradable Principal (PT) and Yield (YT) tokens, with maturity-aware fees, implied-rate guards, and cross-pool parity enforcement. It brings fixed-income market discipline to AMMs so LPs and traders can separate principal safety from yield speculation without selling the underlying.
+Tags: Custom hooks, Dynamic Fee, ETH Staking, LP Fees, LVR, Price Discovery, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+We integrated Reactive Network as the execution layer for hook events. When MochiYieldHook detects PT/YT parity drift above threshold on Unichain Sepolia, it emits ParityDriftDetected; our MochiReactiveKeeper on Reactive Lasna subscribes to that event and triggers a cross-chain callback to ArbitrageRouter on the origin chain to restore parity , no centralized keeper bots required.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/karar189/mochiyeild](https://github.com/karar189/mochiyeild)
+Slides: https://www.mochiyeild.xyz/slides
+Project Link: https://www.mochiyeild.xyz/
+Demo Video: [https://youtu.be/PPvFvIPpd8k](https://youtu.be/PPvFvIPpd8k)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Most people who hold yield bearing assets like wstETH face a simple problem: you either keep the whole position, or you sell it. There is no easy way to say "I want my principal back at maturity, but I want to trade or speculate on just the yield." That makes yield exposure feel all or nothing.
+
+This gets harder when you think about impermanent loss. Liquidity providers in normal AMM pools take price risk. As the market moves, the value of their position can drift away from simply holding the asset. For yield products, that risk is not constant over time. Near maturity, price behavior and volatility are very different from months earlier, but most pools still charge the same fees and apply the same rules regardless of where you are on the curve.
+
+Fixed income style markets try to solve this with Principal Tokens (PT) and Yield Tokens (YT). PT represents the right to redeem underlying at maturity. YT represents the future yield until that date. In theory, PT plus YT should track the underlying. In practice, these markets often break down. PT can trade above par, which implies a negative yield. Fees do not reflect how much time is left until maturity. And when PT and YT prices drift apart from the underlying, someone has to notice and arbitrage it back manually.
+
+Older AMM designs make this even harder. Uniswap v3 and custom pools cannot easily run one shared policy across two related markets at once. You cannot atomically enforce implied rate limits, maturity based fee changes, and cross pool parity checks in a single coordinated system. That is the gap Mochi Yield is built to fill.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Mochi Yield brings fixed income logic directly into Uniswap v4 through a single hook that understands yield curves, not just swap volume. When someone trades PT or YT, the hook checks whether the trade makes economic sense given time to maturity, adjusts fees as expiration gets closer, and monitors whether PT and YT still add up correctly against the underlying.
+
+That matters because v4 lets one hook govern multiple pools at the same time. PT and YT markets can share the same rules, the same guardrails, and the same parity checks in one place. Conservative users get a clearer path to principal focused exposure. Yield speculators can trade future yield without selling wstETH. LPs get fees that better match the actual risk they are taking over the life of the position.
+
+We also integrated Reactive Network so the hook does more than emit events. When parity drift is detected, Reactive can trigger automated corrective action across chains instead of waiting for a manual bot or keeper. The result is a market that is easier to understand for users and more stable for everyone participating in it.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was putting fixed income logic inside a Uniswap v4 hook without breaking how swaps are supposed to feel. Every trade needed to respect time to maturity, block trades that implied negative yield, adjust fees based on how close PT is to expiration, and still stay within reasonable gas limits. Getting those checks to work together on every swap took a lot of iteration and testing.
+
+Coordinating two related pools at once was another major challenge. PT and YT markets need to stay aligned with each other and with the underlying asset, but most AMM designs treat each pool as its own isolated system. Building parity monitoring and shared policy rules across both pools in one hook required careful thinking about state, events, and what should happen when prices drift apart.
+
+Integrating Reactive Network added a completely different layer of complexity. The hook runs on Unichain Sepolia, but the reactive keeper lives on Reactive Lasna and has to listen for events, decode them correctly, and send callbacks back to the origin chain. Debugging that full pipeline, from parity drift detection to automated response, was much harder than building the core contracts alone. Small mismatches in event data, subscription setup, or callback timing could break the entire flow.
+
+We also had to make hard tradeoffs for the hackathon timeline. The reactive callback path works end to end, but executing the full PT/YT arbitrage directly inside Uniswap v4 swaps is still the next step. Balancing a polished demo, solid test coverage, and a frontend that explains a fairly abstract fixed income concept to everyday DeFi users stretched us across smart contracts, cross chain infrastructure, and product design all at once :)
+
+---
+
 # MultiHookAdapter
 
 # MultiHookAdapter
@@ -15152,7 +17376,7 @@ Description: Exclusive Pools only for the holders of certain NFTs
 Tags: Compliance, DEX, DeFi, Governance, KYC, Security, Trading Volume Rewards, delegates
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Exclusive Pools only for the holders of certain NFTs
@@ -15167,7 +17391,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -15484,7 +17708,7 @@ Description: It's basic Nezlobin directional fee hook
 Tags: Dynamic Fee, LP Fees
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 It's basic Nezlobin directional fee hook.
@@ -15499,7 +17723,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -15568,7 +17792,7 @@ Description: A hook to adjust pool fee in both direction based on price volatili
 Tags: LP Fees
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 A hook to adjust pool fee in both direction based on price volatility.
@@ -15583,7 +17807,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -15772,6 +17996,48 @@ The biggest challenge was implementing dynamic fee overrides within the Uniswap 
 
 ---
 
+# Novara
+
+# Novara
+
+Description: A Uniswap v4 hook that protects concentrated liquidity by moving out-of-range positions into a yield strategy and automatically redeploying liquidity when market conditions improve.
+Tags: Custom Routers, Custom hooks, Dynamic Tick Adjustment, LP Liquidity, Security, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/sidarth16/Novara-Protocol](https://github.com/sidarth16/Novara-Protocol)
+Slides: 
+Project Link: 
+Demo Video: [https://drive.google.com/file/d/1BkRCG_kwQhpuREFExOUfI5c-kmLqQbYY/view?usp=sharing](https://drive.google.com/file/d/1BkRCG_kwQhpuREFExOUfI5c-kmLqQbYY/view?usp=sharing)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Concentrated liquidity in Uniswap v3/v4 is highly capital efficient, but LPs stop earning fees when price moves outside their chosen range. Inactive positions often leave capital sitting idle while waiting for the market to return, reducing overall capital efficiency and making liquidity provision less attractive for many users.
+
+Novara was inspired by the idea that liquidity should continue working even when it is no longer earning swap fees. Instead of leaving out-of-range positions idle, Novara automatically transitions capital into a yield-generating strategy and later redeploys liquidity when conditions improve. The goal is to create a more autonomous and productive liquidity management experience for LPs.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Novara introduces a yield-aware lifecycle for concentrated liquidity positions using a Uniswap v4 Hook.
+
+The hook monitors LP positions and automatically manages transitions between:
+
+ACTIVE → YIELD MODE → ACTIVE → EXITED
+
+When a position moves out of range, liquidity is recalled and deployed into a yield strategy through the Novara Yield Vault. Yield accrues while the position is inactive, and automation later redeploys liquidity back into Uniswap when conditions become favorable.
+
+By transforming idle liquidity into productive capital, Novara improves capital efficiency and demonstrates how hooks can create autonomous LP management systems.
+
+## Challenges: What was challenging about building this project?
+
+One of the biggest challenges was designing and implementing a complete liquidity lifecycle around a Uniswap v4 Hook. The project required coordinating multiple protocol components—including the Hook, Yield Vault, Aave Adapter, Reserve, Automation layer, and Deployment Registry—while maintaining consistent state transitions between ACTIVE, YIELD MODE, and EXITED positions. Another challenge was integrating live on-chain data into the frontend and reliably discovering user positions from blockchain events. Significant effort also went into testing and validating the full lifecycle on Sepolia, ensuring liquidity could move from an active Uniswap position into a yield-generating strategy, accrue yield, and later be redeployed automatically through upkeep mechanisms. This required extensive debugging of contract interactions, automation flows, deployment infrastructure, and frontend indexing logic.
+
+---
+
 # Omni Incentive Hook
 
 # Omni Incentive Hook
@@ -15795,7 +18061,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -16409,6 +18675,57 @@ Shumpei: Lead architect for the backend of a crypto exchange project in Japan ar
 
 ---
 
+# Orbital
+
+# Orbital
+
+Description: Orbital is a Uniswap v4 hook implementing Paradigm's Orbital stableswap, where liquidity lies on an N-dimensional sphere instead of a flat curve surface — a multi-token pool like Curve, but with higher-dimensional concentrated liquidity. Each LP concentrates liquidity around the peg and any coin that breaks peg is automatically isolated, so LPs earn more in calm markets and shed far less impermanent loss when a stablecoin depegs.
+Tags: CFMM, Custom hooks, DEX, LP Fees, Stablecoins, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+We built a keeper-free depeg circuit-breaker with Reactive Network. A Reactive Smart Contract on Reactive Lasna (OrbitalDepegReactive) subscribes to a Chainlink price feed's AnswerUpdated event for one of the pool's stablecoins; when the reported price leaves the peg band, it emits a cross-chain Callback to Unichain Sepolia. There the Reactive callback proxy invokes our OrbitalDepegCallback contract, which is registered as the hook's guardian and calls OrbitalHook.guardianPause()  pausing the pool the instant an external oracle reports a depeg, faster than any human or keeper. The breaker can only pause (a fail-safe action); resuming the pool stays owner-only so a human reviews first. Unichain Sepolia (1301) is a supported Reactive destination, so the hook is the callback target directly and reactive-lib stays out of the audited core
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Oxkai/Orbital.Hook](https://github.com/Oxkai/Orbital.Hook)
+Slides: https://docs.google.com/presentation/d/1LNTvnNO2X7vZTLA7QAB-9TJrX7mUNy1U/edit?usp=sharing&ouid=[phone removed]&rtpof=true&sd=true
+Project Link: https://orbital-hook.vercel.app
+Demo Video: [https://vimeo.com/[phone removed]?share=copy&fl=sv&fe=ci](https://vimeo.com/[phone removed]?share=copy&fl=sv&fe=ci)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Stablecoin LPs look safe until a peg breaks. In a flat stableswap like Curve, a depeg drains the pool into the broken coin and every LP is left holding the bag  the classic stable-LP impermanent loss. These pools are also capital-inefficient (liquidity is spread across prices that never trade) and practically capped at two or three assets, so a multi-stable pool fragments into many shallow pairs.
+
+We were inspired by Paradigm's Orbital paper, which generalizes the stableswap onto an N-dimensional sphere. That geometry lets one pool hold many stablecoins at once, lets each LP concentrate liquidity tightly around the peg for far higher capital efficiency, and  crucially  isolates a single depegged coin instead of letting it poison the whole pool. We built that as a production Uniswap v4 hook so it plugs into real routing and flash accounting, turning the paper into something an LP can actually use.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Orbital is, to our knowledge, the first N-asset concentrated stableswap shipped as a live Uniswap v4 hook  it takes Paradigm's Orbital paper from theory to a working on-chain pool. Its core features:
+
+- One pool, many stablecoins: all the pairs of a multi-stable basket share a single hook and one reserve vector on the sphere, instead of fragmenting into shallow two-asset pools.
+- Virtual reserves for deep liquidity: each tick uses virtual reserves to amplify depth right at the peg, so the price barely moves on size - the pool quotes like it holds far more capital than is actually deposited, and the tighter an LP concentrates, the deeper that liquidity gets.
+- Torus consolidation, O(1) swaps: interior and boundary ticks are consolidated into a single torus invariant, so a swap touches the whole book at once and stays O(1) no matter how many assets or ticks the pool has (the engine tracks only the running sums of reserves).
+- Automatic depeg isolation: when a coin breaks peg, its ticks flip to their boundary and the bad coin is fenced off - capping the tail impermanent loss that wrecks Curve-style LPs and directly answering the Hookathon's "Impermanent Loss" theme.
+- Native v4, no custom router: the basket is exposed as the N(N-1)/2 token pairs, all bound to the same hook, so it routes through the standard Universal Router and PoolManager like any v4 pool - no bespoke router required. Tokens never leave the PoolManager; the hook settles swaps entirely in ERC-6909 claim tokens via flash accounting, so it is non-custodial and cheaper to trade against.
+
+The impact is a stablecoin venue where deep multi-coin liquidity, high capital efficiency, and depeg protection coexist - making LPing in stables meaningfully safer and more profitable, and giving the v4 ecosystem a reusable higher-dimensional AMM primitive.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was turning the Orbital paper's continuous geometry into exact, gas-bounded Solidity:
+
+- Sphere/torus math on-chain: the swap requires solving the spherical invariant with a Newton iteration in fixed-point (WAD), keeping the result within ~1 ppm of the true root while never overflowing or dividing by zero at the tick boundaries. Reproducing the torus consolidation (interior + boundary ticks as one invariant) so a swap stays O(1) took the most iteration.
+- Fitting N assets into v4's two-token model: a v4 pool is a pair, but Orbital is one basket. We had to expose the basket as N(N-1)/2 pairs that all share a single hook and one reserve vector, intercept every swap in beforeSwap, return the right BeforeSwapDelta, and settle through the PoolManager in ERC-6909 claim tokens via flash accounting — without the hook ever custodying tokens.
+- Tick crossings and depeg isolation: detecting when a swap pushes a tick from interior to boundary, accounting for the crossing mid-swap, and fencing off a depegged coin cleanly were the most correctness-sensitive paths and the source of the trickiest edge cases.
+- Gas: a naive solver recomputed sqrt(n)·WAD ~30 times per swap. Caching it as an immutable plus a bit-shift-seeded sqrt cut roughly 83% off solver gas (solveSwap ~393k -> ~65k), and we bounded the tick-crossing scan to stop a dust-tick griefing/DoS vector.
+- Frontend faithfulness: quoting accurately through the V4Quoter, building an interactive 3-token sphere simulation that shows ticks/virtual reserves/prices honestly, and serving a fast transaction history without running a dedicated indexer.
+
+---
+
 # Orbitwork
 
 # Orbitwork
@@ -16487,6 +18804,80 @@ We will solve the housing crisis and create value and efficiency at every step o
 Took me over a month just to read enough of fixed income quant textbooks to even understand enough for a demp.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# Oscillon -- Depeg-Aware LP Protection Hook for Sta
+
+# Oscillon -- Depeg-Aware LP Protection Hook for Stable Pools
+
+Description: Oscillon is a Uniswap v4 hook that detects stablecoin micro-depegs in real  time and charges arb bots a dynamic fee proportional to the damage they cause  — redirecting that captured value back to LPs as yield. Backtested against  the March 2023 USDC depeg: LPs earned 4x more than a vanilla static-fee pool  during the same event.
+Tags: Dynamic Fee, LP Fees, LP Liquidity, LVR, Oracle, Stablecoins
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI6
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/sammed-21/trunkGuard](https://github.com/sammed-21/trunkGuard)
+Slides: 
+Project Link: https://beta-testnet.oscillon.xyz
+Demo Video: [https://www.loom.com/share/b537b04e075a4056813be3b6c8ed059e](https://www.loom.com/share/b537b04e075a4056813be3b6c8ed059e)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Stablecoin LPs on Uniswap v4 face a silent, invisible loss called LVR 
+(Loss Versus Rebalancing). The largest USDC/USDT pool on Uniswap v4 earns 
+LPs $309/day in fees while arb bots silently extract an estimated $15,000/day 
+from the same pool by exploiting stale prices during micro-depegs. Static 
+fee pools charge 1 bps on every swap regardless of whether that swap is a 
+retail trader at parity or an arb bot exploiting a 50 bps USDC depeg. The 
+LP pays the difference. This problem is formally defined in academic 
+literature as LVR (Milionis et al., 2022, arxiv.org/abs/[phone removed]) and 
+represents one of the primary reasons passive stable pool LP is a 
+structurally losing strategy. Uniswap v4 hooks are the first infrastructure 
+that allows a pool to respond to this problem at the fee level.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Oscillon is the first production Uniswap v4 hook specifically designed for 
+stable pool LVR mitigation using real-time oracle deviation as the fee 
+signal. The mechanism uses a hybrid three-zone piecewise fee curve combined 
+with a quadratic formula that fires only on drain-direction swaps during 
+active depegs  leaving organic flow completely unaffected in normal 
+conditions. Backtested against 6 days of real USDC/USDT swap data including 
+the March 2023 USDC depeg event (peak 1,167 bps): LP income increased from 
+$754k to $3.02M a 4x improvement with zero impact on normal trading 
+conditions (0-3 bps range showed identical LP income across all models). 
+The mechanism is grounded in published LVR research and includes three 
+adversarial protections validated in tests: rolling drain multiplier 
+defeating fragmentation attacks, TWAP fallback defeating oracle DoS, and 
+disagreement guard preventing oracle manipulation. With Standard Chartered 
+projecting $2T of stablecoins on-chain by 2028 and Uniswap v4 named as the 
+native liquidity layer, Oscillon addresses a problem that will compound with 
+every dollar of institutional stable capital that moves on-chain
+
+## Challenges: What was challenging about building this project?
+
+Three specific technical challenges
+
+First: Uniswap v4 removed native 
+observe() from the PoolManager, requiring every hook needing price history 
+to implement its own TWAP ring buffer we built a 144-slot circular buffer 
+updated in afterSwap with linear interpolation for the 30-minute window. 
+
+Second: Chainlink's 0.1% deviation threshold makes sub-10-bps micro-depegs 
+completely invisible to a Chainlink-only oracle design we implemented a 
+pool-price-vs-oracle drift signal that detects these micro-depegs within 2-3 
+arb swaps of onset. 
+
+Third: calibrating the fee formula against the LP/volume 
+tradeoff required building a full Python backtest pipeline against real 
+historical USDC/USDT swap data, which revealed that a hybrid max(piecewise, 
+quadratic) formula captures 2.6x more LP value in the 7-30 bps range than 
+either formula alone while remaining competitive with Curve (4 bps) below 
+16 bps deviation
 
 ---
 
@@ -17181,6 +19572,47 @@ TTL and MGK work in a defi infra team, spend 7 years doing trading infra, close 
 
 ---
 
+# PegGuard - Measured IL Insurance
+
+# PegGuard - Measured IL Insurance
+
+Description: PegGuard is a Uniswap v4 dynamic-fee hook that turns LVR/correcting flow into measured IL insurance for LPs. It uses a Pyth-priced hot path and a Reactive Network volatility control plane, with every parameter calibrated against real on-chain replay data.
+Tags: Dynamic Fee, LP Fees, LVR
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+PegGuard targets Arbitrum for the hook and live shadow testing. Reactive Network is used as the control plane: a sentinel watches the canonical mainnet WETH/USDC pool, detects volatility, and sends a cross-chain regime callback so the hook can tighten safely without using Reactive Network as a price oracle.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Juktong/pegguard](https://github.com/Juktong/pegguard)
+Slides: 
+Project Link: https://pegguard.matseoi.com/
+Demo Video: [https://youtu.be/mFQAOFveuAc](https://youtu.be/mFQAOFveuAc)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+LPs lose value when arbitrage and informed flow move pool prices back toward fair value. That loss is measurable, but most dynamic fee hooks either react too slowly, tax harmless basis/noise, or optimize for headline capture while quietly making LPs worse off.
+
+PegGuard started from that problem: can a hook charge only the flow that is actually correcting the pool, fall back safely when the signal is weak, and prove the result against real swap data instead of a toy simulation?
+
+## Impact: What makes this project unique? What impact will this make?
+
+PegGuard treats dynamic fees as an insurance mechanism, not just a volatility surcharge. The hook uses a trailing basis EMA to avoid taxing slow venue/quote basis, charges only the correcting side, and falls back to the base fee on stale oracle data, confidence anomalies, or unseeded state.
+
+What makes it different is the evidence discipline. The same signal logic is implemented in Solidity, Foundry fixture replay, and a Python shadow pipeline. Under the selected defaults, the replay shows 92.42% premium-weighted precision in the calm fixture and 98.86% in the volatile fixture. The impact is a more honest model for specialized LP markets: charge toxic flow when the signal is real, stay symmetric when it is not.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was making the research causal enough to become hook logic. Early versions could overstate capture by accidentally taxing slow basis or treating historical sampling delay like live oracle staleness.
+
+I had to align Solidity, Foundry fixture replay, and the Python shadow pipeline around the same per-swap semantics: pre-swap pricing, post-swap basis updates, strict Pyth staleness guards, confidence-spike fallback, and monotone regime control. The other challenge was being disciplined about evidence: separating calibrated backtests, live shadow results, proxy route-away analysis, and what is still not proven.
+
+---
+
 # PegProtocol
 
 # PegProtocol
@@ -17510,7 +19942,7 @@ Tags: Dynamic Fee
 Integrations: Chainlink
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 PointPool is a gamification layer built on top of Uniswap V4, introducing a point system, levels, badges, challenges, and quests to incentivize liquidity provision and trading. It aims to enhance user engagement in DeFi by transforming routine activities into rewarding experiences.
@@ -17525,7 +19957,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -17778,6 +20210,83 @@ Simulating real-world MEV attacks for testing without risking actual user funds.
 
 ---
 
+# PostHook
+
+# PostHook
+
+Description: Posthook is a consumer gift card powered by a Uniswap v4 dynamic-fee hook and Reactive Network: you deposit two stablecoins into a v4 LP position that earns a premium swap fee while unclaimed, so the gift grows in transit — and a Reactive Smart Contract automates the cross-chain claim, unwinding the position on Unichain and delivering the proceeds on Base.
+Tags: Cross-Chain, Custom hooks, Dynamic Fee, LP Fees, LP Liquidity, Stablecoins, Unichain, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI5
+
+## How did you integrate our partners, if any?
+
+- Reactive Network: our cross-chain automation layer. We deployed a Reactive Smart Contract that subscribes to Posthook's events across both chains (`GiftDeposited` on Unichain, `GiftClaimed` on Base) and reacts by driving the next step on the opposite chain, mirror, unwind, deliver, so a single claim settles cross-chain with no user in the loop.
+
+- Unichain: the sender side. The hook, the v4 pool, and the `GiftSender` escrow that owns the LP position are all deployed on Unichain Sepolia.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/yashj09/PostHook](https://github.com/yashj09/PostHook)
+Slides: https://canva.link/jqy54zuqlgvymqq
+Project Link: https://posthook.vercel.app
+Demo Video: [https://youtu.be/OCoB1hXtIik](https://youtu.be/OCoB1hXtIik)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Gift cards are dead weight, value sits idle until spent, and cross-chain UX is worse: bridges, manual steps, trusted operators. We wanted yield that works while a gift travels and a claim that settles across chains on its own. The hook is the yield engine; Reactive is the automation layer that makes "claim on one chain, get paid on another" happen without anyone pressing buttons.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Two primitives, both event-driven.
+
+The hook uses beforeSwap not to gate but to reprice: a state-aware dynamic fee that charges 0.30% while a gift is in transit and 0.05% idle, and since the gift is the pool's sole LP, the entire premium accrues to it.
+
+Reactive then closes the loop: a deployed Reactive Smart Contract subscribes to our gift events across both chains and reacts to a claim by driving the unwind on Unichain and the payout on Base.
+
+The result is an autonomous cross-chain yield product where the user takes one action and never sees an LP, a tick, or a bridge.
+
+## Challenges: What was challenging about building this project?
+
+- Making the v4 deposit robust,  concentrated-liquidity math against a live pool price, since the hook's own premium fee drifts the pool off 1:1 and naive 1:1 minting reverted on slippage.
+- The cross-chain state machine,  one gift's lifecycle spans three chains (Unichain → Reactive → Base), and we hit a Reactive Lasna log-data quirk that forced a careful event-encoding workaround.
+- A subtle race where the frontend derived the gift ID from a global counter instead of the deposit's own receipt, occasionally pairing the right secret with the wrong gift, fixed by reading the ID straight from the transaction's emitted event.
+
+---
+
+# Premium Yield Hook
+
+# Premium Yield Hook
+
+Description: PremiumYield is a Uniswap v4 hook that solves the single biggest barrier to passive LP participation: impermanent loss (IL). Instead of reacting to IL after it happens, PremiumYield builds a structurally capitalized, yield-bearing insurance fund directly into the liquidity layer.
+Tags: Constant Product Market Maker (CPMM), Custom hooks, Dynamic Fee, Dynamic Tick Adjustment, LP Fees, LP Liquidity, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI7
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Mrwicks00/Premium-Yield](https://github.com/Mrwicks00/Premium-Yield)
+Slides: https://gamma.app/docs/PremiumYield-5qgwacsmhbib1ob?mode=doc
+Project Link: 
+Demo Video: [https://youtu.be/qdcU59UujKU](https://youtu.be/qdcU59UujKU)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+PremiumYield was inspired by one of DeFi's biggest problems: impermanent loss. Many users avoid providing liquidity because price movements can wipe out their returns. We wanted to make LPing safer by creating a system where users pay a small premium for protection, while that premium continues earning yield instead of sitting idle.
+
+## Impact: What makes this project unique? What impact will this make?
+
+What makes PremiumYield unique is that the insurance fund is productive. Premiums are deposited into yield-bearing vaults, allowing LPs to either receive IL protection when needed or get their premium back with yield if they don't claim. This can make liquidity provision more attractive, predictable, and accessible to passive investors.
+
+## Challenges: What was challenging about building this project?
+
+The biggest challenge was balancing insurance coverage with protocol solvency. We had to accurately calculate impermanent loss, integrate with Uniswap v4 hooks and ERC4626 vaults, and design safeguards that ensure the insurance fund remains healthy while still providing meaningful protection to LPs.
+
+---
+
 # Pricepulse
 
 # Pricepulse
@@ -17918,6 +20427,41 @@ We both bring deep engineering experience, having worked directly on Layer 1 and
 
 ---
 
+# Prism
+
+# Prism
+
+Description: Prism is a Uniswap v4 hook that splits every LP deposit into two tokens: LP-Y, which earns full swap fees with zero impermanent loss, and LP-D, which absorbs the IL and is auto-sold to protocols bidding for it via an on-chain standing-bid market. LPs exit whole no matter what price does — IL is paid from the buyer's USDC collateral vault, computed oracle-free from pool prices alone.
+Tags: Impermanent Loss, LP Fees, LP Liquidity, Options/Futures
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Reactive Network: an RSC on Lasna subscribes to every pool swap and fires a cross-chain callback to auto-settle LP-D positions when price reverts through the LP's entry — guaranteeing the buyer's upside without keepers or manual calls. Both are live: 6 contracts across Unichain Sepolia and Lasna.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/ayush18pop/Prism](https://github.com/ayush18pop/Prism)
+Slides: https://drive.google.com/file/d/181kRZKPBrkIfwACInCtB1yiEccObGWVo/view?usp=sharing
+Project Link: https://prism.ayush.works/
+Demo Video: [https://youtu.be/_gOM0p25tds](https://youtu.be/_gOM0p25tds)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Impermanent loss is the unsolved tax on AMM liquidity — a 2021 study of 17,000 wallets found roughly half of Uniswap LPs underperformed simply holding. LPs have no on-chain way to hedge it, so protocols compensate with liquidity mining, which buys rented TVL that leaves the moment emissions slow. What struck us is that this is two sides of one missing market: LPs need to offload IL risk, and protocols are already paying to make that risk go away — they're just paying inefficiently, in emissions, with no price discovery. Prism builds that market directly into the pool. The deposit splits into a yield claim and a risk claim, protocols bid for the risk side with USDC collateral, and the hook clears the market atomically at deposit time.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Most IL solutions are insurance funds, dynamic fees, or off-chain hedging — they socialize or dampen IL. Prism is the only design we know of that prices it: IL becomes a transferable asset (LP-D) with a live order book inside the pool itself, and the yield side (LP-Y) becomes a genuinely IL-free fixed-income instrument. Everything is oracle-free — IL is computed from entry vs exit sqrtPrice read straight from the pool — and the whole split-match-collateralize flow happens in one transaction inside afterAddLiquidity, with no wrapper contract and no custody. For LPs this means passive liquidity provision finally beats holding. For protocols it means replacing emissions-based liquidity mining with directly purchased, collateral-backed, permanent liquidity — paying for exactly the risk they want to absorb instead of spraying tokens.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was making the economics safe inside a single hook callback. The collateral adequacy check — proving a standing bid's collateral covers worst-case IL across the entire tick range before filling — required deriving a closed-form max-IL bound (WAD-scaled, computed at both tick boundaries) that works without any oracle. Settlement had three distinct paths (LP holds both tokens, LP-D sold then LP exits, RSC force-settle) that all had to converge on identical accounting; we found and fixed a bug where the LP-exit path stranded vault remainder unreachable by the LP-D holder. Cross-chain was its own battle: callback authorization on Reactive, deployment ordering (the RSC must exist before the first deposit), and Unichain Sepolia rejecting batched broadcasts from delegated accounts — we ended up deploying all six contracts serially. And throughout: keeping CEI ordering and pull-based payments strict, because the hook holds real collateral and an ERC-1155 transfer callback is a reentrancy surface. 66 Foundry tests encode these invariants, not just behaviors.
+
+---
+
 # Prisma
 
 # Prisma
@@ -18011,7 +20555,7 @@ The Fhenix integration was quite challenging since we have to jump through a lot
 
 Description: 1 - 2 sentence summary of the project.
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 1 - 2 sentence summary of the project.
@@ -18074,7 +20618,7 @@ Cohort: UHI4
 # What are the key links to share? (Ex. demo video, GitHub, deck)
 
 github : [https://github.com/zianksm/Protected-Pool](https://github.com/zianksm/Protected-Pool)
-deck   : [https://majestic-guilty-514.notion.site/Protected-Pool-1183d048ca7c80f0b179e59231322d35](https://www.notion.so/1183d048ca7c80f0b179e59231322d35?pvs=21)
+deck   : [https://majestic-guilty-514.notion.site/Protected-Pool-1183d048ca7c80f0b179e59231322d35](https://app.notion.com/p/1183d048ca7c80f0b179e59231322d35?pvs=21)
 Explanation vide :  [https://youtu.be/pJa3m6MwaQA](https://youtu.be/pJa3m6MwaQA) -> little bit over duration but i hope that's okay :)
 
 # Problem / Background: What inspired the idea? What problems are you solving?
@@ -18525,7 +21069,7 @@ Tags: Custom hooks, DEX, DeFi, Dynamic Fee
 Integrations: Chainlink
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Real World Event Hooks to attract liquidity for RWA token pools
@@ -18541,7 +21085,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -18759,7 +21303,7 @@ Description: Automated range orders for LPs
 Tags: DeFi, Order Type, Security
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Automated range orders for LPs
@@ -18803,6 +21347,49 @@ Understanding Uniswap v4 took time. It was a bit challenging to decide on a flow
 ## Team:
 
 Richa
+
+---
+
+# RangeGuard
+
+# RangeGuard
+
+Description: A Uniswap v4 hook providing native on-chain impermanent loss coverage for LPs, funded by dynamic fee skimming and powered by the Reactive Network for autonomous cross-chain automation
+Tags: Cross-Chain, Dynamic Fee, LP Liquidity, reactive-network Impermanent-Loss
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 10, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/garykocsis/RangeGuard/](https://github.com/garykocsis/RangeGuard/)
+- **Demo Video:** [https://www.youtube.com/watch?v=82_9mEh_POM](https://www.youtube.com/watch?v=82_9mEh_POM)
+- **Live Project:** [https://range-guard.vercel.app](https://range-guard.vercel.app/)
+
+### **Partner Integrations**
+
+A Reactive Network contract (on the Lasna Omni fork) gives the hook autonomy it cannot have on its own — it watches the pool's price, detects when positions cross in or out of range, and drives periodic accrual checkpoints, with no keeper bots and no off-chain infrastructure.
+
+### **Problem / Background**
+
+Despite IL being the single biggest reason liquidity providers leave AMMs, there is no native, on-chain mechanism to protect against it. LPs earn swap fees but take on a hidden risk — when prices move, the AMM automatically rebalances their position, and at withdrawal they may receive a token mix worth less than simply holding the original assets.
+
+In Uniswap v4's concentrated liquidity model this effect is amplified. Tighter ranges earn more fees but concentrate more IL exposure. The insight: the same swap activity that creates IL also generates fees. A small, configurable portion of those fees — skimmed automatically on every swap — could fund a native coverage buffer built directly into the pool.
+
+### **Impact**
+
+RangeGuard is unique because it solves IL protection from inside the pool rather than around it. Three things make it genuinely different: (1) Self-funding by design — the coverage buffer is funded by a configurable slice of every swap fee; (2) Auditable coverage using Actual/365 Fixed day-count conventions from fixed-income finance, making IL protection predictable and independently verifiable; (3) Autonomous cross-chain automation via Reactive Network — range transitions are detected autonomously with no keeper bots.
+
+Protocols and DAOs that need deep, sticky liquidity currently rely on token emissions. RangeGuard offers an alternative: retain LPs with native downside protection funded by the pool's own activity.
+
+### **Challenges**
+
+The hardest part was not writing code — it was figuring out what to build. Early concepts were either too simple or too complex. The breakthrough came from constraining the design: what if the buffer could only be funded by the pool's own fees?
+
+Spec-driven development with AI (Claude Code / Opus) required a new workflow — write a complete spec first, get explicit approval before any code, one function per session, clean session boundaries with summary documents.
+
+The Reactive Network migration was the biggest technical low point: the network had upgraded to the Omni fork mid-build, requiring diagnosis of two non-obvious breaking changes from on-chain state alone: a vmOnly detection heuristic permanently false on the new EVM, and a Callback Proxy reserve funding model that silently dropped callbacks.
 
 ---
 
@@ -19020,6 +21607,106 @@ It's a practical solution for TWAMM execution for specialized/illiquid markets t
 Understanding how to setup everything so the callbacks successfully landed on Unichain. Just after I had it working, there was an issue on Reactive side, I didnt know that yet so I spent trying to fix my contracts that didn't need fixing.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# Reactive-Delta-Shield
+
+# Reactive-Delta-Shield
+
+Description: The Reactive Delta-Shield (RDS) is an autonomous, self-funding delta-hedging engine designed for Uniswap v4 concentrated liquidity providers (LPs). By integrating a Uniswap v4 hook with the Reactive Network, the system isolates a fraction of swap fees in real-time to serve as dedicated hedging collateral.
+Tags: Cross-Chain, Custom hooks, DEX, LP Fees
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Describes react() → Callback event flow, subscribe(), and cross-chain execution
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/bakarezainab/Reactive-Delta-Shield](https://github.com/bakarezainab/Reactive-Delta-Shield)
+Slides: https://docs.google.com/document/d/1uDYi_9wxcl7bKo0J6QcJTr-u3BrtLTYKtWkUySVuxvM/edit?usp=sharing
+Project Link: 
+Demo Video: [https://docs.google.com/document/d/1uDYi_9wxcl7bKo0J6QcJTr-u3BrtLTYKtWkUySVuxvM/edit?usp=sharing](https://docs.google.com/document/d/1uDYi_9wxcl7bKo0J6QcJTr-u3BrtLTYKtWkUySVuxvM/edit?usp=sharing)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+The project was inspired by the persistent exposure of concentrated liquidity providers (LPs) to Impermanent Loss (IL) and Loss-Versus-Rebalancing (LVR) during high-volatility market events. To solve this, we built a system that eliminates the need for manual, capital-inefficient hedging by automating downside protection natively at the pool level.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Reactive Delta-Shield is unique because it integrates Uniswap v4 hooks with the Reactive Network to trigger and self-fund leveraged hedging positions on external derivatives exchanges using a dynamic slice of pool swap fees. By automating this entire process, it significantly lowers the barrier to entry for retail LPs, protects passive capital, and introduces a new paradigm of autonomous, cross-chain risk management in DeFi.
+
+## Challenges: What was challenging about building this project?
+
+Reactive Network ↔ v4 hook bridging, ABI decoding Swap logs, MockPerpDex accounting
+
+---
+
+# ReactiveHedge
+
+# ReactiveHedge
+
+Description: When an LP adds liquidity to your v4 pool, the hook automatically opens a delta-neutral short on Hyperliquid (or a mock perp for the demo) sized to the LP's net delta exposure. A Reactive Smart Contract continuously monitors net delta as the pool price drifts, and fires cross-chain callbacks to rebalance the hedge.
+Tags: Constant Product Market Maker (CPMM), Cross-Chain, Custom hooks, Dynamic Fee, Dynamic Tick Adjustment, LP Liquidity, LVR, MEV, Options/Futures, Oracle, Unichain, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+Frontend:
+
+[https://uhi9-project-frontend.utkarsharjariya.dev](https://uhi9-project-frontend.utkarsharjariya.dev/)
+
+Demo Video:
+
+[https://uhi9-demo-video.utkarsharjariya.dev](https://uhi9-demo-video.utkarsharjariya.dev/)
+
+Slide Deck:
+
+[https://uhi9-slide-deck.utkarsharjariya.dev](https://uhi9-slide-deck.utkarsharjariya.dev/)
+
+---
+
+# ReactiveShield IL Insurance Hook
+
+# ReactiveShield  IL Insurance Hook
+
+Description: ReactiveShield is a Uniswap v4 impermanent-loss insurance hook that lets LPs opt into reserve-backed IL coverage with a chosen deductible threshold. Reactive Smart Contracts on Reactive Network monitor hook events and autonomously trigger payouts through the callback proxy, removing the need for keepers, bots, multisigs, or manual claims.
+Tags: Aave Adapter, Autonomous Settlement, Impermanent Loss Insurance, LP Protection, Onchain Mutual Insurance, Reactive Smart Contracts, Reserve-Backed Insurance, Risk Management, Uniswap v4 Hook, Yield Systems
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+ReactiveShield integrates Reactive Network through a Reactive Smart Contract deployed on Lasna. The hook emits PriceDeviation(bytes32,uint160,uint256,uint256) events; the RSC subscribes to those events, validates the origin chain/hook/topic, deduplicates settlement events, and emits a Reactive callback to settlePoolFromReactive(address,bytes32,uint160) on the destination hook. The hook then verifies both the Reactive callback proxy and the encoded RVM sender before settling eligible insured LPs.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Kingg-titan/reactive-shield](https://github.com/Kingg-titan/reactive-shield)
+Slides: https://gamma.app/docs/ReactiveShield-fan030zjvb5r3is
+Project Link: 
+Demo Video: [https://youtu.be/Jx0XBTrB-zw](https://youtu.be/Jx0XBTrB-zw)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Impermanent loss is still one of the core unsolved risks for Uniswap LPs. Existing approaches often smooth, hedge, or reprice IL indirectly, but the LP still absorbs the loss when price movement overwhelms those mechanisms. ReactiveShield was inspired by the gap between “IL management” and actual “IL compensation”: LPs need an explicit reserve-backed insurance product that pays them when covered loss occurs.
+
+ReactiveShield solves this by creating an opt-in insurance layer inside a Uniswap v4 hook. LPs choose a deductible, pay a premium, and receive a capped payout when IL rises above that threshold. Reactive Network is used because claim settlement is event-driven: the RSC can observe hook events and trigger settlement without relying on a keeper, manual claim, or off-chain operator.
+
+## Impact: What makes this project unique? What impact will this make?
+
+ReactiveShield is unique because it treats impermanent loss as an insurable risk rather than only a fee or hedging problem. The hook creates a pool-native mutual reserve funded by LP premiums and reserve contributions, then uses Reactive Network to trigger autonomous settlement when price movement creates eligible claims.
+
+The impact is a clearer risk model for LPs: instead of accepting unlimited IL exposure, LPs can opt into defined coverage with transparent deductibles, caps, reserve health states, and circuit breakers. For Uniswap v4, this demonstrates a new category of hook: not just dynamic execution logic, but programmable risk transfer directly at the pool layer.
+
+## Challenges: What was challenging about building this project?
+
+The hardest challenge was proving the full Reactive Network integration end to end. A successful origin-chain event is not enough; the system also has to prove Lasna RVM processing and a destination callback that actually executes on the hook. ReactiveShield’s demo script therefore verifies all three proof layers: Unichain Sepolia PriceDeviation, Lasna RVM processing, and destination InsurancePaid.
+
+Another challenge was designing the callback authentication correctly. The hook does not trust a single signal; it checks both msg.sender == callbackProxy and the encoded sender == reactiveSender. The project also had to handle callback debt, epoch-gated payouts, max coverage caps, depleted reserve states, and a permissionless fallback path without weakening the Reactive settlement model.
 
 ---
 
@@ -19247,7 +21934,7 @@ Cohort: UHI2
 
 Prize: Brevis Prize, Chainlink Prize
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Reputation Hook project is where giving identities to traders globally
@@ -19364,6 +22051,38 @@ With more funding, this project can become a one-stop-shop for compliant hooks. 
 
 Team: Luiz Vasconcelos Junior (https://x.com/lvj_luiz)
 background: Computer Engineer from Brazil, currently working with zk verification on starknet and winner of multiple web 3 hackathons, with over 70k USD in team prizes
+
+---
+
+# RiskShield — Tranche-Based IL Insurance Hook
+
+# RiskShield — Tranche-Based IL Insurance Hook
+
+Description: RiskShield turns impermanent loss into a priced, transferable risk market inside a Uniswap v4 pool. Senior LPs receive capped IL protection, junior insurers provide first-loss USDC capital and earn premium yield, and traders fund the reserve through hook-aware dynamic premiums.
+Tags: Impermanent Loss Insurance, LVR, Unichain, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/NikhilRaikwar/riskshield-v4-hook](https://github.com/NikhilRaikwar/riskshield-v4-hook)
+Slides: https://drive.google.com/file/d/1V95o8Ataci5LTHBwavrqMbUOyshVkxxk/view?usp=sharing
+Project Link: https://riskshield.vercel.app/
+Demo Video: [https://youtu.be/OjjJOUXtRm8](https://youtu.be/OjjJOUXtRm8)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+LPs in volatile AMM pools earn fees but silently absorb impermanent loss and LVR, making realized yield unpredictable. RiskShield solves the lack of onchain risk separation by allowing conservative LPs to enter a protected senior tranche while junior insurers explicitly underwrite first-loss risk in exchange for trader-funded premium yield.
+
+## Impact: What makes this project unique? What impact will this make?
+
+RiskShield creates a tranche-based LP risk market directly inside the Uniswap v4 pool lifecycle. Unlike a standalone IL calculator or dynamic fee hook, it connects protected senior liquidity, junior first-loss capital, trader-paid premiums, active liability tracking, reserve utilization limits, and capped IL settlement into one deployed mechanism.
+
+## Challenges: What was challenging about building this project?
+
+The most challenging parts were deploying the hook at an address with the correct v4 permission bits, integrating with the real Unichain Sepolia PoolManager, creating an honest trader-paid premium path, and preventing the insurance reserve from becoming undercollateralized. RiskShield addresses these challenges through CREATE2 hook mining, approved-router premium funding, active liability tracking, reserve utilization limits, coverage caps, and junior withdrawal guardrails.
 
 ---
 
@@ -19587,6 +22306,54 @@ When I continued working on the project for the Uniswap Hook Incubator (Round 7)
 
 ---
 
+# SCRATCHIN
+
+# SCRATCHIN
+
+Description: SCRATCHIN is a fully on-chain scratch card lottery game where players buy NFT cards with USDC, and block-hash entropy reveals three symbols automatically match two for a small win, match three for the jackpot funded by real Uniswap V4 swap fees.
+Tags: Gamefi, Pool Native Incentivization, Stablecoins, Unichain, Yield Farming
+Integrations: Reactive Network, Unichain
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+Date: June 8, 2026
+
+**Cohort: UHI8   |   Chain(s): Unichain, Reactive Network**
+
+**Key Links**
+
+- **GitHub:** [https://github.com/Akanimoh12/SCRATCHIN](https://github.com/Akanimoh12/SCRATCHIN)
+- **Deck / Slides:** [https://docs.google.com/presentation/d/1G30RoRdEJoBqUQpmLOVtdbf3QSDbEiuYtdn38ijJ_3U/edit?usp=sharing](https://docs.google.com/presentation/d/1G30RoRdEJoBqUQpmLOVtdbf3QSDbEiuYtdn38ijJ_3U/edit?usp=sharing)
+- **Demo Video:** [https://www.loom.com/share/b7e2adf6affa4211a3970577c83955fe](https://www.loom.com/share/b7e2adf6affa4211a3970577c83955fe)
+- **Live Project:** [https://scratchin.vercel.app/](https://scratchin.vercel.app/)
+
+### **Partner Integrations**
+
+Unichain: all game contracts (ScratchCard ERC-721, PrizePool, Referral) are deployed on Unichain Sepolia.
+
+Reactive Network: An RSC runs on Lasna testnet watching for CardPurchased events on Unichain, then automatically triggers revealCardCallback() cross-chain with no backend or cron job.
+
+Uniswap V4 afterSwap hook: diverts a portion of swap fees directly into the prize pool, making every swap on the paired pool a contribution to the next winner.
+
+### **Problem / Background**
+
+DeFi is powerful but intimidating. Most people won't touch liquidity pools or swap hooks — the learning curve is too steep and the UX is cold.
+
+The goal was to build something that brings people into the Uniswap V4 ecosystem through play. Scratch cards are universally understood. What if a scratch card lived entirely on-chain, had no backend, auto-revealed itself, and its jackpot was fed by real swap activity? SCRATCHIN is that idea — solving the engagement gap by making DeFi fun and approachable without dumbing it down.
+
+### **Impact**
+
+SCRATCHIN is the first scratch card game built on Uniswap V4 and Reactive Network together — and likely the first fun consumer game on Unichain. The jackpot is funded by V4 afterSwap hook fees so every swap grows the prize. Card reveals are fully automated by a Reactive Network RSC watching CardPurchased events cross-chain — zero backend, zero cron jobs.
+
+It's a proof of concept that V4 hooks + Reactive Network can power consumer products, not just DeFi infrastructure.
+
+### **Challenges**
+
+Reactive Network was the hardest part. The interface is not well-documented: the react() function takes a LogRecord struct (not individual params), the Callback event requires a gas_limit as the third indexed param, and REACTIVE_IGNORE is a specific non-zero sentinel. Getting all three wrong silently breaks everything — no errors, just nothing happens. Also discovered that react() must be gated with vmOnly, not authorizedSenderOnly, or it reverts silently inside the ReactVM.
+
+On the contract side, ensuring refunds never drain the jackpot required a full reserve model redesign. On the frontend, building the ATM card fan UI with responsive sizing and Framer Motion spring animations across mobile and desktop was detail-heavy.
+
+---
+
 # SHADOW TRADE LIMIT HOOK
 
 # SHADOW TRADE LIMIT HOOK
@@ -19665,6 +22432,50 @@ A major challenge is defining a ruleset along which others can align, or a frame
 
 ---
 
+# SPRY Finance
+
+# SPRY Finance
+
+Description: SPRY is a Uniswap V4 hook: a small contract that V4's singleton PoolManager consults on every swap to set the fee. Instead of one flat fee, a Spry pool charges a fee that scales with how much each trade moves the price, and with how much the whole block has already moved.
+Tags: Custom hooks, DEX, Dynamic Fee, LP Fees, LP Liquidity
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/SpryFinance/](https://github.com/SpryFinance/)
+Slides: https://spry.fi/deck
+Project Link: https://spry.fi
+Demo Video: [https://spry.fi/Demo.mp4](https://spry.fi/Demo.mp4)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+SPRY Whitepaper: [https://spry.fi/Spry-Whitepaper.pdf](https://spry.fi/Spry-Whitepaper.pdf)
+
+Impermanent loss remains one of the biggest unresolved tradeoffs in AMM-based liquidity systems. While liquidity providers absorb the costs of large price movements and arbitrage activity, most fee models remain static, charging the same rate regardless of the imbalance or risk a swap introduces to the pool.
+
+We originally started exploring this problem by building SPRY on top of Uniswap v2, experimenting with dynamic-fee mechanisms designed to better align LP compensation with actual market impact and impermanent loss.
+
+With the launch of Uniswap v4 and the introduction of hooks and dynamic fee infrastructure, we saw an opportunity to revisit and evolve that idea in a protocol-native way.
+
+SPRY was created to transform swap fees from fixed parameters into adaptive risk pricing; dynamically adjusting fees based on price movement and cumulative pool conditions to create a more sustainable yield system and improve LP protection under volatile market conditions.
+
+## Impact: What makes this project unique? What impact will this make?
+
+SPRY introduces a different way of thinking about AMM fees: instead of treating fees as fixed configuration parameters, it treats them as adaptive pricing for liquidity risk.
+
+What makes SPRY unique is that the system does not simply increase fees based on volatility or predefined rules. Fees dynamically respond to the actual price movement introduced into the pool and the cumulative imbalance created during execution, allowing LP compensation to reflect better the impermanent loss being generated.
+
+The long-term impact is to make LP yield more sustainable and capital-efficient by reducing hidden value extraction from liquidity providers and creating a market where liquidity risk is priced more accurately. We believe this can help shift AMM design from static fee models toward adaptive liquidity systems.
+
+## Challenges: What was challenging about building this project?
+
+A major challenge is preventing fee circumvention strategies, such as splitting a large trade into multiple smaller swaps to obtain lower effective fees. To address this, we designed cumulative and execution-aware fee logic that evaluates swaps in context rather than isolation.
+
+We also had to balance LP protection with usability, increasing fees enough to better compensate impermanent loss without making normal trading activity inefficient. Finding that balance while preserving a predictable user experience became a core design challenge throughout development.
+
+---
+
 # STAS HOOK
 
 # STAS HOOK
@@ -19696,6 +22507,55 @@ STAS Hook is unique because it turns the fee parameter into a live stability ins
 The hardest parts were getting the fee math, oracle integration, and edge cases exactly right. I had to carefully design how depeg basis points, swap direction, and confidence intervals map into fees, while ensuring the result always fits Uniswap v4’s fee constraints. Handling oracle staleness, zero or extreme prices, and making sure penalties/rebates never break pool safety required a lot of testing. It was also challenging to build fork tests and scenarios that realistically simulate depegs so I could validate that the hook behaves correctly under stress, not just in ideal conditions.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# STRATUM
+
+# STRATUM
+
+Description: STRATUM is a structured credit primitive for Uniswap v4 - the first hook to apply credit subordination to AMM liquidity. It splits a liquidity position into a fixed-yield, IL-protected senior tranche and a leveraged-fee, IL-absorbing junior tranche through an on-chain priority waterfall.
+Tags: Basic Interest Rate, CFMM, Constant Product Market Maker (CPMM), Cross-Chain, Custom hooks, Dynamic Fee, Inter-Connected Pools, LP Fees, LP Liquidity, LVR, Machine Learning, Unichain, zk-SNARK
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+
+## How did you integrate our partners, if any?
+
+I use Reactive Network to automate STRATUM without off-chain bots. I deployed three RSCs on Lasna (EpochSettler, CoverageMonitor, ReserveBalancer) that subscribe to specific events from my Unichain Sepolia hook. When an event matches, each RSC's react() schedules a cross-chain callback to its Unichain twin via the Reactive callback proxy, which then settles epochs, reports coverage stress, or signals reserve rebalancing. The core hook never hard-depends on Reactive: it passes all tests with peripherals disabled, and Reactive is an optional autonomic layer on top.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/guglxni/STRATUM](https://github.com/guglxni/STRATUM)
+Slides: https://drive.google.com/file/d/1MLdaz167F85QMkqOrPNCIP9NTUS0eTOy/view?usp=sharing
+Project Link: https://stratum-nu-dusky.vercel.app
+Demo Video: [https://drive.google.com/drive/folders/1EZLK5LX6vS97P3PbWgTjU3eBeIP16l_P?usp=sharing](https://drive.google.com/drive/folders/1EZLK5LX6vS97P3PbWgTjU3eBeIP16l_P?usp=sharing)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers on Uniswap face a basic tradeoff: you earn fees when people trade, but you can lose money when prices move (impermanent loss). Today everyone in a pool shares the same risk and the same return. There is no way for a cautious LP to get steady yield without taking full IL risk, and no way for a more aggressive LP to get extra fee upside in exchange for backing that risk.
+
+I built STRATUM to split one pool into two seats, like senior and junior tranches in structured finance. Senior LPs get a smoother, more protected return. Junior LPs take more risk and earn the extra fees that sit above the senior payout. Impermanent loss is handled inside the pool: junior absorbs it first, before senior principal is touched. The core math uses pool price movement only, not an external price feed.
+
+This fits the hookathon theme because it tackles both impermanent loss and yield in one design, instead of bolting on a separate insurance product.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Most IL projects try to hedge or insure LPs from the outside. STRATUM is different: the LPs in the pool underwrite each other. Junior capital is the buffer that makes senior safer. The fee waterfall decides who gets paid first. That is a new primitive for Uniswap v4, not a small tweak to fees.
+
+I deployed and tested the full flow on Unichain Sepolia: deposit into senior or junior, run swaps, close an epoch, and show IL landing on junior while senior stays protected. I also connected the surrounding stack I planned for the project: automated settlement through Reactive Network, cross-chain reserve movement through Across, machine learning for volatility on Arbitrum Stylus, and attestation through EigenLayer. The hook still works on its own if you turn all of that off.
+
+If this works at scale, conservative capital (treasuries, funds, cautious LPs) can finally LP volatile pairs with a defined risk seat, while risk-tolerant LPs get paid to provide that protection. That should help pools attract deeper, stickier liquidity.
+
+## Challenges: What was challenging about building this project?
+
+Getting the money logic right was the hardest part. When someone withdraws, the contract has to pay the right tranche, charge IL to the right place, and never pay out more than came in. I spent a lot of time on tests and edge cases, including sharp price moves and same-block manipulation.
+
+Uniswap v4 hooks are tight on space and rules. I had to pack tranche accounting, epoch payouts, dynamic fees, and withdrawal settlement into a single hook that still deploys and passes a large test suite.
+
+The project spans several chains and tools (Solidity on Unichain, automation on Reactive, bridging, Rust ML, ZK verification). I had to keep the main hook simple and optional for everything else, so a judge can understand the core idea without needing the full stack to work.
+
+I am building solo, so I had to ship the core story first (two tranches, waterfall, IL on junior) and add integrations in layers. Some pieces are fully live on testnet; others, like live ZK proof submission, are only partial on testnet and I was careful not to overclaim that in the demo.
 
 ---
 
@@ -19733,6 +22593,43 @@ The impact of this project is huge: This hampers TVL growth (critical for the ac
 Integrating Eigenlayer w/hooks and deploying to testnet wansn't as easy as I expected. Several problems happened due lack of knowledge, that's why I decided to simulate everything using the real code without testnet
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# SafeSwap
+
+# SafeSwap
+
+Description: Trustless MEV protection and LVR rebate for LPs
+Tags: LP Fees, LVR, MEV
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/rafajaw/SafeSwap](https://github.com/rafajaw/SafeSwap)
+Slides: 
+Project Link: https://safeswap.spot/
+Demo Video: [https://youtu.be/3bZfOUMqNe0](https://youtu.be/3bZfOUMqNe0)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Two invisible taxes built into every AMM: MEV and LVR.
+
+  - Swappers pay MEV. A pending swap in a public mempool tells bots exactly what you're buying, how much, and roughly where your slippage limit sits — the raw material for sandwich attacks. You eat worse execution; a bot keeps the difference.
+  - LPs pay LVR (loss-versus-rebalancing). When the outside market moves, arbitrageurs trade against the stale pool until its price catches up — and pocket the spread. LPs supplied the liquidity that made that repricing possible, but normal AMMs never charge for it. It's the single largest structural cost of being an LP.
+
+SafeSwap closes both at the protocol layer in a single Uniswap V4 hook — no off-chain sequencer, no oracle, no privileged executor in the pool path.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Trustless by construction. No private relay you have to trust, no oracle to manipulate, no admin who can front-run. The protection is the bond + the hook math.
+
+## Challenges: What was challenging about building this project?
+
+Mining the hook address. V4 encodes hook permissions in the address, and we went further: the pool profile (base-fee bps + rebate %) is mined into the hook address itself, so 0xf100C70… literally reads as "1.00% base fee, 70% rebate." That meant building a custom AVX2 address miner.
 
 ---
 
@@ -19836,6 +22733,48 @@ solo
 
 ---
 
+# SamanaHook - IL Insurance for Committed Liquidity
+
+# SamanaHook - IL Insurance for Committed Liquidity
+
+Description: Anyone who needs committed liquidity during a high-IL window funds a bounty. LPs who remain collect a base reward plus an IL payout proportional to the IL suffered.
+Tags: ICO, LP Liquidity, Liquidity Mining, Pool Native Incentivization, Price Discovery
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/diego-G/samana-hook](https://github.com/diego-G/samana-hook)
+Slides: https://github.com/diego-G/samana-hook/blob/14dfc06dd8f0f87df9d4543fc74635a1c6d3b5e4/assets/slides/samana-hook-slides.pdf
+Project Link: 
+Demo Video: [https://youtu.be/KIklbhsGRrM](https://youtu.be/KIklbhsGRrM)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Impermanent loss is worst exactly when a pool needs liquidity most: at launch, during a depeg, after an exploit, around a token unlock. Volatility peaks, fees are thin, and rational LPs stay out, precisely when their absence hurts the most.
+
+The parties who need that depth have only blunt tools today: liquidity mining that pays flat emissions regardless of risk taken, or opaque off-chain market-maker deals. Neither compensates LPs for what actually keeps them away: IL during the danger window.
+
+SamanaHook flips that incentive on-chain. Whoever has a stake in pool depth funds a bounty; LPs who commit through a fixed window earn a flat reward plus an insurance payout proportional to the IL they suffered. The hook enforces it all at the pool level, with no external oracles or trusted intermediaries.
+
+## Impact: What makes this project unique? What impact will this make?
+
+What makes it unique is that the insurance is trustless end to end. Existing IL protection relies on external oracles or a counterparty underwriting the risk. SamanaHook computes IL entirely from the pool's own TWAP history (entry snapshotted at qualification, exit read at claim), with payouts capped by a pre-funded budget in a single bounty token. No third-party feed, no underwriter, bounded downside for the creator.
+
+It is also only possible with v4 hooks: the lockup is enforced at the pool level, qualification is detected automatically as liquidity crosses the threshold, and rewards survive bounty deactivation via pull payments. No staking wrapper, no escrow, no trust in the creator after funding.
+
+The impact is a new primitive: risk-priced liquidity commitment. Instead of flat emissions for presence, anyone (a protocol at launch, an issuer during a depeg, a DAO after an exploit) pays LPs precisely for the risk they bear, exactly when bearing it matters. That keeps liquidity in pools during the events that currently drain it.
+
+## Challenges: What was challenging about building this project?
+
+The hardest problem was making the price measurement manipulation-resistant without an external oracle. The IL payout depends on two attacker-influenced moments (entry at qualification, exit at claim), so spot price was unusable: a flash loan could inflate measured IL. The hook therefore embeds its own observation ring buffer, writing one tick per block from beforeSwap. A flash loan cannot sustain a deviation across blocks, so a 30-minute TWAP over that buffer resists to even multiple-blocks manipulation.
+
+The second challenge was the IL calculation itself. IL = 1 − 2√r/(1+r) is simple in math but had to be computed from two sqrtPriceX96 values entirely in Q96 fixed-point, with 512-bit intermediates via FullMath to avoid overflow without losing precision. Fuzz tests verify symmetry (same IL for equal moves up or down), monotonicity, and that payouts stay capped under arbitrary price paths.
+
+---
+
 # Sandwich Protector Hook
 
 # Sandwich Protector Hook
@@ -19927,6 +22866,114 @@ Satisfy makes Uniswap v4‑style markets credential‑aware without changing cor
 Automation and governance: making the SatisfyAutomationModule powerful enough for real operations (epoch changes, pool -> policy routing, emergency pause) but constrained via roles and one‑shot reactive jobs so misconfiguration or replay can’t silently corrupt policy.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# Schizō
+
+# Schizō
+
+Description: schizō turns each Uniswap v4 LP position into two tradeable tokens ; one that collects fees, one that bears impermanent loss : creating an on-chain bond market for IL, with a Reactive Smart Contract marking positions to market on every swap.
+Tags: CFMM, Cross-Chain, Custom hooks, DEX, Dynamic Fee, Inter-Connected Pools, LP Fees, MetaPools, Options/Futures
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+A Reactive smart contract (ILBondReactive, on Lasna) is the IL mark-to-market engine: fully event-driven, no cron or keeper.
+
+1. Subscribes to 4 hook events on the origin chain: SwapOccurred, PositionCreated, PositionExited, ILBondDataBundle.
+2. On every swap → emits a callback to prepareILBondData() on the hook, which emits a bundle of all open positions' prices.
+3. On the bundle → computes impermanent loss (IL = 1 − 2√r/(1+r)) for each position inside the ReactVM, then callbacks settleILMark() to write the fresh mark on-chain.
+4. Position create/exit → self-callbacks keep activeCount in sync.
+
+Net: hook + pools on Sepolia/Unichain, IL-pricing engine on Lasna, talking purely through Reactive's event→callback loop. No centralized bot; the network re-prices IL trustlessly on every swap.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Prakhar-30/schizo_UHI9](https://github.com/Prakhar-30/schizo_UHI9)
+Slides: https://docs.google.com/presentation/d/1lFZoVNyTSlJt31cj_2eb6N9q5CTvGmuAjJ_kOyV2K-k/edit?usp=sharing
+Project Link: https://schizo-il-bond.vercel.app/
+Demo Video: [https://youtu.be/RMAE2iiFZEE](https://youtu.be/RMAE2iiFZEE)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Impermanent loss is the single biggest reason people don't LP.
+You provide liquidity to earn fees, but if the price moves you can end up worse off than if you'd just held, and that downside is silent, unhedgeable, and bundled into the same position as your yield.
+Today an LP has no way to keep the fee income while shedding the IL risk, and a trader who wants directional/volatility exposure has no clean instrument to buy it.
+
+I was inspired by how TradFi unbundles risk: a bond strips a cash flow from its principal, and structured products separate the coupon from the exposure.
+
+DeFi LP positions are really two assets fused together: a fee-earning claim and a volatility-bearing claim
+
+but AMMs force you to hold both.
+
+schizō solves this by splitting every Uniswap v4 LP position into two tradeable tokens:
+- FEE-T :  the swap fees + an upfront premium (yield, no IL)
+- IL-T:  the underlying composition that bears impermanent loss (the risk leg a hunter buys)
+
+This creates an on-chain bond market for impermanent loss: LPs sell their downside for cash today, and hunters take on IL exposure at a price.
+The hard part : continuously re-pricing each position's IL as the market moves; is solved by a Reactive Smart Contract that marks every position to market on each swap, trustlessly and without any centralized keeper.
+
+## Impact: What makes this project unique? What impact will this make?
+
+What makes schizō different is that it actually splits the LP position into two tradeable tokens:  one earns the fees, the other carries the impermanent loss. Most "IL hedging" projects bolt on insurance or an options vault on the side;  schizō unbundles the position itself, which nobody's really done cleanly on Uniswap v4.
+
+The other piece is the Reactive Smart Contract. IL is hard to trade because it changes on every swap, so you'd normally need a bot constantly re-pricing positions. We don't — the Reactive Network re-prices each position the instant a swap happens, on-chain, no keeper. That's what makes a live IL market possible at all.
+
+The impact: LPs finally get an exit besides pulling liquidity. You can stay in, keep earning fees, and sell the downside to someone who wants it; which should bring in LPs who sit out today and deepen liquidity for everyone. And traders get a clean way to take a direct position on volatility instead of guessing through options. It's DeFi pricing risk the way TradFi does: yield-seekers and risk-takers each get the side they actually want.
+
+## Challenges: What was challenging about building this project?
+
+- Pricing IL on every swap, trustlessly. Getting the Reactive Network loop right was the core challenge: a two-legged flow where a swap triggers the hook to emit a data bundle, then the RSC computes IL in the ReactVM and writes the mark back. Wiring the event topics, callbacks, and gas correctly across two chains took real iteration.
+
+- Relay lag. The settleILMark write-back leg sometimes stalled on the relay even though the bundle leg landed reliably. We made the frontend derive IL client-side from live pool price as a fallback, so the UI never freezes.
+
+- Multi-pool correctness. Our first version read one pool's price and applied it to every position: fine for one pool, corrupts marks across 45. We had to carry each position's own pool price through the bundle.
+
+- IL math in fixed-point Solidity. The IL formula √r·√r overflowed at extreme price divergence and could brick a whole bundle. Had to saturate at 100% IL before the overflow point.
+
+- Decimals everywhere. Pools mix 2/6/8/18-decimal tokens, so raw prices were off by huge factors — every parse, format, and chart needed per-token decimal handling.
+
+---
+
+# Schrodinger Hook
+
+# Schrodinger Hook
+
+Description: Schrodinger Hook is a private rebalancing hook.
+Tags: Compliance, Custom hooks, DEX, Dynamic Fee, LP Fees, LP Liquidity, MEV, Pool Native Incentivization, Private Debt, RWA, Regulation, Security, Stablecoins, Tokenized Stocks, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+The Schrödinger RWA Hook integrates with Reactive Network. Instead of relying on centralized automation infrastructure, Reactive Contract monitor relevant events and automatically trigger the required on-chain actions.
+
+ https://github.com/Coffhee-Finance/Schrodinger-Hook/blob/main/CoffheeRWA/src/ReactiveRWAController.sol
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Coffhee-Finance/Schrodinger-Hook](https://github.com/Coffhee-Finance/Schrodinger-Hook)
+Slides: 
+Project Link: https://coffhee-app-2s7u.vercel.app/
+Demo Video: [https://youtu.be/tmm_qRj3mSY](https://youtu.be/tmm_qRj3mSY)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Schrodinger Hook is designed to solve the critical privacy, security, and capital efficiency problems that currently prevent institutional Real-World Assets (RWAs) and tokenized debt from safely scaling on public decentralized exchanges. This project brings true privacy on-chain.
+
+https://islandersfan2025.github.io/Schrodinger-PitchDeck/
+
+## Impact: What makes this project unique? What impact will this make?
+
+The Schrodinger Hook requires the use of ERC 7984 confidential tokens (FHE enabled) to be used inside the project. This allows for private rebalancing with different strategies such as dark pools for example. 
+
+## Challenges: What was challenging about building this project?
+
+The biggest challenge has been utilizing the limitations in using FHE (Fully Homomorphic Encryption). There have not been many other challenges though.
 
 ---
 
@@ -20766,7 +23813,7 @@ Description: I upgraded the "take profit" limit order from the course with simul
 Tags: DeFi
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 I upgraded the "take profit" limit order from the course with simulated swaps**.**
@@ -20915,7 +23962,7 @@ Description: The POC of the hook I built is required for my current project with
 Tags: DeFi, Trading Rewards
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 The POC of the hook I built is required for my current project with M^0 Labs. [https://x.com/m0foundation](https://x.com/m0foundation).  $M is a stablecoin and wrapped $M is The POC of the hook I built is required for my current project with M^0 Labs. [https://x.com/m0foundation](https://x.com/m0foundation).  $M is a stablecoin and wrapped $M is a wrapper contract for it. This wrapper maintains a 1:1 rate with $M and offers Earners yield. Eraners can periodically claim their yield. Additionally, smart contracts like Pool Manager can be added to the $M earning list. All $M that is held within it will earn an earning rate.
@@ -20932,7 +23979,7 @@ This rate will be distributed further between LPs based on their shares of liqui
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -21148,6 +24195,86 @@ This project proved that intelligent, self-improving financial systems can exist
 
 ---
 
+# Smooth IL
+
+# Smooth IL
+
+Description: A Uniswap v4 hook that reduces impermanent loss for long-term LPs by paying capped, tenure-weighted reimbursements from a smoothing reserve, with settlement automated through Reactive Network.
+Tags: DEX, Dynamic Fee, LP Fees, LP Liquidity, LVR, Liquidity Mining, MEV, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Reactive Network powers the automated settlement path. The hook emits a ReactiveSettlementRequested event with the pool ID, position key, recipient, exit price, and deadline. A Reactive Smart Contract on Lasna subscribes to that event, validates the origin chain, hook, topic, pool ID, deadline, and payload, then emits a callback to Unichain Sepolia.
+The Unichain callback proxy calls settlePositionFromReactive, and the hook verifies both the callback proxy and the expected RVM sender before settling the position.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/cryptanu/timeweighted-il-smoothing-hook](https://github.com/cryptanu/timeweighted-il-smoothing-hook)
+Slides: https://gamma.app/docs/Stay-longer-suffer-less-466zm88m0wxtbi4
+Project Link: 
+Demo Video: [https://youtu.be/FpTQx4jvISk](https://youtu.be/FpTQx4jvISk)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Impermanent loss discourages long-duration liquidity. In most AMM designs, the pool does not distinguish between an LP who provided useful liquidity for a long time and one who entered opportunistically before a price move. This creates poor incentives: long-term LPs absorb volatility risk, while short-term liquidity can still compete for fees.
+
+TimeWeightedILSmoothing solves this by rewarding duration directly. The longer a position stays in the pool, the higher the percentage of computed IL that can be smoothed, up to the reserve cap.
+
+## Impact: What makes this project unique? What impact will this make?
+
+The project turns time in pool into a native DeFi risk primitive.
+Instead of using points, emissions, external loyalty programs, or generic yield incentives, the hook gives long-tenured LPs better IL treatment at the moment they need it most: settlement. It also avoids creating protocol debt because payouts are capped by the reserve balance and LP entitlement.
+
+The Reactive integration also makes the design more interesting: settlement is event-driven. The origin event, Reactive processing transaction, and destination callback can all be inspected independently.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was making the mechanism judge-verifiable end-to-end. It was not enough to write a hook that calculates a payout; the project needed to prove that settlement could be triggered through Reactive Network and finalized on the destination chain.
+
+Another challenge was keeping the hook solvent. The design had to avoid promising guaranteed insurance, so payouts are intentionally capped by reserve capacity and LP entitlement.
+
+A third challenge was balancing hackathon scope with correctness. Exact concentrated-liquidity IL is complex, so v1 uses a simpler full-range approximation while leaving exact v4 tick-range math as the next major improvement.
+
+---
+
+# Sochalant
+
+# Sochalant
+
+Description: A Uniswap v4 hook that splits LP positions into senior/junior tranches (70/30) and dynamically adjusts hedging based on an on-chain risk score computed from price delta, swap volume, and volatility — no oracles or keepers required.
+Tags: LP Liquidity, Trading Volume Rewards, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Reactive Network was used in our dashboard to monitor market stress and cause needed reactions which help hedge risk
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/orsinibear/Sochalant-Inc.git](https://github.com/orsinibear/Sochalant-Inc.git)
+Slides: https://docs.google.com/presentation/d/1vUnnuRt9CxxZe-v1HlfIVsVIczbiJY0cOziqVGo3nMk/edit?usp=sharing
+Project Link: https://sochalant-inc.vercel.app/
+Demo Video: [https://www.loom.com/share/322698e7461e4b1fa0ab967d48306fff](https://www.loom.com/share/322698e7461e4b1fa0ab967d48306fff)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap v4 LPs face two unsolved problems: all LPs share the same IL and fee exposure regardless of risk appetite, and pools don't react to market conditions , volatility spikes can erode returns before anyone can rebalance. Existing solutions require external oracles, keeper bots, or separate infrastructure.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Sochalant is the first v4 hook to combine tranched liquidity with fully on-chain dynamic hedging. No oracles, no keepers, no external contracts — the entire risk engine runs inside hook callbacks (beforeSwap/afterSwap/beforeAddLiquidity). This makes sophisticated risk management accessible to any pool with zero additional infrastructure.
+
+## Challenges: What was challenging about building this project?
+
+Debugging hook callbacks on a live testnet (Unichain Sepolia) was difficult — reverts produce opaque error codes. Settlement logic required careful handling of BalanceDelta signs (negative = settle, positive = take). WETH proxy on OP Stack chains doesn't support transferFrom as expected, requiring custom ERC20 tokens for testing. The afterSwap arithmetic had to be redesigned after an on-chain revert (pool ID hash is not a price).
+
+---
+
 # Social Identity-Weighted DEX Fees
 
 # Social Identity-Weighted DEX Fees
@@ -21339,6 +24466,58 @@ What is the leveraged option strategy? It's replicates "Squeeth," a tokenized st
 ### **Challenges**
 
 Implementing the custom curve logic with V4 liquidity math was quite challenging. Especially because it requires the hook to override much of the Uniswap core logic.
+
+---
+
+# Squid
+
+# Squid
+
+Description: Squid is a cross-chain data observability and automation solution for passive LPs. It turns passive LPing from a blind yield bet into a data-driven, monitorable, and eventually automated strategy.
+Tags: Cross-Chain, Custom hooks, LP Liquidity, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+I'm using reactive network for a unified cross-chain liquidity management experience. 
+
+In a real world scenario, deterioration in the pool health for a token pair signals a bad market condition for that pair. By tracking relevant pool health metric and triggering necessary actions across chains when things go bad, LPs can be saved from making bad decisions across all platforms
+
+To demonstrate it, I've implemented a simple action-reaction workflow where if the percentage of active positions in a pool drops below a theshold (signifying bad pool health), an event is emitted and reactive network marks the pool as unsafe for LPs. LPs are prohibited for taking any new position in that pool until the pool recovers completely.
+
+That's how reactive network can help in unifying the liquidity management across multiple chains
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Saumay-Agrawal/squid](https://github.com/Saumay-Agrawal/squid)
+Slides: https://squid-deck.pages.dev/
+Project Link: 
+Demo Video: [https://www.loom.com/share/a931f711ca7e412c8ac33750a413452e](https://www.loom.com/share/a931f711ca7e412c8ac33750a413452e)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+To optimise for IL or yield, I needed to get a better understanding about it. I tried searching for data around IL that I can study or analyse, but I couldn't find any. On talking to the Uniswap & Atrium team members, I realised that there are no solutions giving a good visibility into the stats of pools and liquidity positions in a easy to understand way 
+
+Moreover, since one of the goals was also to optimise for stickier liquidity, I started looking specifically into the issues passive LPs are facing. They already have the desired user behaviour, but are often unsatisfied and get discouraged because of a lack of a better user experience.
+
+So I combined these insights to build a fully on-chain data observability solution that can help passive LPs manage their positions and optimise for a better yield
+
+The data collected can be used for various other purposes as well
+
+## Impact: What makes this project unique? What impact will this make?
+
+It's a multi-faceted solution that can have an ecosystem wide impact
+
+1. Passive LPs -> can use it to optimise for their yield
+2. Analysts and researchers -> can use it for R&D
+3. dapp Developers and aggregators -> can use the data collected for building or integrating new solutions
+4. Protocol -> can draw insights from the data and set direction for future protocol enhancements
+
+## Challenges: What was challenging about building this project?
+
+Since it's a full stack solution, I had to do a little bit of everything to just get a prototype ready. Deciding from what metrics to track, how to repurpose them and present them, and how to simulate the liquidity flows and order flows locally for testing, I had to figure out a lot of stuff in a very short span of time. It was fun!
 
 ---
 
@@ -21717,6 +24896,57 @@ It would bring a fun twist to staking on ethereum and its partners.
 Integrating Fhenix and Eigenlayer
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# Steady
+
+# Steady
+
+Description: Steady is a cross-chain automated savings protocol that lets users set up recurring on-chain DCA plans — “buy $50 of ETH every week” — which execute themselves trustlessly via the Reactive Network, with no off-chain keeper.  A Uniswap v4 dynamic-fee hook makes every recurring savings swap completely fee-free.
+Tags: Cross-Chain, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI5
+
+## How did you integrate our partners, if any?
+
+Reactive Network is the trustless automation engine at the core of Steady — it replaces the off-chain keeper entirely.
+
+We deploy a dedicated reactive contract, ReactiveSteady (extends AbstractReactive), on the Reactive Network (Lasna). It subscribes to the PlanDue event emitted by SteadyPlanRegistry.poke() on the destination chain, and when a plan comes due its react() handler fires a cross-chain requestCallbackV_1_0(...) that targets SteadyExecutor.executePlan back on the chain where the Uniswap v4 pool lives.
+
+On the destination side, SteadyExecutor extends AbstractCallback to receive that callback, guarded by a dual-auth model (onlyServiceProvider for the Reactive callback proxy + onlyReactive for the originating sender) so only genuine, due executions can move funds.
+
+Per-chain callback-proxy addresses are configured in script/config/ChainConfig.sol, ReactiveSteady is funded with REACT to pay callback gas, and the full poke → react → callback → swap loop is proven end-to-end in test/crosschain/SteadyCrossChain.t.sol.
+
+One integration note worth flagging: we verified every interface against the standard reactive-lib rather than the omni variant, since the omni library was broken during the build.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/AJTECH001/Steady](https://github.com/AJTECH001/Steady)
+Slides: https://steady-deck-m8j3cennb-jamiu-alades-projects.vercel.app/
+Project Link: 
+Demo Video: [https://www.loom.com/share/4bbb[phone removed]fe6a2e05fa01c4a85c4](https://www.loom.com/share/4bbb[phone removed]fe6a2e05fa01c4a85c4)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Dollar-cost averaging is the most reliable retail savings strategy, but on-chain it forces a bad choice: either manually remember to swap every week, or hand a centralized, opaque keeper an allowance and hope it doesn't fail, censor, or disappear—all while paying full swap fees that erode returns over time.
+
+Steady was inspired by the idea that recurring savings should run themselves trustlessly. Plans live fully on-chain, execution is triggered automatically by the Reactive Network with no off-chain bot, and a Uniswap v4 dynamic-fee hook makes every savings swap fee-free.
+
+## Impact: What makes this project unique? What impact will this make?
+
+What makes Steady unique is that it removes the off-chain keeper entirely—execution is triggered trustlessly on-chain by the Reactive Network instead of a centralized bot that can fail, censor, or vanish—while a Uniswap v4 dynamic-fee hook makes every recurring savings swap completely fee-free, something no existing DCA tool offers.
+
+The impact is a savings primitive that anyone can rely on without trusting an intermediary: disciplined, automated dollar-cost averaging that keeps more of users' returns and brings the single most effective retail wealth-building strategy fully on-chain and self-custodial.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was wiring two independent runtimes into one trustless loop. The Reactive Network contract lives on a separate chain from the Uniswap v4 pool, which created a deploy-time dependency cycle: the executor needs the reactive sender's address and vice versa. We solved this by making both sides owner-settable and adding two post-deploy wiring transactions.
+
+On top of that, securing the cross-chain callback required building a dual-auth model—verifying both the Reactive callback proxy and the originating sender—so that only genuine, due executions can move funds. We also implemented replay protection and slippage bounds on the v4 swap itself.
+
+Finally, the Reactive tooling was a moving target. The official omni library was broken, so we had to verify every interface and per-chain callback-proxy address against the standard reactive-lib, and confirm which testnets actually support bidirectional cross-chain communication. This process ruled out Arbitrum Sepolia and ultimately led us to deploy on Unichain Sepolia.
 
 ---
 
@@ -22147,6 +25377,86 @@ Real-time accuracy: Exchange rates change every second, and the tough part was f
 Data reliability: Bank APIs don’t always give the full picture, and street rates are not written anywhere. The challenge was how to blend official sources with what people on the ground are saying — and still keep it accurate.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# Structured Settlement Hook
+
+# Structured Settlement Hook
+
+Description: Structured Settlement Hook is a Uniswap v4 hook that lets issuers, market makers, and aggregators route signed, policy-aware settlement capacity through a normal v4 pool. Ordinary swaps stay on the AMM path, while eligible signed swaps can split execution between AMM liquidity and a protected collateral or registered-issuer settlement rail, with LI.FI-compatible fulfillment support for solver-style routing.
+Tags: Compliance, Custom hooks, DEX, LP Liquidity, Oracle, Order Type, RWA, Stablecoins
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+No sponsors are claimed for this submission. 
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/SteerProtocol/phantom-liquidity-hook](https://github.com/SteerProtocol/phantom-liquidity-hook)
+Slides: https://hook.steer.finance/UHI_DECK.pdf
+Project Link: https://hook.steer.finance
+Demo Video: [https://hook.steer.finance/UHI_DEMO.mp4](https://hook.steer.finance/UHI_DEMO.mp4)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap v4 makes it possible to add custom settlement behavior to a pool, but most real-world liquidity still does not fit neatly into passive LP inventory. Issuers, collateral desks, and market makers often have usable capacity that depends on inventory, risk limits, oracle state, compliance policy, or signed quotes. Without a hook-level settlement path, that capacity stays in private rails, OTC flows, or custom aggregators instead of becoming composable pool liquidity.
+
+Structured Settlement Hook was inspired by that gap. The goal is to let a normal v4 pool remain useful for ordinary swaps while giving qualified flow a way to access external settlement capacity only when the required quote, route, and policy checks are present.
+
+## Impact: What makes this project unique? What impact will this make?
+
+The unique part is that this is not just a hook contract demo. It is a working settlement system around a v4 hook: deployed frontend, quote server path, registered-issuer swap surface, protected collateral-route swaps, LI.FI-compatible fulfillment plumbing, readiness diagnostics, and an operator console for market risk, execution, oracle, and deployment settings.
+
+The impact is a new pattern for bringing controlled liquidity into Uniswap without forcing all capacity to sit passively in an AMM range. Stablecoin issuers, collateralized asset protocols, market makers, solvers, and aggregators could expose inventory through v4 under explicit limits, while ordinary pool users still get the default AMM path.
+
+We have verified both collateral settlement token movement and the registered-issuer path. In the latest recorded Sepolia proof, signed M1-backed hook data produced a broker plus AMM split where manager settlement and the PoolManager AMM remainder matched. That makes the project relevant to the Impermanent Loss & Yield Systems theme because it points toward pools that can route to external yield, issuer, collateral, or solver capacity without making that capacity permanently exposed as LP inventory.
+
+## Challenges: What was challenging about building this project?
+
+The biggest technical challenge was keeping the hook honest about when it should do nothing. A normal swap must pass through cleanly, while a structured swap has to decode signed hook data, enforce replay protection, validate quote bounds, size external capacity, and return the correct settlement delta without contaminating the AMM path.
+
+The second challenge was productizing the workflow around the hook. We had to coordinate quote-server signing, exact-input/exact-output/target-output request construction, registered-issuer payloads, collateral-route protection, LI.FI-style executor boundaries, simulation gates, role-gated management actions, readiness checks, and browser-visible configuration without leaking server-side secrets.
+
+The last challenge was proving the paths were real enough for a final submission. We built broad first-party coverage across contracts, interface behavior, quote parsing, fulfillment modules, role gates, and browser smoke paths, then recorded live Sepolia verification for the registered-issuer exact-input broker plus AMM route. The project is still unaudited hookathon code, so production would require external audit, monitoring, and deployment hardening.
+
+---
+
+# StructuredYield
+
+# StructuredYield
+
+Description: StructuredYield is a Uniswap v4 Hook that separates impermanent loss risk from trading fees by splitting standard LP positions into a principal-protected tranche (PT-LP) and a leveraged yield tranche (YT-LP). This architecture enables risk-free liquidity provision for conservative capital, while allowing risk-seeking users to speculate purely on swap fee revenue.
+Tags: Custom Routers, Custom hooks, LP Fees, LP Liquidity, Options/Futures, Security, Unichain, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/ShivamSoni20/StructuredYield-Hook](https://github.com/ShivamSoni20/StructuredYield-Hook)
+Slides: https://docs.google.com/presentation/d/1c57Wuij3Ixt2gGuvC3WPsgBvP0MGaIyB/edit?usp=sharing&ouid=[phone removed]&rtpof=true&sd=true
+Project Link: https://structured-yield-hook.vercel.app/
+Demo Video: [https://youtu.be/uZktQIxXxYs](https://youtu.be/uZktQIxXxYs)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers on Uniswap earn fees but are also exposed to impermanent loss and unpredictable returns. This forces every LP into the same risk profile, making LPing less attractive for users seeking more predictable outcomes.
+
+StructuredYield was inspired by fixed-income and structured finance products, where principal and yield can be separated. Using Uniswap v4 Hooks, we split an LP position into PT-LP (principal-focused exposure) and YT-LP (yield exposure), while routing a portion of swap fees into an insurance reserve to help offset impermanent loss.
+
+Our goal is to make LPing more predictable and introduce fixed-income style primitives to Uniswap liquidity providers.
+
+## Impact: What makes this project unique? What impact will this make?
+
+StructuredYield introduces fixed-income style liquidity positions to Uniswap v4 by separating a single LP position into principal-focused (PT-LP) and yield-focused (YT-LP) assets. Unlike traditional LPing, where all users share the same risk profile, StructuredYield allows risk and yield to be separated and managed independently. This can make LPing more attractive to conservative capital, improve risk management for liquidity providers, and create new structured yield products on top of Uniswap v4.
+
+## Challenges: What was challenging about building this project?
+
+One of the biggest challenges was designing a system that could separate principal and yield while remaining compatible with the Uniswap v4 lifecycle. We had to integrate hook callbacks for liquidity events and swaps, build fee-routing logic for the insurance reserve, and create accurate accounting for PT-LP and YT-LP positions. Another challenge was building a complete end-to-end experience with smart contracts, frontend integration, real testnet deployments, and live fee-routing demonstrations.
 
 ---
 
@@ -22635,6 +25945,41 @@ Synchronizing liquidity, collateral, and borrowing between Uniswap and Aave with
 
 ---
 
+# TRIDENT
+
+# TRIDENT
+
+Description: Trident is a Uniswap v4 hook that protects LPs from impermanent loss through three autonomous layers: arb-detection fees that charge arbitrageurs proportionally, gamma-aware boundary premiums that compensate LPs at range edges, and an on-chain IL reserve vault that pays out at withdrawal — all driven by Reactive Network cross-chain automation.
+Tags: Cross-Chain, Dynamic Fee, LP Fees, LVR, MEV, Oracle, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI7
+
+## How did you integrate our partners, if any?
+
+TridentReactive is deployed on Reactive Network's Lasna testnet and subscribes to Swap and AnswerUpdated events on Unichain Sepolia. It runs react() in ReactVM to compute oracle deviation and fee parameters, then sends callbacks to pre-load TridentHook's state before each swap. Chainlink price feeds are used as the ground-truth oracle for detecting arbitrage gaps between the real-world ETH price and the pool's implied price.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/dannyy2000/Trident](https://github.com/dannyy2000/Trident)
+Slides: https://docs.google.com/presentation/d/1y7cGxAO60aSLGUQBXNisct-E1o82JRmegd-xOfXSlmw/edit?usp=sharing
+Project Link: https://trident-ruddy.vercel.app/
+Demo Video: [https://youtu.be/9Qu4Qu3XEOA](https://youtu.be/9Qu4Qu3XEOA)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+LPs in concentrated liquidity AMMs are systematically unprofitable. Six peer-reviewed papers quantify the drain: Fritsch & Canidio show swap fees don't cover arbitrage losses in most major Uniswap pools; Milionis et al. prove LVR is the dominant LP drain requiring 10% daily volume at 30bps just to break even; Lehar & Parlour document gamma risk spiking at range boundaries; and JIT bots dilute LP fees by 85% on average extracting ~$750B annually. Every layer in TridentHook is a direct, research-backed response to one of these findings.
+
+## Impact: What makes this project unique? What impact will this make?
+
+TridentHook is the only hook addressing all three LP loss vectors simultaneously and autonomously. The arb premium means arbitrageurs subsidise LPs rather than extract from them. The gamma-aware boundary premium means LPs earn most exactly when they're at most risk. The IL reserve vault means long-term LPs receive on-chain compensation at exit while JIT bots (same-block in/out) receive zero. No bot, no keeper, no centralized relay — Reactive Network makes it fully autonomous.
+
+## Challenges: What was challenging about building this project?
+
+The hardest challenge was the Reactive Network integration: deploying TridentReactive on Lasna, managing subscription debt mechanics, and understanding that react() executes in an isolated ReactVM copy where state changes don't persist to the deployed contract. The three-layer fee math required careful invariant design — arb amplifier tuning, gamma scoring from tick distance, and the loyalty/IL factor cascade in the vault. Uniswap v4's hook callback architecture (particularly afterAddLiquidity return delta handling and the dynamic fee flag) also required deep protocol knowledge.
+
+---
+
 # TWAMM Launch
 
 # TWAMM Launch
@@ -22801,7 +26146,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -23219,6 +26564,38 @@ The hardest part was designing an econometric model that separated fee concentra
 
 ---
 
+# ThroneHook
+
+# ThroneHook
+
+Description: ThroneHook is a Uniswap v4 hook that routes a share of swap fees to the most active traders in a pool via two competitive thrones: Frequency (most swaps) and Volume (highest input). The goal is to add a community engagement layer to any pool.
+Tags: Community Layer, Competitive Leaderboard, Engagement Mechanics, Trading Volume Rewards
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/WalquerX/throne](https://github.com/WalquerX/throne)
+Slides: https://docs.google.com/presentation/d/1EEfwOXMD8Xf6YOkdJpoYiirfKS84NwNvHrvfCP0FPuc/edit?usp=sharing
+Project Link: 
+Demo Video: [https://www.loom.com/share/32dda60d224a4b03b4806969e6f36395](https://www.loom.com/share/32dda60d224a4b03b4806969e6f36395)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Trading on a DEX is anonymous and transactional. There is no recognition for active participants and nothing that makes being part of a specific pool feel different from any other. Inspired by how streaming platforms reward consistent engagement, ThroneHook adds a competitive identity layer directly on top of swap activity.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Any pool can attach ThroneHook and gain a leaderboard, competitive thrones, and fee streaming to its most active traders.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was designing the prize mechanism. The hook attributes fees to the correct holder on every swap with no iteration over users and no external randomness or keeper services.
+
+---
+
 # Tick Range and Allowlist hooks
 
 # Tick Range and Allowlist hooks
@@ -23486,6 +26863,40 @@ Our biggest challenge so far has been onboarding comic creators into the world o
 # Team: Who is on the team? What are their backgrounds?
 
 Token Comic is led by Katherine Diaz (Co-founder & CEO) and Juan Pablo Rios (founder & CTO). Recently, we teamed up with Simone Di Cola, a fellow developer we met during the Hook Incubator, and together we’re participating in this hoockathon.
+
+---
+
+# TokenLaunchHook Studio
+
+# TokenLaunchHook Studio
+
+Description: V4 hook attached to a newly launched token's pool. Enforces fair-launch rules (anti-snipe, dynamic LP fee tax, conditional liquidity lock, whitelist phase) without modifying the ERC-20 token contract. 
+Tags: ICO
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Only Uniswap V4 and deployed on Unichain
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/maxsiz/uhi9-token-launch-hook](https://github.com/maxsiz/uhi9-token-launch-hook)
+Slides: https://iber.dev/uhi9-token-launch-hook/
+Project Link: https://uhi9-token-launch-hook.vercel.app/
+Demo Video: [https://youtu.be/dE8aF8CyHqA](https://youtu.be/dE8aF8CyHqA)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Every token launch is a battlefield: snipers grab the first block, sandwich bots tax early buyers, teams pull liquidity, nobody gets fair access. The usual fix was to bake logic into the ERC-20 — more code, more audits. But these pains happen in the pool, so the fix belongs there.
+
+## Impact: What makes this project unique? What impact will this make?
+
+ Control is the governance NFT — just the deployer's own LP position, no admin key. 
+
+## Challenges: What was challenging about building this project?
+
+ To make a launch as one atomic multicall — optional EIP-1167 token clone, pool init, seed mint — with all config passed in hookData.
 
 ---
 
@@ -24016,6 +27427,169 @@ N/A
 
 ---
 
+# Tranche LP
+
+# Tranche LP
+
+Description: --
+Tags: LP Fees
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [root project: https://github.com/jimmychu0807/uhi9-tranche-lp / submodule: https://github.com/jimmychu0807/uhi9-tranche-lp-hook](root project: https://github.com/jimmychu0807/uhi9-tranche-lp / submodule: https://github.com/jimmychu0807/uhi9-tranche-lp-hook)
+Slides: 
+Project Link: 
+Demo Video: [https://google.com](https://google.com)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Hi Atrium team,
+
+The goal of this project is to design a hook that issues Senior Receipts Tokens (SRT) and Junior Tranche Receipts Tokens (JRT) to LPs. SRT holders receive a fixed yield, while JRT holders absorb all the impermanent loss. The reason people may still want to hold JRT is that it effectively behaves like a leveraged position on the underlying trading fees. If trading fees cover the impermanent loss, JRT has significant upside; otherwise, JRT holders incur the loss. If the value of the JRT tranche goes to zero, SRT holders then begin to take losses.
+
+At the current project stage, I have not been able to complete the project, and I am not fully confident that the hook’s behavior is correct.
+
+I have intentionally not included a demo video, and I do not expect this to count as a qualified submission. However, I still wanted to let the Atrium team know that I made an attempt to develop a hook, and I appreciate the team’s effort in running UHI9.
+
+## Impact: What makes this project unique? What impact will this make?
+
+--
+
+## Challenges: What was challenging about building this project?
+
+--
+
+---
+
+# TrancheGuard
+
+# TrancheGuard
+
+Description: TrancheGuard is a Uniswap v4 hook for tranche-based impermanent-loss insurance — Senior LPs are protected up to a buffer while Junior LPs absorb the first loss for a larger fee share — with both parameters derived from a Monte-Carlo IL simulation, not guessed.
+Tags: LP Fees, LP Liquidity, Tranched Liquidity
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/yugo0822/tranche-guard](https://github.com/yugo0822/tranche-guard)
+Slides: 
+Project Link: 
+Demo Video: [https://www.youtube.com/watch?v=bVCJvg0E19Q](https://www.youtube.com/watch?v=bVCJvg0E19Q)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Every Uniswap v3/v4 LP faces the same impermanent loss regardless of their risk appetite — range is the only dial, but tightening it couples fees, IL, and out-of-range risk all at once. There is no way to be "senior" capital that is protected, or "junior" capital paid to take the first loss. This is standard in structured finance but missing entirely from AMM liquidity. TrancheGuard adds that missing axis.
+
+## Impact: What makes this project unique? What impact will this make?
+
+TrancheGuard introduces a genuine tranche structure to Uniswap v4: the same pool, the same fees, but two Tranches an LP can actually choose between. What makes it different is that the protection buffer and fee split are not hardcoded guesses — they are derived from a Monte-Carlo simulation of the pair's IL distribution and injected as immutable hook parameters. In the representative case, a Senior LP is 2.6× less likely to end a period underwater than a plain LP, for about 0.3% less expected return.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was the security model. In v4 a hook's sender is the router, not the user, so naive hookData authentication is spoofable; the solution was to bind position ownership to sender and derive the LP's stake from the PoolManager's own BalanceDelta rather than any caller-supplied value. A second challenge was keeping the on-chain IL computation consistent with the off-chain Monte-Carlo model so that the derived parameters actually mean what the hook enforces. Small mismatches in how HODL value is measured compound into large errors in the protection amount.
+
+---
+
+# TrancheHook
+
+# TrancheHook
+
+Description: TrancheHook is a Uniswap v4 hook that splits any LP position into a Principal Token (redeems at fixed $1 face value at maturity) and a Yield Token (earns all swap fees, absorbs impermanent loss first), bringing fixed-income structured products natively to the AMM layer.
+Tags: Custom hooks, LP Fees, Oracle
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/AAYUSH-GUPTA-coder/tranchehook](https://github.com/AAYUSH-GUPTA-coder/tranchehook)
+Slides: https://drive.google.com/file/d/1DGs9_05RPjSe_TcwiLjMB9yR3cGd8-tD/view?usp=sharing
+Project Link: 
+Demo Video: [https://youtu.be/pBKRu49YODM](https://youtu.be/pBKRu49YODM)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap v4 LP positions combine two very different risks into a single asset: unpredictable swap fee income and impermanent loss that can reduce principal. Today, liquidity providers have no native way to separate these risks.
+
+This makes LP positions difficult to use for participants who need predictable returns, such as DAO treasuries, institutional allocators, and fixed income investors. They either accept both risks together or choose not to provide liquidity at all.
+
+TrancheHook is inspired by how traditional finance solves similar problems through tranching. When a user deposits liquidity, the hook automatically splits the LP position into two tokens:
+
+- Principal Token (PT): A senior claim that is paid first at maturity and aims to preserve principal.
+- Yield Token (YT): A junior claim that receives 100% of the swap fees generated during the lifetime of the position while absorbing impermanent loss before PT.
+
+This allows risk-averse users to hold PT for more predictable outcomes, while yield-seeking users can hold YT for higher upside in exchange for taking on more risk.
+
+Projects like Pendle Finance have demonstrated the value of separating principal and yield. TrancheHook brings this concept natively to the Uniswap v4 hook layer, without requiring a separate protocol or wrapper, enabling structured finance primitives directly inside Uniswap
+
+## Impact: What makes this project unique? What impact will this make?
+
+TrancheHook is unique because it brings **yield tranching directly to the Uniswap v4 hook layer**.
+
+Today, protocols like Pendle, Spectra, and Napier provide yield tranching by building separate protocols on top of existing AMMs and wrapping external yield sources. In contrast, TrancheHook performs the PT/YT split **natively at the moment of deposit inside Uniswap v4**, without requiring a wrapper protocol or additional layer.
+
+This enables any Uniswap v4 liquidity position to be transformed into two separate financial instruments:
+
+* **Principal Token (PT):** A senior claim designed for users who want more predictable outcomes.
+* **Yield Token (YT):** A junior claim that earns all swap fees while absorbing losses before PT.
+
+The impact is that different types of users can participate in the same liquidity pool with different risk profiles. DAO treasuries and conservative investors can hold PT for principal-focused exposure, while yield seekers can hold YT to capture higher upside from trading activity.
+
+Because PT and YT are standard ERC20 tokens, they can also be traded on secondary markets, used as collateral in lending protocols, or held until maturity, creating new opportunities for composability across DeFi.
+
+By turning every Uniswap v4 LP position into a structured finance primitive, TrancheHook expands the range of financial products that can be built directly on top of Uniswap.
+
+## Challenges: What was challenging about building this project?
+
+My biggest challenge was learning **Uniswap v4 Hooks** and understanding how its architecture works.
+
+Unlike a regular smart contract, Uniswap v4 has a unique hook lifecycle with functions like `beforeSwap` and `afterSwap`, which took some time to fully understand. Understanding the overall hook skeleton and how all the components fit together was the most difficult part of the project.
+
+Another challenge was generating a custom hook address with the correct permission bits so that Uniswap could recognize it as a valid hook and call the appropriate lifecycle functions.
+
+---
+
+# TrancheShield
+
+# TrancheShield
+
+Description: TrancheShield is a Uniswap v4 hook that protects liquidity providers from impermanent loss by splitting them into Senior (protected) and Junior (underwriting) tranches, with the protection funded by a slice of swap fees instead of token emissions. A Reactive Network smart contract prices the pool's risk in real time adjusting the dynamic fee, IL coverage, and deposit gating cross-chain as volatility, reserve health, and withdrawal pressure change.
+Tags: CFMM, Cross-Chain, Custom hooks, Dynamic Fee, LP Fees, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI2
+
+## How did you integrate our partners, if any?
+
+I integrated Reactive Network as the project's real-time risk engine, and it is the core of the design rather than an add-on. A ReactiveRiskController, which inherits AbstractReactive and is deployed on the Reactive Lasna testnet, subscribes to our hook's swap, reserve-ratio, and Senior-withdrawal events on Unichain Sepolia. It maintains a per-pool Welford volatility model together with toxic-flow and bank-run detection, and whenever risk crosses a threshold it emits a bounded cross-chain callback. A CallbackReceiver, which inherits AbstractCallback and lives on Unichain Sepolia, receives those callbacks and applies them to the hook's risk parameters, namely the dynamic-fee multiplier, the impermanent-loss coverage ratio, and Senior-deposit gating. The two Reactive contracts live in src/reactive/ReactiveRiskController.sol and src/reactive/CallbackReceiver.sol. The full cross-chain roundtrip, in which a swap on Unichain Sepolia triggers react() on Lasna, which then sends a callback that re-prices the hook into its CRISIS regime, is verified live on testnet, and the deployed addresses and the verified transaction are recorded in docs/deployment.md.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/AhmetTahirYildiz/TrancheShield](https://github.com/AhmetTahirYildiz/TrancheShield)
+Slides: 
+Project Link: https://tranche-shield.vercel.app/
+Demo Video: [https://www.youtube.com/watch?v=kbLKJp9qn-s](https://www.youtube.com/watch?v=kbLKJp9qn-s)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Impermanent loss is the biggest and least understood cost of being a Uniswap liquidity provider. A passive position is structurally short volatility, so when the price moves the constant-product curve rebalances the LP into the depreciating asset and leaves the position worth less than if the tokens had simply been held. The loss is effectively invisible because it is netted silently against fee income, which is why most LPs only discover it when they withdraw. The existing ways to mitigate it all live outside the pool. Options and variance swaps are illiquid for long-tail pairs and bring basis risk and manual rolls, while the IL-protected vaults that do exist fund their protection with inflationary token emissions, which simply shifts the cost onto tokenholders. We wanted protection that is structural, in-protocol, and self-funding, where the premium that pays for the coverage comes from the same swap flow that causes the impermanent loss in the first place, and where the price of that protection tracks live market risk instead of sitting at a static parameter.
+
+## Impact: What makes this project unique? What impact will this make?
+
+TrancheShield turns impermanent loss from an unpriced tax into a two-sided market that lives inside a single pool. Risk-averse LPs take the Senior tranche and buy partial IL coverage with a small fee premium, while risk-seeking LPs take the Junior tranche and underwrite that coverage in exchange for extra yield, and the reserve that backs the protection fills from real swap fees rather than token emissions. What makes the project unique is its cross-chain reactive risk engine. Instead of a static fee or a coverage number set by governance, a Reactive Network contract continuously reprices the pool, raising the fee and tightening coverage exactly when volatility, reserve depletion, or withdrawal pressure spikes, and relaxing them again when the market calms. Because the heavy, stateful risk model runs off the swap path on Reactive, the swaps themselves stay cheap. The impact is that LPs gain a transparent, on-chain hedge against impermanent loss with no external venue and no emissions, pools effectively become self-insuring, and protocols get a reusable pattern for risk parameters that adapt in real time. We proved the whole loop end to end with a real on-chain event, where a Senior position recovered half of its impermanent loss, with an on-chain shortfall of 3.17 and a compensation of 1.59 paid from the Junior tranche through the waterfall.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was getting the cross-chain reactive loop right. Reactive runs the same contract as two separate instances, one on the Reactive node side and one inside the reactive virtual machine, each with its own state, and several non-obvious failure modes cost us hours. The react function has to be gated with the vmOnly modifier only, because adding the sender access control silently drops every callback. The callback gas limit has to be large enough to cover the full nested call from the proxy to the receiver to the hook, since 250k gas silently runs out of gas while 900k works, and a normal eth_call hides the revert so the only way to see it is to replay the transaction with cast run. Contracts whose constructor calls subscribe cannot be deployed with forge script, because the local simulation has no precompile at address 0x64 and the constructor reverts, so they must be deployed with forge create instead. We also caught a real correctness bug late in the build, where our first risk controller tracked a single global risk mode, so once any pool reached CRISIS it latched there and fresh pools never received a callback, and we rewrote the controller to key all of its risk state per pool. Finally, on the dashboard we learned that fixed historical log windows age out of public RPC endpoints, so we changed the on-chain IL proof to read its transaction receipt by hash, which keeps it visible no matter how far the chain advances.
+
+---
+
 # TrueLend
 
 # TrueLend
@@ -24332,6 +27906,46 @@ This is the first hook to provide enterprise-grade cost predictability for DeFi 
 - Multi-chain deployment complexity
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# Ultramar Port of Call
+
+# Ultramar Port of Call
+
+Description: Ultramar Port of Call is a Yield-Protected AMM pattern for private operating-business capital: investors receive a signed passport and enter fixed, capped Uniswap v4 capital windows instead of exposing issuer inventory to passive public LP impermanent-loss risk. The hook enforces router-bound authorization, exact-input settlement, oracle freshness, caps, blocked public liquidity, and beforeSwapReturnDelta custom accounting for yield-bearing capital routes.
+Tags: Capital Windows, Compliance, Custom Accounting, Custom Routers, Custom hooks, Debt Covenant Preview, Illiquid Assets, Impermanent Loss & Yield Systems, KYC, Oracle, Permissioned Liquidity, Price Discovery, Private Debt, RWA, Return Delta Hook, Router-Bound Authorization, Yield-Protected AMM
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+No additional partner protocol was integrated. The project focuses tightly on Uniswap v4 core mechanics: PoolManager settlement, hook permission bits, beforeSwap validation, beforeSwapReturnDelta custom accounting, blocked public liquidity, oracle freshness, and a router-bound periphery path.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Diegolden-com/ultramar-private-markets/tree/codex/landing-wave-route-ui/apps/private-equities/contracts](https://github.com/Diegolden-com/ultramar-private-markets/tree/codex/landing-wave-route-ui/apps/private-equities/contracts)
+Slides: https://ultramar.capital/hookathon/port-of-call/deck
+Project Link: https://ultramar.capital/hookathon/port-of-call
+Demo Video: [https://www.loom.com/share/f7d96f316b4d4040b9af00997cee4280](https://www.loom.com/share/f7d96f316b4d4040b9af00997cee4280)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Private-market capital usually breaks before settlement. Cross-border investors struggle with language, diligence, eligibility, legal boundaries, allocation, and reporting; issuers struggle to present operating proof without turning public materials into an uncontrolled offering. A normal public AMM is the wrong primitive for private-company capital because passive LP inventory can absorb opaque issuer risk, stale proof, and route mistakes as impermanent-loss exposure.
+
+Ultramar Port of Call turns the process into a controlled capital port. The investor reviews translated diligence, receives a signed passport, and then chooses a route: equity window, debt covenant preview, secondary transfer, or conversion path. For UHI9, the protected side is the liquidity/inventory side: issuer or escrow inventory is consumed only inside signed, capped, oracle-gated windows, while public liquidity modification and generic router paths are rejected before settlement.
+
+## Impact: What makes this project unique? What impact will this make?
+
+The project is unique because the hook is not just a permission list or fee tweak. It creates a yield/IL-protected capital-window system: the pool uses v4 PoolManager settlement, but the hook replaces continuous public AMM exposure with deterministic, signed, exact-input windows via beforeSwapReturnDelta. Public add/remove liquidity reverts, passports are bound to CapitalWindowRouter, stale issuer proofs are rejected, replayed authorizations fail, and successful executions emit reconciliation events for CRM, portfolio, issuer reporting, covenant monitoring, and risk review.
+
+The deck and tests show the sandbox math explicitly. testWindowStepCurveQuotesExactPricingExample proves the signed demo term: 1,500 demo USDC returns 1,454.54 sandbox restricted LCX at 1.0312 demo USDC/restricted LCX effective, with the active window fixed after the signed FX snapshot. The yield system comes from reviewed real-world round terms, freshness gates, and protected issuer inventory, not from asking public LPs to warehouse toxic or stale private-market flow.
+
+The impact is a reusable v4 pattern for asset-specific yield systems where legal/product constraints become programmable settlement boundaries without rebuilding a bespoke exchange from scratch.
+
+## Challenges: What was challenging about building this project?
+
+The hard part was making the hook feel like a real v4 market instead of a standalone escrow contract with a Uniswap label. The implementation had to bind passport signatures to the intended router, use v4 custom accounting correctly, encode the hook permission mask, block generic router bypasses, reject exact-output paths, protect signed minimum output, handle replay/deadline checks, model oracle freshness, block public LP behavior, and keep the yield/IL-protection story honest. A second challenge was packaging the product so judges can understand the capital-port workflow first and then verify the hook behavior through tests, local scripts, and a Base Sepolia dry-run path.
 
 ---
 
@@ -25363,7 +28977,7 @@ Prize: Uniswap Prize
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -25446,7 +29060,7 @@ Cohort: UHI2
 
 ### Demo:
 
-[https://www.notion.so](https://www.notion.so)
+[https://app.notion.com](https://app.notion.com)
 
 ## Problem / Background:
 
@@ -25587,6 +29201,41 @@ Here's my LinedIn Profile - [https://www.linkedin.com/in/satyam-raikar/](https:/
 
 ---
 
+# Unistrata
+
+# Unistrata
+
+Description: Unistrata is a Uniswap v4 hook that prices a single pool as a capital structure: a senior tranche (Bedrock) with protected principal and a coupon priced from the pool's own realized variance, over a junior first-loss tranche (Sediment) that underwrites the volatility in exchange for the excess fees. Epoch settlement fires cross-chain via a Reactive Network contract — no keeper, no bot, and no external price oracle.
+Tags: Basic Interest Rate, Cross-Chain, LP Fees, LP Liquidity, Oracle, Pool Native Incentivization, Stablecoins, Unichain, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Reactive Network: A Reactive Smart Contract on Lasna automates all epoch settlement cross-chain: it subscribes to a CRON heartbeat and to the hook's UnistrataObservation events, and when realized variance crosses the spike threshold, it fires a Callback to emergencySettle the hook on Unichain Sepolia. The hook is an AbstractCallback with callback-proxy-authenticated entry points (authorizedSenderOnly + rvmIdOnly) plus a permissionless fallback after epoch+grace. Verified end-to-end on the live deployment: reaction #667 delivered emergencySettle (tx 0x1cb640fa6fc86c93c8528ff66cb9c3c55ab8799be002374cf93fd714d634ac43, block 54361109), settling epochId 0→1 with Bedrock protected and Sediment absorbing the entire drawdown — no keeper or bot of ours. The dApp links its live Reactive RVM transaction feed directly from the variance gauge.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/dadadave80/unistrata](https://github.com/dadadave80/unistrata)
+Slides: 
+Project Link: https://unistrata.vercel.app
+Demo Video: [https://youtu.be/D5LHbOlZWPg](https://youtu.be/D5LHbOlZWPg)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Every Uniswap LP is structurally short volatility: when price moves, the AMM sells the appreciating asset to buy the depreciating one, and impermanent loss — loss-versus-rebalancing — is the bill. LPs are forced sellers of volatility with no buyer, and no way to choose between "protected, fixed-income exposure" and "I'll underwrite the risk for extra yield." Existing fixes lean on external price oracles (a trust-and-liveness dependency that fails exactly during the volatility it's meant to price) or off-chain keepers. Unistrata builds the missing buyer: it splits one pool's IL into a senior protected tranche and a junior first-loss tranche, and prices the insurance from the pool's own realized variance — no oracle.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Unistrata is a new primitive, not an integration: an in-pool variance oracle (realized σ² measured from the pool's own tick path inside afterSwap), a variance-priced senior coupon (r = feeYield − λ·σ²/8, the textbook LVR cost of LP exposure), and a keeper-less cross-chain settlement waterfall. The impact: (1) sustainable on-chain fixed income for passive LPs (Bedrock), sized off an honest, oracle-free risk measure; (2) a new asset class — Sediment, a tradeable volatility-underwriting position that banks levered upside in calm/trending markets (+58% in our bull-run test) and absorbs IL in crashes; (3) because it needs no external feed, ANY v4 pool — including long-tail tokens that will never get an oracle — can be given a capital structure. It turns impermanent loss from a tax into a market.
+
+## Challenges: What was challenging about building this project?
+
+The hard parts were all about honesty and safety. (1) An oracle-free realized-variance accumulator that can't be cheaply gamed: one observation per block, a per-block tick-delta cap, EWMA smoothing, and a TWAP-anchored settlement price, so faking volatility costs what causing it costs. (2) The NAV waterfall — marking the pool to market and splitting it so Bedrock's claim is paid first and Sediment takes the residual — proven with stateful invariants (conservation + seniority) across thousands of randomized deposits, swaps, crashes, and settlements. (3) Cross-chain Reactive settlement: a CREATE2-mined hook makes AbstractCallback set rvm_id to the factory, so callbacks reverted "Authorized RVM ID only" until we overrode rvm_id = tx.origin; and spike replays must run forge --slow (one variance observation per block). (4) Fitting the whole hook under the 24 KB EVM limit (24,327 B) while keeping the gasless EIP-2612 deposit path.
+
+---
+
 # Uniswap - RWA swap infra
 
 # Uniswap - RWA swap infra
@@ -25669,7 +29318,7 @@ Description: Allows the user to swap and donate tokens at the same time!
 Tags: DEX, DeFi, Donation
 Cohort: UHI2
 
-[](https://www.notion.so)
+[](https://app.notion.com)
 
 <aside>
 🦄 Allows the user to swap and donate tokens at the same time!
@@ -26347,6 +29996,52 @@ On the business and tokenomics side, the key challenge was finding a fee structu
 
 ---
 
+# Veritas Provenance-Aware Impermanent Loss Protecti
+
+# Veritas: Provenance-Aware Impermanent Loss Protection
+
+Description: Veritas is a Uniswap v4 system that converts content-authenticity data into an on-chain Dilution Risk Score (DRS), a single number that simultaneously gates IP tokenization to block copied or AI-replicated content from raising capital, and calibrates LP fee protection in the resulting graduated pools, creating the first trustless end-to-end lifecycle for creator economy assets from verified origination to deep liquidity.We integrated Reactive Network as a core trust primitive for the Living DRS system. A DilutionMonitorRSC contract runs live on Reactive's Lasna network and subscribes to NewAttestation events emitted by VeritasRegistry on Unichain Sepolia. When any near-duplicate of an attested content token appears on-chain, the RSC fires a cross-chain callback to VeritasRegistryCallback on Unichain, autonomously incrementing that content's dilutionCount: no keeper, no cron, no oracle needed. This raises the DRS of the original asset, which immediately elevates the LP fee on its next swap. This is load-bearing: without this, D could only be pushed upward by the off-chain oracle, which is signable and therefore bribeable. The on-chain dilutionCount floor from Reactive means no oracle can suppress D below what the blockchain itself has already witnessed. Proven live on [phone removed]: dilutionCount raised 0 to 2 end-to-end, DilutionIncremented events confirmed, with zero off-chain infrastructure running.
+Tags: Cross-Chain, Dynamic Fee, Oracle, Unichain
+Integrations: Reactive Network, Unichain
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+Date: June 8, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/scientivan/Veritas](https://github.com/scientivan/Veritas)
+- **Deck / Slides:** [https://drive.google.com/file/d/1GXnxrV3HLi1Yy8fx9d8y--exye-1K8J1/view?usp=sharing](https://drive.google.com/file/d/1GXnxrV3HLi1Yy8fx9d8y--exye-1K8J1/view?usp=sharing)
+- **Demo Video:** [https://drive.google.com/drive/folders/10Z4jm0zJeFoY8lUPw29GDDfLYrOfW2-T?usp=sharing](https://drive.google.com/drive/folders/10Z4jm0zJeFoY8lUPw29GDDfLYrOfW2-T?usp=sharing)
+- **Live Project:** [https://veritas-drs.vercel.app](https://veritas-drs.vercel.app/)
+
+### **Partner Integrations**
+
+Integrated Reactive Network as a core trust primitive for the Living DRS system. A DilutionMonitorRSC contract runs live on Reactive's Lasna network and subscribes to NewAttestation events emitted by VeritasRegistry on Unichain Sepolia. When any near-duplicate of an attested content token appears on-chain, the RSC fires a cross-chain callback to VeritasRegistryCallback on Unichain, autonomously incrementing that content's dilutionCount — no keeper, no cron, no oracle needed. Proven live on [phone removed]: dilutionCount raised 0 to 2 end-to-end, DilutionIncremented events confirmed, with zero off-chain infrastructure running.
+
+### **Problem / Background**
+
+The creator economy and DeFi liquidity markets are broken in the same way, for the same root reason: there is no on-chain primitive that measures content originality risk.
+
+When a creator tries to tokenize their work today, they can mint an ERC-20 and open a pool — but so can anyone who copied their image, generated a near-replica with AI, or scraped their content. There is no gate. Authentic originals and fabrications compete for the same capital on equal footing.
+
+The LP providing liquidity to a content asset pool faces dilution risk: as copies and AI replicas proliferate, the token's scarcity premium erodes and the AMM has no mechanism to price it. Without a priced dilution signal, LPs have no rational basis to commit capital.
+
+### **Impact**
+
+Veritas introduces one score — DRS — that connects the entire creator economy lifecycle from origination to liquidity. At origination, IPLaunchRegistry.registerIP() reads the current DRS and reverts with DRSTooHigh if it exceeds 85%, blocking copied content from raising capital at the contract level. At liquidity, VeritasHook._getDynamicFee() reads the same DRS on every swap and returns a live fee calibrated to dilution risk.
+
+What makes this technically novel is the Living DRS: when a near-duplicate is attested anywhere on-chain, DilutionMonitorRSC on Reactive Lasna fires a cross-chain callback to Unichain with no keeper — the fee rises on the very next swap. The first system where LP IL protection is not just fee-calibrated at deployment but continuously self-updating from real-world origination events.
+
+### **Challenges**
+
+The hardest challenge was ideation — figuring out how impermanent loss, the creator economy, Reactive Network, and Unichain were not just thematically adjacent but structurally unified into one thesis. The breakthrough was connecting IL theory (expected IL scales as -σ²/8) to content replication risk: DRS is not a dashboard metric but a forward variance estimator.
+
+The second challenge was the trust architecture for D. If D is purely oracle-signed, the system has a bribery vector. The Reactive Network integration resolved this — the dilutionCount floor becomes a function of what the blockchain itself has witnessed, bounding D from below regardless of oracle behavior.
+
+The third challenge was building V1 (bonding curve launchpad) and V2 (DRS oracle and dynamic fee) as one system with one narrative.
+
+---
+
 # ViFi
 
 # ViFi
@@ -26502,6 +30197,46 @@ All these limitations are solvable! VixDex will continue to iterate, optimize, a
 M. Abdul Haq – Student Entrepreneur & Full stack Dev | Pursuing a Bachelor of Computer Applications (BCA) | Creator of Souldem Protocol, a government-backed project that enables universities to issue marksheets and consolidated transcripts on-chain, ensuring decentralization and automation.
 
 Koppala Jayanth (aka Fakename) – Student Entrepreneur & Full stack Dev |  Pursuing a Bachelor of Computer Applications (BCA)|. Co-creator of Souldem, contributing to its vision of secure, automated, and decentralized academic credentialing.
+
+---
+
+# Vixa
+
+# Vixa
+
+Description: Vixa is a Uniswap v4 hook that splits a single LP deposit into two sub-positions whose delta exposures  cancel each other so this becomes a structural hedge against impermanent loss. Both legs earn fees continuously, with no external protocols, oracles, or keeper infrastructure required.
+Tags: CFMM, Cross-Chain, Custom hooks, Dynamic Tick Adjustment, LP Fees, LP Liquidity, LVR, Options/Futures, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+Vixa deploys DeltaHookRSC on Reactive Network with a permanent live subscription to three DeltaHook events on Unichain: RebalanceNeeded, PositionOutOfRange, and PositionClosed. When a real swap moves price past an LP's configured threshold, ReactVM fires and the Callback Proxy delivers triggerRebalance() to DeltaDepositor as a verifiable on-chain transaction, no server or bot wallet involved. The second subscription, PositionOutOfRange subscription: when both sub-positions drift fully out of range and the hook goes dark, a keeper sees nothing because there are no events to trigger. But the PositionOutOfRange subscription is independent of the hook's activity, so ReactVM detects the drift and the Callback Proxy forces recovery on Unichain even when the hook itself has gone completely silent.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Jayy4rl/Vixa](https://github.com/Jayy4rl/Vixa)
+Slides: https://docs.google.com/presentation/d/1C3rwO1CS2sTwAzv6DQwAje9jQwBE5b4lecYXL0PJzX4/edit?usp=sharing
+Project Link: https://vixa-mu.vercel.app/
+Demo Video: [https://youtu.be/8igN0fv1i70?si=mB9gTHWzr4lI1GCr](https://youtu.be/8igN0fv1i70?si=mB9gTHWzr4lI1GCr)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Every serious DeFi participant has had the experience of watching the market move after you provide liquidity, and you watch your position bleed while arbitrageurs extract value from the spread you created. Fees are earned, but that doesn't offset the losses incured simply by depositing. Every AMM LP position is structurally equivalent to selling a straddle, the LP is  permanently short volatility, and every existing solution  is just a different way to compensate  after the fact, reduce it partially or shift it to external protocols with idle collateral, and funding costs. Vixa was built from that realization that if the payoff structure itself is the problem, the fix has to live at the structural level: splitting a single deposit into two concentrated legs with complementary delta profiles so the position partially hedges itself from within the pool, both legs earning fees continuously, with no external protocols to fail, no collateral sitting idle, and no keeper infrastructure to front-run.
+
+## Impact: What makes this project unique? What impact will this make?
+
+- Vixa gives retail LPs on volatile pairs a structurally better position. Same pool, same fees, materially lower directional cost. No new protocol to learn and no margin account to manage. Deposit once, the RSC handles the rest.
+- A DAO treasury can deploy into Vixa, set a threshold, and let the RSC manage rebalancing indefinitely; no governance vote required for each adjustment, no operations team running bots overnight.
+- Vixa creates a positive feedback loop for the Uniswap Ecosystem: better LP economics attract more liquidity, which attracts more volume, which generates more fees for LPs.
+- Vixa proves Reactive Network can replace keeper infrastructure entirely with on-chain verifiable automation
+
+## Challenges: What was challenging about building this project?
+
+Tick math for negative prices caused a bit of confusion. Leg ranges are computed wrong for any pool where price is below the zero tick.
+
+The two legs cannot share the same center tick. When I initially placed the short-vol leg starting exactly at the center, both legs shared a boundary. Right after every rebalance, the position would immediately emit RebalanceNeeded again. A one-tick-spacing gap between the legs resolved it.
 
 ---
 
@@ -26710,6 +30445,42 @@ The primary goal remains taking this to production to actually impact LPs positi
 Dhruv Varshney.  Full-time blockchain engineer and builder.
 
 Built web2 startups in the past. Learn more here: [https://linktr.ee/dhruvvarshney](https://linktr.ee/dhruvvarshney)
+
+---
+
+# VolatilityVault
+
+# VolatilityVault
+
+Description: VolatilityVault is a Uniswap V4 hook that uses a Reactive Network smart contract and an AI volatility score to raise swap fees before arbitrage bots strike, then routes those storm-period fees into a yield-bearing buffer that pays LPs back with compounded yield. LPs set their intent once and the system protects their position automatically.
+Tags: Cross-Chain, Dynamic Fee, LP Liquidity, LVR, Oracle, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI7
+
+## How did you integrate our partners, if any?
+
+Reactive Network is the cross-chain brain. We deployed a Reactive Smart Contract (VolatilityRSC) on Reactive Lasna (chain 5318007) that subscribes to Uniswap V4 Swap events on Ethereum Sepolia, computes a Volatility Risk Score inside the ReactVM, and relays it cross-chain via a callback to a VRSCallbackReceiver on Sepolia, which updates the on-chain VRSOracle that drives the hook's dynamic fee. 
+Reactive also triggers the YieldBuffer's distribution when volatility subsides. Verified live end-to-end: a real Sepolia swap automatically moved the on-chain VRS with zero manual input. RSC: 0xf2cdD5a3dE69E3E0e7f1a04Fd48F771C63b32C32 (Lasna).
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/OlaGreat/VolatilityVault](https://github.com/OlaGreat/VolatilityVault)
+Slides: https://docs.google.com/presentation/d/1tqF5cEm_lUVNPFF_CjDVW1Aa0JNM3YK6/edit?usp=sharing&ouid=[phone removed]&rtpof=true&sd=true
+Project Link: https://volatility-vault.vercel.app/dashboard
+Demo Video: [https://youtu.be/DMD-SjJmCG0](https://youtu.be/DMD-SjJmCG0)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Providing liquidity earns yield but quietly bleeds LPs to arbitrage bots. When price moves on a reference market, bots rush the pool, take the favorable side, and leave the LP with impermanent loss. Every existing mitigation reacts after the damage is done. I wanted a hook that sees the storm coming and makes the bots and not the LPs pay for it.
+
+## Impact: What makes this project unique? What impact will this make?
+
+VolatilityVault combine cross-chain volatility sensing (via Reactive Network), predictive dynamic fees that rise before arbitrage lands, toxic-order detection, and a dual-asset yield buffer that turns storm fees into compounded LP returns with per-LP payout intent. It flips impermanent loss from a tax on LPs into income, and the whole protection loop runs autonomously on-chain.
+
+## Challenges: What was challenging about building this project?
+
+The hardest parts were all real V4/Reactive mechanics: implementing afterSwap fee-taking with the afterSwapReturnDelta delta accounting; discovering that Reactive callbacks silently never deliver unless the destination contract deposits into the callback proxy via depositTo(); handling that V4 fees arrive in the swap's unspecified token (which alternates), forcing a dual-asset buffer; and that the hook's sender is the router not the LP, so the LP address has to be passed through hookData. Also had to pin wagmi v2 for RainbowKit wallet detection.
 
 ---
 
@@ -27303,6 +31074,66 @@ Currently in the Base Incubator building on Uniswap v4
 
 ---
 
+# Yield-Subsidized Directional Hook
+
+# Yield-Subsidized Directional Hook
+
+Description: A production-ready Uniswap V4 hook that protects liquidity providers from impermanent loss through directional fee scaling that taxes toxic arbitrage, automated yield generation via ERC-4626 vault integration, and precise IL compensation using accumulated yield, all powered by Reactive Network's decentralized keeper automation.
+Tags: Cross-Chain, Pool Native Incentivization, Price Discovery, Security, Trading Rewards, Yield Farming
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+We integrated Reactive Network for trustless, decentralized automation that eliminates centralized keeper infrastructure. Our ReactiveSubscriber contract monitors pool liquidity events on the origin chain (Ethereum/L2), while ReactiveKeeperCallback on the Reactive VM evaluates sweep conditions (threshold, interval) and autonomously triggers capital sweeps when idle liquidity exceeds 1 token or 1 hour has passed. This event-driven architecture ensures optimal yield generation timing without polling or centralized bots, with configurable thresholds and cost-efficient execution that only triggers when profitable.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/precious-akpan/yield-subsidized-directional-hook](https://github.com/precious-akpan/yield-subsidized-directional-hook)
+Slides: 
+Project Link: 
+Demo Video: [https://github.com/precious-akpan/yield-subsidized-directional-hook/blob/main/Screen%20Recording%[phone removed]%20082801.mp4](https://github.com/precious-akpan/yield-subsidized-directional-hook/blob/main/Screen%20Recording%[phone removed]%20082801.mp4)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers in traditional AMMs face a brutal economic reality: impermanent loss can erase all fee earnings, toxic arbitrage systematically extracts value at their expense, and out-of-range capital sits idle earning zero yield. Current solutions are fragmented—IL hedging requires external options protocols, yield generation needs manual rebalancing, and toxic flow protection is virtually non-existent.
+
+We recognized that Uniswap V4 hooks uniquely position us to solve this at the protocol level, where all swap and liquidity events flow through a single chokepoint. By combining three mechanisms into a closed-loop system, we create sustainable LP protection: (1) Directional fee scaling detects and taxes toxic arbitrage by comparing oracle prices to pool prices—if a swap pushes the pool price away from fair value, we scale fees 1-3x proportional to the deviation, (2) Idle capital is automatically swept into ERC-4626 yield vaults via Reactive Network automation without centralized infrastructure, (3) Accumulated yield is precisely calculated and distributed as IL subsidies when LPs exit, using exact IL measurement that compares their position value against hold value.
+
+The inspiration came from observing that these three problems are actually interconnected: toxic flow creates IL, idle capital represents missed yield opportunities, and yield could offset IL if systematically captured and redistributed. The 2026 UHI9 theme validated our thesis that this is the most pressing problem in DeFi liquidity provision.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Three innovations make it unique:
+
+Oracle-Based Toxic Flow Detection
+Unlike static fee tiers, we dynamically classify swap direction as "toxic" or "benign" by fetching external oracle prices and comparing against pool prices. Swaps moving the pool away from fair value are toxic arbitrage—we scale fees from 1.0x to 3.0x based on price deviation magnitude. This taxes informed traders while keeping fees low for normal flow. Gas-optimized to add only ~45k overhead per swap.
+
+Trustless Automated Capital Management
+ We solved the centralized keeper problem through Reactive Network integration. When liquidity moves out of range, our ReactiveSubscriber emits events that trigger ReactiveKeeperCallback on the Reactive VM, which autonomously executes capital sweeps using Uniswap v4's flash accounting pattern. No bots, no cron jobs, no single point of failure—purely event-driven with configurable thresholds (minimum 1 token idle, 1 hour intervals). Cost-benefit analysis ensures sweeps only execute when profitable.
+
+Precise IL Compensation with Graceful Failures
+We track each LP's initial deposit amounts and prices, calculate exact IL on withdrawal by comparing position value vs hold value, and distribute pro-rata subsidies from the yield pool. If vaults are illiquid, we mint ERC-1155 claim tokens instead of blocking withdrawals—LPs can redeem later when vaults recover. No other hook has this level of fault tolerance.
+
+This transforms Uniswap V4 pools from LP-hostile to LP-protective, enabling sustainable concentrated liquidity. LPs can finally compete with informed traders on fair terms. For protocols, this unlocks deeper liquidity with lower mercenary capital flight.
+
+## Challenges: What was challenging about building this project?
+
+Challenge 1: Trustless Capital Sweeps Without Centralized Infrastructure
+The biggest technical challenge was implementing automated capital sweeps without centralized keeper bots, which would undermine decentralization and create a single point of failure. Uniswap V4's flash accounting pattern (unlock/lock) requires precise delta management—you take tokens, deposit to vaults, and settle back to zero in a single callback.
+
+Challenge 2: On-Chain IL Calculation Within Gas Budgets
+Calculating impermanent loss accurately requires: (1) storing LP initial positions (amounts, price), (2) fetching current pool price, (3) computing hold value vs position value, (4) handling partial withdrawals and multi-position scenarios. Naive implementations easily exceed 100k gas.
+
+Challenge 3: Graceful Vault Failure Handling
+External vault integrations introduce systemic risk: vaults can be illiquid, paused, or fail unexpectedly. If vault.withdraw() reverts, LP withdrawals would be blocked entirely, creating unacceptable UX.
+
+Toxic flow detection requires comparing oracle price (fair value) to pool price (potentially stale). Manipulated oracles could cause incorrect classification, either under-taxing toxic flow or over-taxing benign flow.
+Challenge 4: Directional Fee Classification with Oracle Manipulation Resistance
+
+---
+
 # YieldForge
 
 # YieldForge
@@ -27334,6 +31165,59 @@ YieldForge is unique because it introduces a "set-and-forget" compounding layer 
 The biggest challenge was architecting a robust, strategy-agnostic registry that could interface seamlessly with diverse protocols like Aave V3 and Compound V3 while adhering to Uniswap v4's strict gas and logic constraints. Specifically, handling the nuances of different yield-bearing tokens, such as reconciling rounding errors between "shares" and "assets" and managing native token wrapping, required extensive mainnet fork testing to ensure every wei was accounted for and secure.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# YieldGuard
+
+# YieldGuard
+
+Description: A Uniswap v4 Hook that combines Capital Efficiency (Lending Yield) with MEV Protection (Dynamic Volatility Fees), orchestrated entirely by the Reactive Network.
+Tags: Dynamic Fee, LP Fees, LP Liquidity, MEV
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI6
+
+## How did you integrate our partners, if any?
+
+Uniswap v4: We built the core contract as a Uniswap v4 Hook, tapping directly into the lifecycle callbacks (beforeSwap, afterSwap, afterAddLiquidity, beforeRemoveLiquidity) to manage capital and adjust fees.
+Aave (Simulated): We integrated mock yield-bearing vaults to route 90% of idle LP assets, earning continuous lending yield.
+Reactive Network: Integrated as a trustless, decentralized off-chain orchestrator to read origin chain oracle events and execute cross-chain actions.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Amity808/yield-guard-Reactive](https://github.com/Amity808/yield-guard-Reactive)
+Slides: https://canva.link/qrs4dnhihs3a6o1
+Project Link: 
+Demo Video: [https://youtu.be/KIKri3z06DA](https://youtu.be/KIKri3z06DA)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+The idea was inspired by the structural unsustainability of providing liquidity (LPing) for volatile token pairs. LPs on traditional AMMs suffer from a double penalty: their capital sits idle and unproductive during low-volume periods, yet they are systematically picked apart by toxic MEV arbitrage (arbitrageurs trading against stale AMM pool prices when external markets move) during periods of high volatility, leading to Loss Versus Rebalancing (LVR).
+
+Problems Solved
+Capital Inefficiency (Idle Capital): In YieldGuard, 90% of idle pool liquidity is automatically swept into a lending protocol (e.g., Aave) to earn yield. It is only pulled back Just-In-Time (JIT) during swaps, ensuring LP assets are always productive.
+
+LVR and toxic MEV Exploitation: Traditional AMMs charge static fees regardless of market conditions. YieldGuard dynamically integrates with the Reactive Network to monitor cross-chain price oracle movements. If a volatility spike occurs, the swap fee is spiked automatically to 3.0% to disincentivize toxic arbitrageurs, dropping back down to a competitive 0.05% during calm periods to attract organic retail swappers.
+
+## Impact: What makes this project unique? What impact will this make?
+
+What Makes This Project Unique?
+Autonomous Cross-Chain Logic: Unlike traditional hooks that require centralized off-chain keepers or chainlink automation to trigger state updates (which are slow and susceptible to frontrunning), 
+
+YieldGuard
+ utilizes the Reactive Network to run decentralized, low-latency price checking.
+Dual-Action Hook Architecture: It seamlessly merges MEV mitigation (spiking swap fees during price jumps) with yield generation (automating asset sweep to Aave vaults and JIT retrieval), converting a standard passive Uniswap v4 pool into an active yield-optimizing fund.
+
+The Impact
+Sustainable Yield for LPs: By earning continuous base yield from lending protocols and penalizing toxic MEV arbitrageurs, LPs can profitably provide liquidity for volatile assets (e.g., meme coins or new launches) without experiencing negative net returns from Loss Versus Rebalancing (LVR).
+DeFi Ecosystem Depth: Greater security and profitability for LPs mean deeper liquidity pools, lower price slippage for everyday swappers, and a healthier decentralized exchange infrastructure.
+Blueprint for Reactive DeFi: Demonstrates a practical paradigm where Reactive Smart Contracts act as intelligent, event-driven copilots for Ethereum and EVM-native smart contracts.
+
+## Challenges: What was challenging about building this project?
+
+Building a cross-chain, event-driven liquidity manager on Uniswap v4 presented several complex smart contract, integration, and accounting challenges.
+ Routing 90% of idle capital to a lending vault (Aave mock) means the pool itself is under-collateralized. During a swap, we must pull funds from the vault Just-In-Time (JIT) in beforeSwap and re-deposit the remainder in afterSwap.
 
 ---
 
@@ -27477,6 +31361,47 @@ From there, I validated the real behavior using mainnet fork tests with actual L
 Overall, the hardest problems were not in the hook logic itself. They were in the infrastructure details around event correctness, deterministic deployment, and making cross-chain testing reliable enough to trust.
 
 # Team: Who is on the team? What are their backgrounds?
+
+---
+
+# YieldStream Hook
+
+# YieldStream Hook
+
+Description: YieldStream Hook is a Uniswap v4 hook that splits a hook-managed LP position into two transferable ERC-20 claims: FYT, a claim on the epoch’s future fee stream, and PT, a claim on the epoch’s principal. Reactive Network observes backed fee-accrual events and autonomously triggers epoch settlement on Lasna without a keeper, bot, multisig, or manual settlement transaction.
+Tags: Autonomous Settlement, DeFi Derivatives, ERC-20 Claim Tokens, Epoch-Based Settlement, Fixed Income, Impermanent Loss, LP Fee Markets, Reactive Smart Contracts, Structured Yield, Uniswap v4 Hooks, Yield Tokenization
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI5
+
+## How did you integrate our partners, if any?
+
+YieldStream integrates Reactive Network through a Reactive Smart Contract deployed on Lasna. The Uniswap v4 hook emits `FeesAccrued(uint256 indexed epochId, uint256 indexed amount0, uint256 amount1)` when backed fees are reported; the RSC subscribes to that event, maintains per-epoch ReactVM state, checks whether the event’s epoch has crossed its block boundary, and queues `settleEpochFromReactive(address,uint256)` back to the destination hook. The hook restricts Reactive settlement by requiring both the configured callback proxy and the expected Reactive sender/RVM identity.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Najnomics/yieldstream-hook](https://github.com/Najnomics/yieldstream-hook)
+Slides: https://gamma.app/docs/YieldStream-Hook-6zg69mi5kaihuji
+Project Link: 
+Demo Video: [https://youtu.be/7ZatxhbuRMc](https://youtu.be/7ZatxhbuRMc)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap LPs earn fee revenue that may be valuable, but that future fee stream is locked inside the LP position and cannot be sold, priced forward, or transferred separately from principal. LPs who want certainty cannot monetize expected future fees upfront, while yield buyers cannot get pure exposure to Uniswap trading volume without managing an LP position themselves.
+
+YieldStream was inspired by the gap between fixed-income DeFi primitives and AMM-native LP positions. Existing hook patterns address dynamic fees, hedging, routing, and idle yield, but they do not turn a Uniswap v4 LP position’s future swap-fee income into an epoch-scoped transferable claim.
+
+## Impact: What makes this project unique? What impact will this make?
+
+YieldStream creates an AMM-native yield-splitting primitive: FYT holders absorb fee-variance risk, while PT holders retain principal and impermanent-loss exposure. This gives LPs a way to sell expected future fees upfront and gives buyers a clean instrument for Uniswap fee exposure.
+
+The project is unique because the split happens directly inside the Uniswap v4 hook lifecycle and settlement is automated through Reactive Network rather than a keeper or manual operator. The demo includes public Base Sepolia, Unichain Sepolia, and Lasna txid proofs showing deposit, fee event emission, Reactive observation, queued callback, and destination settlement.
+
+## Challenges: What was challenging about building this project?
+
+The hardest challenge was aligning the financial model with real Uniswap v4 hook constraints. The hook needed to avoid treating arbitrary swap hookData as fee accounting, scope epochs to the configured pool, prevent lockup bypasses, and ensure PT/FYT claims are backed by hook-managed accounting rather than unsupported assumptions.
+
+Reactive integration also required careful handling of Lasna’s legacy endpoint and library, explicit subscription configuration, callback gas limits, and callback authentication. The final implementation uses a callback proxy plus expected Reactive sender check, short demo epochs for judge-visible settlement, and a permissionless fallback settlement path for idle-pool cases.
 
 ---
 
@@ -28239,6 +32164,42 @@ Testing was equally tricky. You can't just unit-test a hook in isolation; it has
 
 ---
 
+# dnhook
+
+# dnhook
+
+Description: Delta Neutral Hook is a Uniswap v4 project exploring how a market-making pool can account for inventory risk on-chain, expose hedge intent to an external keeper, and use dynamic fees to guide order flow while the system returns toward delta neutrality.
+Tags: Custom hooks
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/malawadd/dnhook](https://github.com/malawadd/dnhook)
+Slides: https://docs.google.com/presentation/d/1iGqkDQYj_pqrUdBSas8NKQFXp6fOOMMN/edit?usp=sharing&ouid=[phone removed]&rtpof=true&sd=true
+Project Link: 
+Demo Video: [https://youtu.be/kdXg3MmRl2E](https://youtu.be/kdXg3MmRl2E)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Inspiration: I arrived at the Atrium Academy cohort with pure curiosity. I had no idea what "Delta Neutral" was before joining, but the name sounded like a deep, interesting problem to solve. I wanted to see if I could take a difficult financial concept and build a working implementation from scratch.
+
+Problem: We are solving the Passive Exposure Problem. In standard Uniswap v4 pools, LPs are at the mercy of the market's direction. I wanted to build a native solution where the pool itself "cares" about its inventory and automatically coordinates a hedge to stay neutral, allowing LPs to provide liquidity without the constant fear of directional price shifts.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Uniqueness: This isn't just another vault sitting on top of a pool; it is a Native Risk Management Engine. By embedding the strategy directly into the v4 hook lifecycle and using a decoupled Adapter Pattern, we’ve created a "Unified Strategy Plane." This allows the hook to maintain professional market-making policies (like dynamic fees and health-based gating) while plugging into any external venue like Synthetix V3.
+
+Impact: It creates a blueprint for "Self-Protecting Liquidity." This project shows a future where the pool isn't just a passive pot of assets, but an active participant that manages its own risk. It lowers the barrier for LPs to participate in volatile markets by providing them with an automated "safety net" that coordinates with professional perp exchanges.
+
+## Challenges: What was challenging about building this project?
+
+The Integration Puzzle: The hardest part was solving the "Triangle of Coordination." Getting the Hook (On-chain Policy), the Keeper (Off-chain Brain), and the Adapter (External Execution) to talk to each other in perfect sync was a just pure headache. i have no idea if it actually work that well ;_;
+
+---
+
 # dynamic stable coin manager hook
 
 # dynamic stable coin manager hook
@@ -28475,6 +32436,41 @@ FheatherX addresses four critical limitations that have prevented FHE-based DEXs
 
 ---
 
+# hookeeper
+
+# hookeeper
+
+Description: HooKeeper is an autonomous cross-chain protection system that utilizes Uniswap V4 hooks to detect Impermanent Loss and NEAR Chain Signatures to privately redistribute arbitrage profits back to affected Liquidity Providers. It maintains ecosystem stability by "recycling" value from external bots on chains like Terra and Injective while triggering emergency liquidity boosts on Osmosis during periods of high volatility.
+Tags: Cross-Chain, Custom hooks, MEV, Trading Rewards
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/jilt/hookeeper/](https://github.com/jilt/hookeeper/)
+Slides: https://drive.google.com/file/d/1ShVEicsOsFXLSZJVzGC_x1YDwLjSyCeE/view?usp=sharing
+Project Link: https://hookeper.vercel.io
+Demo Video: [https://drive.google.com/file/d/1EMvZS1cXr6yjXCa0yKJQCf6hV9PVpayR/view?usp=sharing](https://drive.google.com/file/d/1EMvZS1cXr6yjXCa0yKJQCf6hV9PVpayR/view?usp=sharing)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+The idea for HooKeeper was inspired by the realization that Liquidity Providers (LPs) face three compounding risks that result in a "guaranteed transfer of wealth" from them to arbitrage bots whenever price divergence across chains exceeds 2%
+. Currently, the threat of Impermanent Loss (IL) is so significant that some users choose to deposit funds in single-asset vaults rather than liquidity pools to avoid it.
+
+## Impact: What makes this project unique? What impact will this make?
+
+. HooKeeper "recycles" arbitrage bots profits  (on chains like Terra or Injective) by routing them back to the affected LPs.
+. HooKeeper is using NEAR Chain Signatures for the Cross-Chain transactions, which allow the system to sign transactions on other chains via an MPC network with no private key exposure eluding the privacy concerns of knowing individual LP balances. HooKeeper preserves LP privacy by using Merkle roots, ensuring that detailed balance data never leaves the Uniswap V4 environment in plaintext
+. Hookeeper keeps capital within the ecosystem rather than allowing it to be drained by external bots.
+
+## Challenges: What was challenging about building this project?
+
+implementing the near signature interface (work in progress)
+
+---
+
 # kvhook
 
 # kvhook
@@ -28524,6 +32520,91 @@ Time really became a challenge after learning that my previous team would be spl
 # Team: Who is on the team? What are their backgrounds?
 
 Ex-intern at Nethermind, auditing protocols and developing the fuzzer functionality for AuditAgent for automated vulnerability detection and current member of the Norwegian National Cybersecurity Team
+
+---
+
+# lambda
+
+# lambda
+
+Description: Lambda turns the money liquidity providers quietly lose into money they earn. The first Uniswap v4 hook that hedges every LP position on a real perpetual market automatically and cross-chain — Unichain → Hyperliquid, driven by Reactive Smart Contracts with no off-chain bot in the loop. Lambda the hook catches λ before it leaves.
+Tags: Cross-Chain, Dynamic Fee, Inter-Connected Pools, LP Fees, LP Liquidity, LVR, Options/Futures, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI8
+Date: June 8, 2026
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/Hijanhv/lambda-protocol](https://github.com/Hijanhv/lambda-protocol)
+- **Deck / Slides:** [https://drive.google.com/file/d/1l70RBB-kpkhAd9cIEGwsQ03ellFhz-2s/view?usp=sharing](https://drive.google.com/file/d/1l70RBB-kpkhAd9cIEGwsQ03ellFhz-2s/view?usp=sharing)
+- **Demo Video:** [https://youtu.be/aZqSBNNoL8c?si=37T00C_CLmqFv5G-](https://youtu.be/aZqSBNNoL8c?si=37T00C_CLmqFv5G-)
+- **Live Project:** [https://lambda-protocol.vercel.app/](https://lambda-protocol.vercel.app/)
+
+### **Partner Integrations**
+
+Uniswap v4: beforeAddLiquidity/beforeRemoveLiquidity gate the vault, afterSwap tracks exact delta, and beforeSwap returns a dynamic-fee override (Nezlobin directional fee) on a dynamic-fee pool. Delta math cross-checked against v4's own getAmount0Delta.
+
+Reactive Network: A Reactive Smart Contract (AbstractReactive) subscribes to the hook's HedgeRequested event on Unichain and fires a cross-chain callback (AbstractCallback) to the hedger — no off-chain bot. Nonce-ordered replay protection on both legs. Verified live on Reactive Lasna → Unichain Sepolia.
+
+### **Problem / Background**
+
+LVR ("loss-versus-rebalancing") is the single biggest reason providing liquidity is harder to make money at than it looks. A liquidity provider deposits two assets into a pool and earns a small fee on every trade. The catch: when ETH's price rises, the pool automatically sells ETH to traders; when it falls, the pool buys ETH. The pool sells the thing going up and buys the thing going down — the opposite of what any investor would choose.
+
+The people on the other side of those trades are arbitrageurs — bots that buy the cheap side and sell the expensive side. Every time the price moves, they take a small certain profit from the pool. The LP pays for it.
+
+### **Impact**
+
+LVR is widely cited as the single biggest unsolved problem for Uniswap LPs — it's the reason sophisticated capital hesitates to provide liquidity, which caps how deep and competitive pools can get. Lambda attacks the LVR leak from two independent sides at once: the on-chain directional fee makes toxic flow pay the LP, while the off-chain hedge neutralizes the residual price risk.
+
+By making a delta-neutral, yield-positive LP position possible, Lambda pulls risk-averse capital into v4 pools that would otherwise sit on the sidelines, and brings Hyperliquid funding income on-chain as a new, reusable v4 yield primitive.
+
+### **Challenges**
+
+The Hyperliquid perp leg (LambdaHedger + CoreWriterLib) is fully written, unit-tested, and fork-proven against real HyperEVM mainnet state — it is not on testnet for one external reason only: Reactive's testnet (Lasna) doesn't route callbacks to HyperEVM testnet; HyperEVM is a Reactive destination on mainnet (999) only.
+
+The sequencing is deliberate: keep the free fork proof now (validates the real hedger against real mainnet state), and spend money once — on the audited mainnet deployment. A testnet detour would be paying real money for a strictly weaker artifact in between.
+
+---
+
+# loyalty-lock-hook
+
+# loyalty-lock-hook
+
+Description: A time-decaying exit fee that turns mercenary churn into yield for loyal LPs.
+Tags: Donation, LP Fees, LP Liquidity, Yield Farming
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+
+## How did you integrate our partners, if any?
+
+-
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/kaushalya4s5s7/loyalty-lock-hook](https://github.com/kaushalya4s5s7/loyalty-lock-hook)
+Slides: 
+Project Link: 
+Demo Video: [https://drive.google.com/drive/folders/1uM1PCqzePRbGjZkxJYzzzfSdz4l6WbvW?usp=sharing](https://drive.google.com/drive/folders/1uM1PCqzePRbGjZkxJYzzzfSdz4l6WbvW?usp=sharing)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity pools bleed value to mercenary liquidity: capital that farms incentives, then exits the moment a better yield appears. It inflates TVL on paper but leaves real LPs with thin depth, wider spreads, and the "cold‑start" problem on every new pool.
+
+## Impact: What makes this project unique? What impact will this make?
+
+A stick, paid to the people who stay. When an LP withdraws, Loyalty Lock charges an exit fee that decays linearly from maxFeeBps → 0 over vestDuration, and donates that fee to the LPs still in range. Quick flippers subsidise long‑term liquidity; LPs who vest fully leave free.
+
+## Challenges: What was challenging about building this project?
+
+The hardest part was v4's BalanceDelta accounting on liquidity removal. Charging an exit fee isn't a simple
+  transfer — you have to take it via the afterRemoveLiquidityReturnDelta mechanism, then donate() it back so the
+  hook nets to zero (callerDelta = delta − hookDelta). Getting that delta math to balance, plus encoding the
+  permission flags into a mined CREATE2 hook address, was the real learning curve. A subtler edge case: if the
+  exiting LP is the only in-range liquidity, donate() reverts (NoLiquidityToReceiveFees) and traps them — so I
+  added a getLiquidity guard to waive the fee. On tooling, v4-periphery's main had dropped BaseHook (had to
+  vendor a minimal one), and the full PoolManager only compiles with via-IR + very high optimizer runs
+  (stack-too-deep otherwise).
 
 ---
 
@@ -29070,6 +33151,73 @@ Integrating Across Protocol for reward distribution presented unique challenges 
 
 ---
 
+# sentry
+
+# sentry
+
+Description: Sentry is a Uniswap V4 hook that taxes short-lived liquidity positions on an exponential decay curve (65% at t=0, near 0% after ~1.7 hours) and redistributes the captured fees to long-term LPs who have held for over 24 hours, using the Reactive Network to trigger cross-chain redistributions automatically. It defends loyal liquidity providers from JIT (just-in-time) MEV bots that sandwich swaps without contributing real liquidity depth.
+Tags: LP Fees, Pool Native Incentivization, Reputation, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI7
+
+## How did you integrate our partners, if any?
+
+Reactive Network is integrated as the automation and cross-chain coordination layer — two contracts subscribe to on-chain events and react without any off-chain keepers:
+
+RedistributionScheduler — subscribes to TaxAccumulated events emitted by SentryHook. When the accumulated tax for a pool crosses $1,000 OR 24 hours have elapsed since the last payout, it emits a Callback that triggers executeRedistribution() on the hook, which drains the RedistributionPool to eligible long-term LPs. No cron job, no bot — Reactive Network's VM calls react() and dispatches the cross-chain callback automatically.
+
+ReputationAggregator — subscribes to PositionOpened and PositionClosed events. It tracks each LP's totalCapitalSeconds (capital × duration) across every chain where they've provided liquidity, then broadcasts setReputation() back to ReputationOracle contracts on all registered chains. This is what powers the reputation discount in SentryHook._applyReputationDiscount() — an LP with strong multi-chain tenure gets a reduced tax rate, even on a chain where they're new.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/Godbrand0/sentry](https://github.com/Godbrand0/sentry)
+Slides: 
+Project Link: https://fable-wbgo.vercel.app/
+Demo Video: [https://www.loom.com/share/00ba28db5e5c4246ae4037c51a5939f6](https://www.loom.com/share/00ba28db5e5c4246ae4037c51a5939f6)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Uniswap V3 and V4 pools suffer from a well-documented MEV attack called Just-in-Time (JIT) liquidity. A bot monitors the mempool, spots a large incoming swap, and in the same block:
+
+Adds a massive concentrated liquidity position right around the current tick
+Lets the swap execute — the bot captures nearly all the fees because its position dominates in-range liquidity at that moment
+Immediately removes the position
+The bot holds liquidity for zero real time — sometimes just two transactions in the same block. It contributes nothing to the pool's actual depth between swaps, yet it extracts fees that should have gone to LPs who are there all the time.
+
+The impact on real LPs is compounding:
+
+Fee yields drop because bots dilute every large swap
+Loyal LPs face higher impermanent loss relative to fees earned
+The incentive to provide deep, stable liquidity weakens — which ultimately hurts traders too through wider effective spreads
+What makes this moment the right time to solve it:
+Uniswap V4 is the first version that allows hook contracts to intercept liquidity operations and modify token deltas. Before V4, there was no mechanism to enforce a time-based cost on liquidity. V4's afterRemoveLiquidityReturnDelta permission is the exact primitive needed — the hook can take a fraction of the fees before they reach the LP, effectively taxing the exit.
+
+Sentry's answer: make JIT unprofitable by taxing short-lived positions on an exponential decay curve. A position held for zero seconds pays 65% of its fees back into a pool that pays out to LPs who actually stayed. The longer you hold, the less you pay — by ~1.7 hours the tax is effectively zero. Bots lose. Patient LPs win.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Sentry is the first protocol to fight JIT MEV at the liquidity layer rather than the swap layer — taxing the exit, not the trade.
+
+What makes it unique:
+
+Exponential decay curve — same-block bots pay 65%, genuine LPs who hold an hour pay near zero. Incentives align precisely without punishing normal rebalancing.
+Trustless automation via Reactive Network — no keeper bots, no Chainlink dependency. Redistribution and cross-chain reputation updates trigger automatically from on-chain events.
+Cross-chain LP reputation — loyal LPs earn a discount across every chain Sentry is deployed on, creating the first portable on-chain liquidity identity.
+The impact: JIT extraction has been estimated to dilute LP fees by 10–30% on high-volume pairs. Sentry makes that extraction unprofitable and redirects those fees to the LPs who actually provide depth between swaps — benefiting traders through tighter effective spreads and LPs through better yields.
+
+## Challenges: What was challenging about building this project?
+
+V4 delta accounting — getting the hookDelta sign wrong causes a silent CurrencyNotSettled revert. Understanding that callerDelta = callerDelta - hookDelta required reading v4-core internals, not the docs.
+
+CREATE2 address mining — type(Contract).creationCode produces different bytecode under via_ir = true, so the mined address never matched deployment. Fix: use vm.getCode() to pull exact artifact bytes.
+
+ISubscriber constraints — notifyBurn fires outside the PoolManager unlock, so token delta manipulation is impossible there. Tax must settle in afterRemoveLiquidity; the subscriber only tracks the true NFT owner for correct redistribution attribution.
+
+Reactive Network mental model — there's no msg.sender you control. The VM calls react() and you emit a Callback to dispatch cross-chain calls. Required building a MockSubscriptionService to simulate the VM in Foundry tests.
+
+---
+
 # spectraQ
 
 # spectraQ
@@ -29542,6 +33690,110 @@ Senior AI Engineer
 HSBC Senior Market Risk Analyst
 CRISI global research Senior Quantitative Analyst
 MSC Mathematical statistics and probability/ financial Mathematic at Universty of Texas/university of Cologne.
+
+---
+
+# ybAMM
+
+# ybAMM
+
+Description: A Uniswap v4 hook that runs a YieldBasis-style leveraged LP off one Euler credit account, so the same WETH a depositor brings backs the swaps and the loan at once. Held at 2x leverage the position's value is a straight line in price, the one point where impermanent loss cancels in the algebra instead of being averaged down.
+Tags: CFMM, Constant Product Market Maker (CPMM), Cross-Chain, Custom hooks, LP Fees, LVR, Oracle, Unichain
+Integrations: Reactive Network
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI3
+
+## How did you integrate our partners, if any?
+
+Reactive Network is the partner integration. It is the keeper that holds the position at target with no off-chain bot. Two reactive contracts on Reactive Lasna watch the live pool. YBReactive catches the hook's ReleverageNeeded event plus a block-interval cron heartbeat and fires a cross-chain callback that re-levers the position back to the 50% target. YBSolvencyReactive can pause the hook at a danger threshold. I also caught a live double-borrow race on devnet (the drift watcher and the cron borrowing for one event) and fixed it by making every callback re-read live state and clamp, so overlapping triggers converge instead of stacking. The whole incident is on-chain with tx hashes in the repo.
+
+Uniswap v4 is the venue: ybAMM is the hook itself. It disables native pool liquidity and settles every swap through beforeSwapReturnDelta custom accounting, so the pool holds no reserves. It is deployed on Unichain.
+
+The rest of the stack, not partners but worth knowing: the hook's balance sheet is one Euler credit account (WETH collateral, borrowed USDC inventory), and a Chainlink ETH/USD feed prices every quote, share mint, and LTV reading with a staleness gate.
+
+## What are the key links to share? (Ex. demo video, GitHub, deck)
+
+Github: [https://github.com/aryan877/ybamm](https://github.com/aryan877/ybamm)
+Slides: https://drive.google.com/open?id=1XErUp2PPKyicXiw5_B0rRnPRb6hmOjmx
+Project Link: https://ybamm.xyz
+Demo Video: [https://youtu.be/o27bR7ansuo](https://youtu.be/o27bR7ansuo)
+
+## Problem / Background: What inspired the idea? What problems are you solving?
+
+Liquidity providers lose money quietly, and it is not a bug. Every price move, an AMM sells the asset going up and buys the one going down, and arbitrageurs take the difference. For an ETH pool that bleed is around 11% a year. Concentrated liquidity and dynamic fees shrink it but never remove it.
+
+What pulled me in was Egorov's YieldBasis result: borrow against the LP and hold leverage at exactly 2x, and value becomes a straight line in price. A straight line has no curvature to lose, so the loss term is gone, not reduced. I wanted that as a real Uniswap v4 hook, with the loan and the liquidity as the same capital instead of two pools pretending to be one.
+
+## Impact: What makes this project unique? What impact will this make?
+
+Most delta-neutral or IL-insurance hooks reduce the loss statistically. ybAMM removes the term itself with the L=2 math, ported from Egorov's Vyper contract and fuzz-checked against it for exact equality, so the curve is provably the real thing.
+
+The part I am proudest of is that it runs. It is live on Unichain Sepolia with a real Chainlink feed and a real cross-chain Reactive loop on Lasna. A deposit lands under target, the keeper notices, and the position re-levers to 50% with nobody touching it. I even caught a live race between the drift watcher and the cron heartbeat and fixed it so callbacks read live state and converge instead of stacking. That whole incident is on-chain with tx hashes in the repo.
+
+## Challenges: What was challenging about building this project?
+
+The architecture moved twice before it was right. I started with the debt leg on Aave across chains through TheCompact, which worked on a fork but meant the collateral backing swaps was not the collateral backing the loan. Then a two-route version on Euler ended up being two half-systems pretending to be one product. I threw both away and collapsed everything into a single hook whose inventory is one Euler account. Deleting working code is hard, but the one-primitive version is the only honest one.
+
+The other hard part was the cross-chain automation: getting Reactive to fire a callback from Lasna back to the hook with replay keys and auth on both legs, and learning from the live double-borrow race that two keepers acting on one condition must read state at execution, not trust the event that triggered them.
+
+---
+
+# ΔShield Protocol
+
+# ΔShield Protocol
+
+Description: ΔShield is a Uniswap v4 hook that captures a portion of arbitrage profits at the hook level and routes them into an LP protection reserve, reducing impermanent loss over time. It also splits LP positions into principal and yield components, so liquidity providers earn from ongoing arb flow instead of only absorbing its downside.
+Tags: Cross-Chain, Custom hooks, Dynamic Fee, Impermanent Loss, LP Fees, LP Liquidity, LVR, MEV, Oracle, Pool Native Incentivization, Unichain, Yield Farming
+Integrations: Reactive Network, Unichain
+Submission Type: Hook Incubator (UHI)
+Cohort: UHI9
+Date: June 8, 2026
+
+**Cohort: UHI9   |   Chain(s): Unichain, Reactive Network**
+
+### **Key Links**
+
+- **GitHub:** [https://github.com/soloking1412/Shield-Protocol](https://github.com/soloking1412/Shield-Protocol)
+- **Demo Video:** [https://drive.google.com/file/d/1XIPVeS3HNCIS7LZ6tIL9YPegbC9mMN48/view?usp=sharing](https://drive.google.com/file/d/1XIPVeS3HNCIS7LZ6tIL9YPegbC9mMN48/view?usp=sharing)
+- **Live Project:** [https://shield-protocol-omega.vercel.app/](https://shield-protocol-omega.vercel.app/)
+
+### **Partner Integrations**
+
+Uniswap v4: beforeSwap detects arb swaps via oracle price deviation and captures profit using BeforeSwapDelta. afterSwap tracks cumulative delta exposure. afterAddLiquidity and afterRemoveLiquidity mint/burn PT-LP and YT-LP tokens per pool.
+
+Reactive Network: ReactiveReserveRSC.sol subscribes to LowReserveAlert events. When triggered, react() emits a Callback bridging USDC from a backup reserve on another chain via Circle CCTP v2.
+
+Chainlink: PriceOracle.sol calls AggregatorV3Interface.latestRoundData() to classify swaps as arbitrage.
+
+Circle CCTP v2: Bridges USDC from backup reserve chain to Unichain to top up the IL reserve.
+
+EigenLayer: DeltaShieldAVS.sol implements the AVS task/response pattern for delta exposure management.
+
+### **Problem / Background**
+
+Impermanent loss has been the unsolved cost of being an LP since Uniswap v1. Every time an arbitrageur corrects the pool price, they extract exactly what the LP loses — but that profit leaves the system entirely. LPs either accept this as the cost of fee income, or avoid volatile pairs altogether.
+
+The problem isn't that arbs exist — they're necessary for price discovery. The problem is that nothing in the current system redirects any of that extracted value back to the LPs who funded the arbitrage opportunity. Uniswap v4's hook system makes a new approach possible: identify arb-motivated swaps before execution and take a small cut of the profit at the hook level for LP protection.
+
+### **Impact**
+
+ΔShield makes LP protection self-funding. The reserve that compensates LPs for IL is built up entirely from the arb flow that caused the IL — no token emissions, no external subsidy, no governance fund needed.
+
+The PT-LP / YT-LP split adds a second layer of value: LPs can hold their principal receipt (PT-LP) for IL protection and separately trade their yield token (YT-LP), which accrues from ongoing arb capture — closer to structured products in TradFi, but native to a v4 hook.
+
+The Reactive Network integration means the reserve can survive market stress without manual intervention — low reserves automatically trigger cross-chain USDC replenishment.
+
+### **Challenges**
+
+1. Hook address permission bits with Forge's CREATE2 factory — minting a valid address required mining a CREATE2 salt using the correct factory constant Forge inherits from forge-std/Base.sol.
+
+2. BeforeSwapDelta accounting — extracting a fee via poolManager.take() inside beforeSwap and returning a matching BeforeSwapDelta requires exact sign conventions depending on zeroForOne direction.
+
+3. Reactive RSC statelessness — the react() function cannot write to storage, so the refill logic had to be designed as a pure decode-and-emit.
+
+4. vm.prank consumed by argument evaluation in tests — token.decimals() calls consume the prank before the target function is reached.
+
+5. Yield index with transferable tokens — the YT-LP _update override must settle yield for both sender and receiver before balance changes to avoid double-counting.
 
 ---
 
