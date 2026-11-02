@@ -9,13 +9,13 @@ It is intended for developers who want to explore, search, or build tools on top
 ## Files
 
 ### `hook_directory.csv`
-A structured table of all **556 hook submissions** across cohorts UHI1–UHI8.
+A structured table of all **759 hook submissions** across cohorts UHI1–UHI10.
 
 | Column | Description |
 |---|---|
 | `Name` | Project name |
 | `Active?` | Whether the project is currently active |
-| `Cohort` | Which UHI cohort the project was submitted in (UHI1–UHI8) |
+| `Cohort` | Which UHI cohort the project was submitted in (UHI1–UHI10) |
 | `Created` | Submission timestamp |
 | `Date` | Project date (if provided) |
 | `Description` | Short project description |
@@ -27,7 +27,7 @@ A structured table of all **556 hook submissions** across cohorts UHI1–UHI8.
 Best for: filtering by cohort/tags, building spreadsheets, quick lookups, data analysis.
 
 ### `hook_directory.md`
-A combined Markdown file containing **562 entries** — one section per hook project — including full subpage content such as problem statements, impact descriptions, team bios, GitHub links, demo videos, and more.
+A combined Markdown file containing **759 entries** — one section per hook project — including full subpage content such as problem statements, impact descriptions, team bios, GitHub links, demo videos, and more.
 
 Best for: feeding into AI tools, Claude Projects, RAG pipelines, semantic search, or any use case that benefits from rich prose context.
 
@@ -37,13 +37,13 @@ Best for: feeding into AI tools, Claude Projects, RAG pipelines, semantic search
 
 **Fetch the raw CSV directly:**
 ```bash
-curl -O https://raw.githubusercontent.com/atriumacademy/hook-directory-data/main/hook_directory.csv
+curl -O https://raw.githubusercontent.com/AtriumAcademy/UHI-Hook-Data/main/hook_directory.csv
 ```
 
 **Load into Python:**
 ```python
 import pandas as pd
-df = pd.read_csv("https://raw.githubusercontent.com/atriumacademy/hook-directory-data/main/hook_directory.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/AtriumAcademy/UHI-Hook-Data/main/hook_directory.csv")
 print(df[df["Tags"].str.contains("Security", na=False)])
 ```
 
